@@ -102,6 +102,19 @@ return {
 				{ name = "cmdline" },
 			}),
 			matching = { disallow_symbol_nonprefix_matching = false },
+
+			-- https://github.com/hrsh7th/nvim-cmp/wiki/Advanced-techniques#disabling-cmdline-completion-for-certain-commands-such-as-increname
+			enabled = function()
+				-- Set of commands where cmp will be disabled
+				local disabled = {
+					IncRename = true,
+				}
+				-- Get first word of cmdline
+				local cmd = vim.fn.getcmdline():match("%S+")
+				-- Return true if cmd isn't disabled
+				-- else call/return cmp.close(), which returns false
+				return not disabled[cmd] or cmp.close()
+			end,
 		})
 	end,
 }
