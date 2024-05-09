@@ -100,6 +100,8 @@ return {
 
 			completion = {
 				completeopt = vim.o.completeopt,
+				keyword_length = 2,
+			},
 			},
 
 			view = {
