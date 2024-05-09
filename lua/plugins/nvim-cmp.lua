@@ -72,6 +72,10 @@ return {
 				completeopt = vim.o.completeopt,
 			},
 
+			view = {
+				entries = { name = "custom", selection_order = "near_cursor" },
+			},
+
 			-- https://github.com/hrsh7th/nvim-cmp/pull/676#issuecomment-1002532096
 			enabled = function()
 				if
