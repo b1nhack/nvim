@@ -102,6 +102,14 @@ return {
 				completeopt = vim.o.completeopt,
 				keyword_length = 2,
 			},
+
+			window = {
+				completion = {
+					border = "rounded",
+				},
+				documentation = {
+					border = "rounded",
+				},
 			},
 
 			view = {
