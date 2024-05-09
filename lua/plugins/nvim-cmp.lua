@@ -67,6 +67,10 @@ return {
 					luasnip.lsp_expand(args.body)
 				end,
 			},
+
+			completion = {
+				completeopt = vim.o.completeopt,
+			},
 		})
 
 		-- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).

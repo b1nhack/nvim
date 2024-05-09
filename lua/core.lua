@@ -99,7 +99,7 @@ vim.o.wildignorecase = true
 vim.o.wrap = false
 
 -- options for Insert mode completion
-vim.g.completeopt = "menu,menuone,noselect,noinsert,popup"
+vim.o.completeopt = "menu,menuone,noselect,noinsert,popup"
 
 -- new window from split is below the current one
 vim.o.splitbelow = true
