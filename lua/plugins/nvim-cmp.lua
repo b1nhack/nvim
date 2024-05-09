@@ -71,6 +71,18 @@ return {
 			completion = {
 				completeopt = vim.o.completeopt,
 			},
+
+			-- https://github.com/hrsh7th/nvim-cmp/pull/676#issuecomment-1002532096
+			enabled = function()
+				if
+					require("cmp.config.context").in_treesitter_capture("comment") == true
+					or require("cmp.config.context").in_syntax_group("Comment")
+				then
+					return false
+				else
+					return true
+				end
+			end,
 		})
 
 		-- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
