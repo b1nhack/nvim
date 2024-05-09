@@ -12,7 +12,6 @@ return {
 				changedelete = { text = " " },
 				untracked = { text = "┆" },
 			},
-			word_diff = true, -- Toggle with `:Gitsigns toggle_word_diff`
 			current_line_blame = true, -- Toggle with `:Gitsigns toggle_current_line_blame`
 			current_line_blame_opts = {
 				delay = 500,
