@@ -54,8 +54,8 @@ return {
 			}),
 
 			mapping = {
-				["<C-u>"] = cmp.mapping.scroll_docs(-4), -- Up
-				["<C-e>"] = cmp.mapping.scroll_docs(4), -- Down
+				["<C-u>"] = cmp.mapping.scroll_docs(-5), -- Up
+				["<C-e>"] = cmp.mapping.scroll_docs(5), -- Down
 
 				["<CR>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then
