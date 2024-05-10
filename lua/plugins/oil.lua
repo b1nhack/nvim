@@ -27,23 +27,6 @@ return {
 			},
 			-- Set to false to disable all of the above keymaps
 			use_default_keymaps = false,
-			git = {
-				-- Return true to automatically git add/mv/rm files
-				---@diagnostic disable-next-line: unused-local
-				add = function(path)
-					return true
-				end,
-
-				---@diagnostic disable-next-line: unused-local
-				mv = function(src_path, dest_path)
-					return true
-				end,
-
-				---@diagnostic disable-next-line: unused-local
-				rm = function(path)
-					return true
-				end,
-			},
 		})
 
 		vim.keymap.set("n", "<Leader>a", "<CMD>Oil<CR>")
