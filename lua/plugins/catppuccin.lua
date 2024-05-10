@@ -62,6 +62,7 @@ return {
 				markdown = true,
 				neotest = true,
 				neogit = true,
+				treesitter_context = true,
 			},
 		})
 
