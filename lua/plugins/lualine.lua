@@ -132,5 +132,7 @@ return {
 				"nvim-dap-ui",
 			},
 		})
+
+		vim.o.showtabline = 1
 	end,
 }
