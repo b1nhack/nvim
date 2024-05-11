@@ -12,6 +12,7 @@ return {
 				sh = { "shfmt" },
 				zsh = { "shfmt" },
 				rust = { "rustfmt" },
+				c = { "clang-format" },
 			},
 
 			format_on_save = {

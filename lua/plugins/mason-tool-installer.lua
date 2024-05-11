@@ -24,6 +24,7 @@ return {
 				-- Formatter
 				"stylua",
 				"shfmt",
+				"clang-format",
 			},
 
 			-- automatically install / update on startup. If set to false nothing
