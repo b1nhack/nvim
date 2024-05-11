@@ -4,6 +4,7 @@ return {
 		"nvim-dap-ui",
 		"nvim-treesitter",
 		"nvim-dap-virtual-text",
+		"mason-nvim-dap.nvim",
 	},
 	keys = {
 		"<Leader>b",
