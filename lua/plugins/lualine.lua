@@ -25,6 +25,7 @@ return {
 					statusline = 200, -- Note these are in mili second and default is 1000
 					tabline = 200,
 				},
+				disabled_filetypes = { statusline = { "dashboard" } },
 			},
 
 			sections = {
