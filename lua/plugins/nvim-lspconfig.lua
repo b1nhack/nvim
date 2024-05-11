@@ -1,11 +1,5 @@
 return {
 	"neovim/nvim-lspconfig",
-	dependencies = {
-		"neodev.nvim",
-		"mason.nvim",
-		"mason-lspconfig.nvim",
-	},
-	event = { "BufReadPost", "BufWritePost", "BufNewFile" },
 
 	config = function()
 		-- Use LspAttach autocommand to only map the following keys
@@ -32,20 +26,6 @@ return {
 						end, { buffer = bufnr, desc = "[lsp] toggle inlay hints" })
 					end
 				end
-			end,
-		})
-
-		local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-		require("mason-lspconfig").setup_handlers({
-			function(server_name)
-				require("lspconfig")[server_name].setup({
-					capabilities = capabilities,
-				})
-			end,
-
-			["lua_ls"] = function()
-				require("lsp.lua_ls")
 			end,
 		})
 

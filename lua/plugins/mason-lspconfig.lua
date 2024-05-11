@@ -1,7 +1,28 @@
 return {
 	"williamboman/mason-lspconfig.nvim",
+	dependencies = {
+		"neodev.nvim",
+		"mason.nvim",
+		"neovim/nvim-lspconfig",
+	},
+	event = { "BufReadPost", "BufWritePost", "BufNewFile" },
 
 	config = function()
-		require("mason-lspconfig").setup()
+		local mason_lspconfig = require("mason-lspconfig")
+		mason_lspconfig.setup()
+
+		local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+		mason_lspconfig.setup_handlers({
+			function(server_name)
+				require("lspconfig")[server_name].setup({
+					capabilities = capabilities,
+				})
+			end,
+
+			["lua_ls"] = function()
+				require("lsp.lua_ls")
+			end,
+		})
 	end,
 }
