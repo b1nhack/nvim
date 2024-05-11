@@ -58,6 +58,27 @@ require("lazy").setup(
 		change_detection = {
 			notify = false, -- get a notification when changes are found
 		},
+
+		performance = {
+			rtp = {
+				disabled_plugins = {
+					"editorconfig",
+					"gzip",
+					"man",
+					-- "matchit",
+					-- "matchparen",
+					"netrwPlugin",
+					"osc52",
+					"rplugin",
+					"shada",
+					"spellfile",
+					"tarPlugin",
+					"tohtml",
+					"tutor",
+					"zipPlugin",
+				},
+			},
+		},
 	}
 )
 
