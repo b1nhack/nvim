@@ -7,6 +7,7 @@ return {
 	},
 	keys = {
 		"<Leader>b",
+		"<Leader>d",
 	},
 
 	config = function()
@@ -34,5 +35,9 @@ return {
 		vim.keymap.set("n", "<Leader>b", function()
 			require("dap").toggle_breakpoint()
 		end, { desc = "Toggle Breakpoint" })
+
+		vim.keymap.set("n", "<Leader>d", function()
+			require("dap").continue()
+		end, { desc = "Dap Continue" })
 	end,
 }
