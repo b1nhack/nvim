@@ -16,6 +16,7 @@ return {
 			ensure_installed = {
 				-- LSP
 				"lua_ls",
+				"clangd",
 
 				-- DAP
 				"codelldb",
