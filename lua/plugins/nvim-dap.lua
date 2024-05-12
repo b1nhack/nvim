@@ -26,12 +26,14 @@ return {
 			dapui.close()
 		end
 
+		-- stylua: ignore start
 		local sign = vim.fn.sign_define
-		sign("DapBreakpoint", { text = " ", texthl = "DapBreakpoint", linehl = "", numhl = "" })
-		sign("DapBreakpointCondition", { text = " ", texthl = "DapBreakpointCondition", linehl = "", numhl = "" })
-		sign("DapLogPoint", { text = " ", texthl = "DapLogPoint", linehl = "", numhl = "" })
-		sign("DapStopped", { text = " ", texthl = "DapStopped", linehl = "", numhl = "" })
-		sign("DapBreakpointRejected", { text = " ", texthl = "DapBreakpointRejected", linehl = "", numhl = "" })
+		sign("DapBreakpoint", { text = " ", texthl = "DapBreakpoint", linehl = "", numhl = "DapBreakpoint" })
+		sign("DapBreakpointCondition", { text = " ", texthl = "DapBreakpointCondition", linehl = "", numhl = "DapBreakpointCondition" })
+		sign("DapLogPoint", { text = " ", texthl = "DapLogPoint", linehl = "", numhl = "DapLogPoint" })
+		sign("DapStopped", { text = " ", texthl = "DapStopped", linehl = "", numhl = "DapStopped" })
+		sign("DapBreakpointRejected", { text = " ", texthl = "DapBreakpointRejected", linehl = "", numhl = "DapBreakpointRejected" })
+		-- stylua: ignore end
 
 		vim.keymap.set("n", "<Leader>b", function()
 			require("dap").toggle_breakpoint()
