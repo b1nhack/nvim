@@ -64,7 +64,7 @@ require("lazy").setup(
 				disabled_plugins = {
 					"editorconfig",
 					"gzip",
-					"man",
+					-- "man",
 					-- "matchit",
 					-- "matchparen",
 					"netrwPlugin",
