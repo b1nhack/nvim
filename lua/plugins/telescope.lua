@@ -156,6 +156,32 @@ return {
 					},
 				},
 
+				git_bcommits = {
+					mappings = {
+						i = {
+							["<C-]>"] = actions.cycle_previewers_next,
+							["<C-[>"] = actions.cycle_previewers_prev,
+						},
+						n = {
+							["<C-]>"] = actions.cycle_previewers_next,
+							["<C-[>"] = actions.cycle_previewers_prev,
+						},
+					},
+				},
+
+				git_commits = {
+					mappings = {
+						i = {
+							["<C-]>"] = actions.cycle_previewers_next,
+							["<C-[>"] = actions.cycle_previewers_prev,
+						},
+						n = {
+							["<C-]>"] = actions.cycle_previewers_next,
+							["<C-[>"] = actions.cycle_previewers_prev,
+						},
+					},
+				},
+
 				lsp_references = { initial_mode = "normal", reuse_win = true, theme = "ivy" },
 				lsp_definitions = { initial_mode = "normal", reuse_win = true, theme = "ivy" },
 				lsp_type_definitions = { initial_mode = "normal", reuse_win = true, theme = "ivy" },
