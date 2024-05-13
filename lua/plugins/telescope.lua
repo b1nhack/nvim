@@ -39,6 +39,7 @@ return {
 
 				preview = {
 					msg_bg_fillchar = "",
+					filesize_limit = 1, -- MB
 				},
 
 				-- https://github.com/nvim-telescope/telescope.nvim/blob/master/lua/telescope/mappings.lua#L133
