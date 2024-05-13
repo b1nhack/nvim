@@ -36,7 +36,8 @@ vim.keymap.set({ "n", "x", "o" }, "k", "i")
 vim.keymap.set("n", "K", "I")
 
 -- Copying and moving text
-vim.keymap.set({ "n", "x" }, "Y", '"*y')
+vim.keymap.set("n", "YY", '"*yy')
+vim.keymap.set("x", "Y", '"*y')
 
 -- Changing text
 vim.keymap.set("n", "<", "<<")
