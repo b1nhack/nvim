@@ -27,10 +27,15 @@ return {
 		telescope.setup({
 			defaults = {
 				scroll_strategy = "limit",
-				prompt_prefix = " ",
-				selection_caret = " ",
+				layout_strategy = "flex",
+				prompt_prefix = " ",
+				selection_caret = " ",
 				multi_icon = " ",
+				dynamic_preview_title = true,
 
+				preview = {
+					msg_bg_fillchar = "",
+				},
 				default_mappings = {
 					i = {
 						["<C-c>"] = actions.close,
@@ -86,13 +91,11 @@ return {
 
 			pickers = {
 				find_files = { previewer = false },
-				live_grep = { theme = "ivy" },
 
 				lsp_references = { initial_mode = "normal", reuse_win = true, theme = "ivy" },
 				lsp_definitions = { initial_mode = "normal", reuse_win = true, theme = "ivy" },
 				lsp_type_definitions = { initial_mode = "normal", reuse_win = true, theme = "ivy" },
 				lsp_implementations = { initial_mode = "normal", reuse_win = true, theme = "ivy" },
-				lsp_dynamic_workspace_symbols = {},
 			},
 			extensions = {
 				fzf = {
