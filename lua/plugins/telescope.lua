@@ -142,6 +142,16 @@ return {
 
 			pickers = {
 				find_files = { previewer = false },
+				buffers = {
+					mappings = {
+						i = {
+							["<c-d>"] = actions.delete_buffer + actions.move_to_top,
+						},
+						n = {
+							["<c-d>"] = actions.delete_buffer + actions.move_to_top,
+						},
+					},
+				},
 
 				lsp_references = { initial_mode = "normal", reuse_win = true, theme = "ivy" },
 				lsp_definitions = { initial_mode = "normal", reuse_win = true, theme = "ivy" },
