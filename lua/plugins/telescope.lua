@@ -208,8 +208,10 @@ return {
 		telescope.load_extension("noice")
 
 		local builtin = require("telescope.builtin")
-		vim.keymap.set("n", "<Leader>ff", require("telescope-function").project_files)
-		vim.keymap.set("n", "<Leader>fg", builtin.live_grep)
+		local func = require("telescope-function")
+
+		vim.keymap.set("n", "<Leader>ff", func.project_files)
+		vim.keymap.set("n", "<Leader>fg", func.live_grep_from_project_git_root)
 		vim.keymap.set("n", "<Leader>fb", builtin.buffers)
 		vim.keymap.set("n", "<Leader>fh", builtin.help_tags)
 
