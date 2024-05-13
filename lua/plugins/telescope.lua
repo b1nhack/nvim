@@ -39,8 +39,24 @@ return {
 				preview = {
 					msg_bg_fillchar = "",
 				},
+
+				-- https://github.com/nvim-telescope/telescope.nvim/blob/master/lua/telescope/mappings.lua#L133
 				default_mappings = {
 					i = {
+						-- ["<LeftMouse>"] = {
+						-- 	actions.mouse_click,
+						-- 	type = "action",
+						-- 	opts = { expr = true },
+						-- },
+						-- ["<2-LeftMouse>"] = {
+						-- 	actions.double_mouse_click,
+						-- 	type = "action",
+						-- 	opts = { expr = true },
+						-- },
+
+						-- ["<C-n>"] = actions.move_selection_next,
+						-- ["<C-p>"] = actions.move_selection_previous,
+
 						["<C-c>"] = actions.close,
 
 						["<Down>"] = actions.move_selection_next,
@@ -48,24 +64,48 @@ return {
 
 						["<CR>"] = actions.select_default,
 						["<C-h>"] = actions.select_horizontal,
-						["<C-s>"] = actions.select_vertical,
+						["<C-v>"] = actions.select_vertical,
 						["<C-t>"] = actions.select_tab,
 
 						["<C-u>"] = actions.preview_scrolling_up,
 						["<C-e>"] = actions.preview_scrolling_down,
+						-- ["<C-f>"] = actions.preview_scrolling_left,
+						-- ["<C-k>"] = actions.preview_scrolling_right,
+
+						["<PageUp>"] = actions.results_scrolling_up,
+						["<PageDown>"] = actions.results_scrolling_down,
+						-- ["<M-f>"] = actions.results_scrolling_left,
+						-- ["<M-k>"] = actions.results_scrolling_right,
+
 						["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
 						["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
 						["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
 						["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 						["<C-l>"] = actions.complete_tag,
 						["<C-/>"] = actions.which_key,
+						["<C-_>"] = actions.which_key, -- keys from pressing <C-/>
+						["<C-w>"] = { "<c-s-w>", type = "command" },
+						-- ["<C-r><C-w>"] = actions.insert_original_cword,
+
+						-- disable c-j because we dont want to allow new lines #2123
 						["<C-j>"] = actions.nop,
 					},
 					n = {
+						-- ["<LeftMouse>"] = {
+						-- 	actions.mouse_click,
+						-- 	type = "action",
+						-- 	opts = { expr = true },
+						-- },
+						-- ["<2-LeftMouse>"] = {
+						-- 	actions.double_mouse_click,
+						-- 	type = "action",
+						-- 	opts = { expr = true },
+						-- },
+
 						["<esc>"] = actions.close,
 						["<CR>"] = actions.select_default,
 						["<C-h>"] = actions.select_horizontal,
-						["<C-s>"] = actions.select_vertical,
+						["<C-v>"] = actions.select_vertical,
 						["<C-t>"] = actions.select_tab,
 
 						["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
@@ -77,7 +117,7 @@ return {
 						["e"] = actions.move_selection_next,
 						["u"] = actions.move_selection_previous,
 						["U"] = actions.move_to_top,
-						["C"] = actions.move_to_middle,
+						["M"] = actions.move_to_middle,
 						["E"] = actions.move_to_bottom,
 
 						["<Down>"] = actions.move_selection_next,
@@ -87,6 +127,14 @@ return {
 
 						["<C-u>"] = actions.preview_scrolling_up,
 						["<C-e>"] = actions.preview_scrolling_down,
+						-- ["<C-f>"] = actions.preview_scrolling_left,
+						-- ["<C-k>"] = actions.preview_scrolling_right,
+
+						["<PageUp>"] = actions.results_scrolling_up,
+						["<PageDown>"] = actions.results_scrolling_down,
+						-- ["<M-f>"] = actions.results_scrolling_left,
+						-- ["<M-k>"] = actions.results_scrolling_right,
+
 						["?"] = actions.which_key,
 					},
 				},
