@@ -42,14 +42,6 @@ return {
 					},
 					view = "mini",
 				},
-
-				{
-					filter = {
-						event = "msg_show",
-						kind = "search_count",
-					},
-					opts = { skip = true },
-				},
 			},
 
 			-- you can enable a preset for easier configuration
