@@ -26,6 +26,7 @@ return {
 	config = function()
 		local telescope = require("telescope")
 		local actions = require("telescope.actions")
+		local action_layout = require("telescope.actions.layout")
 
 		telescope.setup({
 			defaults = {
@@ -89,6 +90,7 @@ return {
 
 						-- disable c-j because we dont want to allow new lines #2123
 						["<C-j>"] = actions.nop,
+						["<C-p>"] = action_layout.toggle_preview,
 					},
 					n = {
 						-- ["<LeftMouse>"] = {
@@ -136,6 +138,7 @@ return {
 						-- ["<M-k>"] = actions.results_scrolling_right,
 
 						["?"] = actions.which_key,
+						["<C-p>"] = action_layout.toggle_preview,
 					},
 				},
 			},
