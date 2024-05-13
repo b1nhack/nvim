@@ -14,10 +14,16 @@ return {
 				rust = { "rustfmt" },
 				c = { "clang-format" },
 			},
+
+			format_on_save = {
+				-- These options will be passed to conform.format()
+				timeout_ms = 500,
+				lsp_fallback = true,
+			},
 		})
 
 		vim.keymap.set("n", "<Leader>f", function()
-			require("conform").format({ async = true })
+			require("conform").format({ async = true, lsp_fallback = true })
 		end)
 	end,
 }
