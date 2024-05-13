@@ -17,7 +17,10 @@ return {
 		"gy",
 		"gi",
 		"<Leader>fs",
+		"<Leader>fS",
 		"<Leader>fd",
+		"<Leader>fD",
+		"<Leader>fl",
 	},
 
 	config = function()
@@ -121,7 +124,12 @@ return {
 		vim.keymap.set("n", "gd", builtin.lsp_definitions)
 		vim.keymap.set("n", "gy", builtin.lsp_type_definitions)
 		vim.keymap.set("n", "gi", builtin.lsp_implementations)
-		vim.keymap.set("n", "<Leader>fs", builtin.lsp_dynamic_workspace_symbols)
-		vim.keymap.set("n", "<Leader>fd", builtin.diagnostics)
+		vim.keymap.set("n", "<Leader>fs", builtin.lsp_document_symbols)
+		vim.keymap.set("n", "<Leader>fS", builtin.lsp_workspace_symbols)
+		vim.keymap.set("n", "<Leader>fd", function()
+			builtin.diagnostics({ bufnr = 0 })
+		end)
+		vim.keymap.set("n", "<Leader>fD", builtin.diagnostics)
+		vim.keymap.set("n", "<Leader>fl", builtin.resume)
 	end,
 }
