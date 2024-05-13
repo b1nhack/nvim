@@ -144,7 +144,9 @@ return {
 			},
 
 			pickers = {
-				find_files = { previewer = false },
+				find_files = {
+					previewer = false,
+				},
 				buffers = {
 					mappings = {
 						i = {
@@ -182,6 +184,10 @@ return {
 					},
 				},
 
+				git_files = {
+					previewer = false,
+				},
+
 				lsp_references = { initial_mode = "normal", reuse_win = true, theme = "ivy" },
 				lsp_definitions = { initial_mode = "normal", reuse_win = true, theme = "ivy" },
 				lsp_type_definitions = { initial_mode = "normal", reuse_win = true, theme = "ivy" },
@@ -202,7 +208,7 @@ return {
 		telescope.load_extension("noice")
 
 		local builtin = require("telescope.builtin")
-		vim.keymap.set("n", "<Leader>ff", builtin.find_files)
+		vim.keymap.set("n", "<Leader>ff", require("telescope-function").project_files)
 		vim.keymap.set("n", "<Leader>fg", builtin.live_grep)
 		vim.keymap.set("n", "<Leader>fb", builtin.buffers)
 		vim.keymap.set("n", "<Leader>fh", builtin.help_tags)
