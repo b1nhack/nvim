@@ -7,6 +7,12 @@ return {
 			"nvim-telescope/telescope-fzf-native.nvim",
 			build = "make",
 		},
+		{
+			"benfowler/telescope-luasnip.nvim",
+			dependencies = {
+				"LuaSnip",
+			},
+		},
 	},
 	cmd = "Telescope",
 	keys = {
@@ -234,8 +240,9 @@ return {
 			},
 		})
 
-		telescope.load_extension("fzf")
 		telescope.load_extension("noice")
+		telescope.load_extension("fzf")
+		telescope.load_extension("luasnip")
 
 		local builtin = require("telescope.builtin")
 		local func = require("telescope-function")
