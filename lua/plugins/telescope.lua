@@ -13,6 +13,9 @@ return {
 				"LuaSnip",
 			},
 		},
+		{
+			"nvim-telescope/telescope-dap.nvim",
+		},
 	},
 	cmd = "Telescope",
 	keys = {
@@ -243,6 +246,7 @@ return {
 		telescope.load_extension("noice")
 		telescope.load_extension("fzf")
 		telescope.load_extension("luasnip")
+		telescope.load_extension("dap")
 
 		local builtin = require("telescope.builtin")
 		local func = require("telescope-function")
