@@ -16,6 +16,8 @@ vim.o.grepprg = "rg -n $* /dev/null"
 -- ignore case in search patterns
 vim.o.ignorecase = true
 
+vim.o.inccommand = "split"
+
 -- adjust case of match for keyword completion
 vim.o.infercase = true
 
