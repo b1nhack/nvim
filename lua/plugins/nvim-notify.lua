@@ -13,6 +13,9 @@ return {
 
 			stages = "fade",
 			timeout = 3000,
+			on_open = function(win)
+				vim.api.nvim_win_set_config(win, { zindex = 99 })
+			end,
 		})
 	end,
 }
