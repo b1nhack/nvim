@@ -22,10 +22,10 @@ vim.keymap.set({ "n", "x" }, "H", "E")
 
 -- Pattern searches
 -- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
-vim.keymap.set("n", "s", "'Nn'[v:searchforward].'zv'", { expr = true, desc = "Next Search Result" })
-vim.keymap.set("x", "s", "'Nn'[v:searchforward]", { expr = true, desc = "Next Search Result" })
-vim.keymap.set("n", "S", "'nN'[v:searchforward].'zv'", { expr = true, desc = "Prev Search Result" })
-vim.keymap.set("x", "S", "'nN'[v:searchforward]", { expr = true, desc = "Prev Search Result" })
+vim.keymap.set("n", "w", "'Nn'[v:searchforward].'zv'", { expr = true, desc = "Next Search Result" })
+vim.keymap.set("x", "w", "'Nn'[v:searchforward]", { expr = true, desc = "Next Search Result" })
+vim.keymap.set("n", "W", "'nN'[v:searchforward].'zv'", { expr = true, desc = "Prev Search Result" })
+vim.keymap.set("x", "W", "'nN'[v:searchforward]", { expr = true, desc = "Prev Search Result" })
 
 -- Scrolling
 vim.keymap.set({ "n", "x" }, "<C-u>", "9<C-y>")
