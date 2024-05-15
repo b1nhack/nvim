@@ -40,8 +40,8 @@ vim.o.jumpoptions = "stack"
 vim.o.shada = ""
 vim.o.wrapscan = false
 
-vim.o.tabstop = 2
-vim.o.shiftwidth = 2
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
 vim.o.smartindent = true
 vim.o.cindent = true
 vim.o.copyindent = true
