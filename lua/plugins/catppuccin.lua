@@ -62,6 +62,7 @@ return {
 				markdown = true,
 				neotest = true,
 				treesitter_context = true,
+				flash = true,
 			},
 		})
 
