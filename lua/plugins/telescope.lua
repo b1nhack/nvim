@@ -40,6 +40,26 @@ return {
 		local actions = require("telescope.actions")
 		local action_layout = require("telescope.actions.layout")
 
+		local function flash(prompt_bufnr)
+			require("flash").jump({
+				pattern = "^",
+				label = { after = { 0, 0 } },
+				search = {
+					multi_window = true,
+					mode = "search",
+					exclude = {
+						function(win)
+							return vim.bo[vim.api.nvim_win_get_buf(win)].filetype ~= "TelescopeResults"
+						end,
+					},
+				},
+				action = function(match)
+					local picker = require("telescope.actions.state").get_current_picker(prompt_bufnr)
+					picker:set_selection(match.pos[1] - 1)
+				end,
+			})
+		end
+
 		telescope.setup({
 			defaults = {
 				scroll_strategy = "limit",
@@ -48,6 +68,10 @@ return {
 				selection_caret = " ",
 				multi_icon = " ",
 				dynamic_preview_title = true,
+				sorting_strategy = "ascending",
+				layout_config = {
+					prompt_position = "top",
+				},
 
 				preview = {
 					msg_bg_fillchar = "",
@@ -130,6 +154,7 @@ return {
 						-- disable c-j because we dont want to allow new lines #2123
 						["<C-j>"] = actions.nop,
 						["<C-p>"] = action_layout.toggle_preview,
+						["<c-s>"] = flash,
 					},
 					n = {
 						-- ["<LeftMouse>"] = {
@@ -178,6 +203,7 @@ return {
 
 						["?"] = actions.which_key,
 						["<C-p>"] = action_layout.toggle_preview,
+						["s"] = flash,
 					},
 				},
 			},
