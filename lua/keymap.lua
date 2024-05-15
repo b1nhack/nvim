@@ -22,10 +22,10 @@ vim.keymap.set({ "n", "x" }, "H", "E")
 
 -- Pattern searches
 -- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
-vim.keymap.set("n", "w", "'Nn'[v:searchforward].'zv'", { expr = true, desc = "Next Search Result" })
-vim.keymap.set("x", "w", "'Nn'[v:searchforward]", { expr = true, desc = "Next Search Result" })
-vim.keymap.set("n", "W", "'nN'[v:searchforward].'zv'", { expr = true, desc = "Prev Search Result" })
-vim.keymap.set("x", "W", "'nN'[v:searchforward]", { expr = true, desc = "Prev Search Result" })
+vim.keymap.set("n", "m", "'Nn'[v:searchforward].'zv'", { expr = true, desc = "Next Search Result" })
+vim.keymap.set("x", "m", "'Nn'[v:searchforward]", { expr = true, desc = "Next Search Result" })
+vim.keymap.set("n", "M", "'nN'[v:searchforward].'zv'", { expr = true, desc = "Prev Search Result" })
+vim.keymap.set("x", "M", "'nN'[v:searchforward]", { expr = true, desc = "Prev Search Result" })
 
 -- Scrolling
 vim.keymap.set({ "n", "x" }, "<C-u>", "9<C-y>")
@@ -53,10 +53,11 @@ vim.keymap.set("n", "L", "<C-r>")
 vim.keymap.set("x", "L", "<CMD>redo<CR>")
 
 -- Multi-window commands
-vim.keymap.set({ "n", "x" }, "su", "<CMD>set nosplitbelow<CR><CMD>split<CR><CMD>set splitbelow<CR>")
-vim.keymap.set({ "n", "x" }, "se", "<CMD>split<CR>")
-vim.keymap.set({ "n", "x" }, "sn", "<CMD>set nosplitright<CR><CMD>vsplit<CR><CMD>set splitright<CR>")
-vim.keymap.set({ "n", "x" }, "si", "<CMD>vsplit<CR>")
+vim.keymap.set({ "n", "x" }, "w", "<Nop>")
+vim.keymap.set({ "n", "x" }, "wu", "<CMD>set nosplitbelow<CR><CMD>split<CR><CMD>set splitbelow<CR>")
+vim.keymap.set({ "n", "x" }, "we", "<CMD>split<CR>")
+vim.keymap.set({ "n", "x" }, "wn", "<CMD>set nosplitright<CR><CMD>vsplit<CR><CMD>set splitright<CR>")
+vim.keymap.set({ "n", "x" }, "wi", "<CMD>vsplit<CR>")
 
 vim.keymap.set({ "n", "x" }, "Q", "<CMD>q<CR>")
 
@@ -71,14 +72,14 @@ vim.keymap.set({ "n", "x" }, "<S-Down>", "<CMD>resize -5<CR>")
 vim.keymap.set({ "n", "x" }, "<S-Left>", "<CMD>vertical resize +5<CR>")
 vim.keymap.set({ "n", "x" }, "<S-Right>", "<CMD>vertical resize -5<CR>")
 
-vim.keymap.set({ "n", "x" }, "st", "<C-w><S-T>")
+vim.keymap.set({ "n", "x" }, "wt", "<C-w><S-T>")
 
 -- Buffer list commands
 vim.keymap.set({ "n", "x" }, "[b", "<CMD>bprevious<CR>")
 vim.keymap.set({ "n", "x" }, "]b", "<CMD>bnext<CR>")
 
 -- Tabpage
-vim.keymap.set({ "n", "x" }, "tu", "<CMD>tabnew<CR>")
+vim.keymap.set({ "n", "x" }, "gt", "<CMD>tabnew<CR>")
 
 vim.keymap.set({ "n", "x" }, "[t", "<CMD>tabprevious<CR>")
 vim.keymap.set({ "n", "x" }, "]t", "<CMD>tabnext<CR>")
