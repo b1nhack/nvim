@@ -18,6 +18,8 @@ return {
 				zsh = { "shfmt" },
 				rust = { "rustfmt" },
 				c = { "clang-format" },
+
+				["*"] = { "injected" },
 			},
 
 			format_on_save = {
