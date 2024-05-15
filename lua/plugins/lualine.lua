@@ -131,6 +131,7 @@ return {
 				"mason",
 				"oil",
 				"nvim-dap-ui",
+				"man",
 			},
 		})
 
