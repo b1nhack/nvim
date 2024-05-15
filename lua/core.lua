@@ -45,7 +45,6 @@ vim.o.fileignorecase = false
 vim.o.history = 1000
 vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
 vim.o.jumpoptions = "stack"
-vim.o.modeline = false
 vim.o.shada = ""
 vim.o.wrapscan = false
 
