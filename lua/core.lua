@@ -39,7 +39,6 @@ vim.o.shortmess = "tToOCFI"
 vim.o.virtualedit = "block"
 vim.o.splitbelow = true
 vim.o.splitright = true
-vim.o.confirm = true
 vim.o.fileformat = "unix"
 vim.o.fileignorecase = false
 vim.o.history = 1000
