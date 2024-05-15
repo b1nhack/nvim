@@ -15,10 +15,6 @@ vim.o.infercase = true
 vim.o.smartcase = true
 vim.o.wildignorecase = true
 
-vim.o.foldenable = false
-vim.o.foldmethod = "expr"
-vim.o.foldexpr = "nvim_treesitter#foldexpr()"
-
 -- ui
 vim.o.cursorline = true
 vim.o.number = true
@@ -40,7 +36,6 @@ vim.o.splitright = true
 vim.o.fileformat = "unix"
 vim.o.fileignorecase = false
 vim.o.history = 1000
-vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
 vim.o.jumpoptions = "stack"
 vim.o.shada = ""
 vim.o.wrapscan = false

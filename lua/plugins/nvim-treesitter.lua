@@ -7,6 +7,12 @@ return {
 	},
 	event = { "BufReadPost", "BufWritePost", "BufNewFile" },
 
+	init = function()
+		vim.o.foldenable = false
+		vim.o.foldmethod = "expr"
+		vim.o.foldexpr = "nvim_treesitter#foldexpr()"
+	end,
+
 	config = function()
 		local configs = require("nvim-treesitter.configs")
 
