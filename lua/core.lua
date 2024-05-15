@@ -30,8 +30,6 @@ vim.o.signcolumn = "yes"
 vim.o.termguicolors = true
 vim.o.colorcolumn = "80"
 vim.o.display = "lastline,uhex"
-vim.o.list = true
-vim.o.listchars = "tab:󰌒 "
 
 -- behavior
 vim.o.inccommand = "split"
