@@ -257,6 +257,7 @@ return {
 				lsp_definitions = { initial_mode = "normal", reuse_win = true, theme = "ivy" },
 				lsp_type_definitions = { initial_mode = "normal", reuse_win = true, theme = "ivy" },
 				lsp_implementations = { initial_mode = "normal", reuse_win = true, theme = "ivy" },
+				diagnostics = { initial_mode = "normal", reuse_win = true, theme = "ivy" },
 			},
 			extensions = {
 				fzf = {
