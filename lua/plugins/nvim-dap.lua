@@ -35,11 +35,11 @@ return {
 		sign("DapBreakpointRejected", { text = " ", texthl = "DapBreakpointRejected", linehl = "", numhl = "DapBreakpointRejected" })
 		-- stylua: ignore end
 
-		vim.keymap.set("n", "<Leader>b", function()
+		vim.keymap.set("n", "<Leader>db", function()
 			require("dap").toggle_breakpoint()
 		end, { desc = "Toggle Breakpoint" })
 
-		vim.keymap.set("n", "<Leader>d", function()
+		vim.keymap.set("n", "<Leader>dd", function()
 			require("dap").continue()
 		end, { desc = "Dap Continue" })
 	end,
