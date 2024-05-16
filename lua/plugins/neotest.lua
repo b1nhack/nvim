@@ -7,6 +7,11 @@ return {
 		"nvim-treesitter",
 	},
 	event = { "BufReadPost", "BufWritePost", "BufNewFile" },
+	keys = {
+		"<Leader>tt",
+		"<Leader>tp",
+		"<Leader>tl",
+	},
 
 	config = function()
 		---@diagnostic disable-next-line: missing-fields
