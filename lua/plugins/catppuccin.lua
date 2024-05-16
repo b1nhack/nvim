@@ -64,6 +64,11 @@ return {
 				treesitter_context = true,
 				flash = true,
 				lsp_trouble = true,
+				indent_blankline = {
+					enabled = true,
+					scope_color = "lavender", -- catppuccin color (eg. `lavender`) Default: text
+					colored_indent_levels = false,
+				},
 			},
 		})
 
