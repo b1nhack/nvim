@@ -61,12 +61,6 @@ vim.keymap.set({ "n", "x" }, "wi", "<CMD>vsplit<CR>")
 
 vim.keymap.set({ "n", "x" }, "Q", "<CMD>q<CR>")
 
-vim.g.kitty_navigator_no_mappings = 1
-vim.keymap.set({ "n", "x" }, "<A-u>", "<CMD>KittyNavigateUp<CR>")
-vim.keymap.set({ "n", "x" }, "<A-e>", "<CMD>KittyNavigateDown<CR>")
-vim.keymap.set({ "n", "x" }, "<A-n>", "<CMD>KittyNavigateLeft<CR>")
-vim.keymap.set({ "n", "x" }, "<A-i>", "<CMD>KittyNavigateRight<CR>")
-
 vim.keymap.set({ "n", "x" }, "<S-Up>", "<CMD>resize +5<CR>")
 vim.keymap.set({ "n", "x" }, "<S-Down>", "<CMD>resize -5<CR>")
 vim.keymap.set({ "n", "x" }, "<S-Left>", "<CMD>vertical resize +5<CR>")
