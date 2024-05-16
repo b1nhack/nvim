@@ -1,8 +1,8 @@
----@diagnostic disable: missing-fields
 return {
 	"rcarriga/nvim-notify",
 
 	config = function()
+		---@diagnostic disable-next-line: missing-fields
 		require("notify").setup({
 			icons = {
 				DEBUG = " ",
