@@ -132,6 +132,7 @@ return {
 				"oil",
 				"nvim-dap-ui",
 				"man",
+				"quickfix",
 			},
 		})
 
