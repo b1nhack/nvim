@@ -12,7 +12,6 @@ return {
 
 				local opts = { buffer = bufnr }
 				vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-				vim.keymap.set("n", "j", vim.lsp.buf.hover, opts)
 				vim.keymap.set("n", "gk", vim.lsp.buf.signature_help, opts)
 				vim.keymap.set({ "n", "x" }, "<C-CR>", vim.lsp.buf.code_action, opts)
 
