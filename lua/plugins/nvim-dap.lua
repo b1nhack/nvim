@@ -26,6 +26,8 @@ return {
 			dapui.close()
 		end
 
+		require("dap.ext.vscode").json_decode = require("json5").parse
+
 		-- stylua: ignore start
 		local sign = vim.fn.sign_define
 		sign("DapBreakpoint", { text = " ", texthl = "DapBreakpoint", linehl = "", numhl = "DapBreakpoint" })
