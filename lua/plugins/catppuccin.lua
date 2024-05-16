@@ -63,6 +63,7 @@ return {
 				neotest = true,
 				treesitter_context = true,
 				flash = true,
+				lsp_trouble = true,
 			},
 		})
 

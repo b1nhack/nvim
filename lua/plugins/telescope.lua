@@ -28,10 +28,6 @@ return {
 		"gd",
 		"gy",
 		"gi",
-		"<Leader>fs",
-		"<Leader>fS",
-		"<Leader>fd",
-		"<Leader>fD",
 		"<Leader>fl",
 	},
 
@@ -39,6 +35,11 @@ return {
 		local telescope = require("telescope")
 		local actions = require("telescope.actions")
 		local action_layout = require("telescope.actions.layout")
+
+		local open_with_trouble = require("trouble.sources.telescope").open
+
+		-- Use this to add more results without clearing the trouble list
+		local add_to_trouble = require("trouble.sources.telescope").add
 
 		local function flash(prompt_bufnr)
 			require("flash").jump({
@@ -129,7 +130,7 @@ return {
 						["<CR>"] = actions.select_default,
 						["<C-h>"] = actions.select_horizontal,
 						["<C-v>"] = actions.select_vertical,
-						["<C-t>"] = actions.select_tab,
+						-- ["<C-t>"] = actions.select_tab,
 
 						["<C-u>"] = actions.preview_scrolling_up,
 						["<C-e>"] = actions.preview_scrolling_down,
@@ -143,8 +144,8 @@ return {
 
 						["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
 						["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
-						["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
-						["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+						["<C-q>"] = add_to_trouble,
+						-- ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 						["<C-l>"] = actions.complete_tag,
 						["<C-/>"] = actions.which_key,
 						["<C-_>"] = actions.which_key, -- keys from pressing <C-/>
@@ -155,6 +156,7 @@ return {
 						["<C-j>"] = actions.nop,
 						["<C-p>"] = action_layout.toggle_preview,
 						["<c-s>"] = flash,
+						["<C-t>"] = open_with_trouble,
 					},
 					n = {
 						-- ["<LeftMouse>"] = {
@@ -172,14 +174,13 @@ return {
 						["<CR>"] = actions.select_default,
 						["<C-h>"] = actions.select_horizontal,
 						["<C-v>"] = actions.select_vertical,
-						["<C-t>"] = actions.select_tab,
+						-- ["<C-t>"] = actions.select_tab,
 
 						["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
 						["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
-						["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
-						["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+						["<C-q>"] = add_to_trouble,
+						-- ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 
-						-- TODO: This would be weird if we switch the ordering.
 						["e"] = actions.move_selection_next,
 						["u"] = actions.move_selection_previous,
 						["U"] = actions.move_to_top,
@@ -204,6 +205,7 @@ return {
 						["?"] = actions.which_key,
 						["<C-p>"] = action_layout.toggle_preview,
 						["s"] = flash,
+						["<C-t>"] = open_with_trouble,
 					},
 				},
 			},
@@ -257,7 +259,6 @@ return {
 				lsp_definitions = { initial_mode = "normal", reuse_win = true, theme = "ivy" },
 				lsp_type_definitions = { initial_mode = "normal", reuse_win = true, theme = "ivy" },
 				lsp_implementations = { initial_mode = "normal", reuse_win = true, theme = "ivy" },
-				diagnostics = { initial_mode = "normal", reuse_win = true, theme = "ivy" },
 			},
 			extensions = {
 				fzf = {
@@ -287,12 +288,6 @@ return {
 		vim.keymap.set("n", "gd", builtin.lsp_definitions)
 		vim.keymap.set("n", "gy", builtin.lsp_type_definitions)
 		vim.keymap.set("n", "gi", builtin.lsp_implementations)
-		vim.keymap.set("n", "<Leader>fs", builtin.lsp_document_symbols)
-		vim.keymap.set("n", "<Leader>fS", builtin.lsp_workspace_symbols)
-		vim.keymap.set("n", "<Leader>fd", function()
-			builtin.diagnostics({ bufnr = 0 })
-		end)
-		vim.keymap.set("n", "<Leader>fD", builtin.diagnostics)
 		vim.keymap.set("n", "<Leader>fl", builtin.resume)
 	end,
 }

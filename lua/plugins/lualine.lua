@@ -15,6 +15,15 @@ return {
 			end
 		end
 
+		local trouble = require("trouble")
+		local symbols = trouble.statusline({
+			mode = "lsp_document_symbols",
+			groups = {},
+			title = false,
+			filter = { range = true },
+			format = "{kind_icon}{symbol.name:Normal}",
+		})
+
 		require("lualine").setup({
 			options = {
 				theme = "catppuccin",
@@ -61,6 +70,14 @@ return {
 						sources = { "nvim_lsp" },
 
 						symbols = { error = " ", warn = " ", info = " ", hint = "󰌶 " },
+					},
+				},
+
+				lualine_c = {
+					"filename",
+					{
+						symbols.get,
+						cond = symbols.has,
 					},
 				},
 
