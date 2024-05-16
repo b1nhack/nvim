@@ -22,7 +22,7 @@ return {
 				noice = true,
 				illuminate = {
 					enabled = true,
-					lsp = false,
+					lsp = true,
 				},
 
 				notify = true,
