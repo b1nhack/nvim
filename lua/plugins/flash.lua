@@ -27,6 +27,7 @@ return {
 			},
 
 			label = {
+				style = "inline",
 				rainbow = {
 					enabled = true,
 					-- number between 1 and 9

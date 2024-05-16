@@ -44,7 +44,10 @@ return {
 		local function flash(prompt_bufnr)
 			require("flash").jump({
 				pattern = "^",
-				label = { after = { 0, 0 } },
+				label = {
+					style = "overlay",
+					after = { 0, 0 },
+				},
 				search = {
 					multi_window = true,
 					mode = "search",
