@@ -67,7 +67,7 @@ return {
 				---@type trouble.Indent.symbols
 				indent = {
 					fold_open = " ",
-					fold_closed = " ",
+					fold_closed = " ",
 				},
 				folder_closed = " ",
 				folder_open = " ",
