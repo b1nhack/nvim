@@ -7,8 +7,8 @@ return {
 		"mason-nvim-dap.nvim",
 	},
 	keys = {
-		"<Leader>b",
-		"<Leader>d",
+		"<Leader>db",
+		"<Leader>dd",
 	},
 
 	config = function()
