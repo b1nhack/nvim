@@ -3,11 +3,11 @@ return {
 	branch = "dev", -- IMPORTANT!
 	keys = {
 		"<Leader>fs",
-		"<Leader>fD",
 		"<Leader>fd",
+		"<Leader>fD",
 
-		"<Leader>fx",
-		"<Leader>fX",
+		"<Leader>fl",
+		"<Leader>fL",
 	},
 
 	config = function()
@@ -102,11 +102,11 @@ return {
 			},
 		})
 
-		vim.keymap.set("n", "<Leader>fs", "<cmd>Trouble symbols toggle<cr>")
-		vim.keymap.set("n", "<Leader>fD", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>")
-		vim.keymap.set("n", "<Leader>fd", "<cmd>Trouble diagnostics toggle<cr>")
+		vim.keymap.set("n", "<Leader>fs", "<CMD>Trouble symbols toggle<CR>")
+		vim.keymap.set("n", "<Leader>fd", "<CMD>Trouble diagnostics toggle filter.buf=0<CR>")
+		vim.keymap.set("n", "<Leader>fD", "<CMD>Trouble diagnostics toggle<CR>")
 
-		vim.keymap.set("n", "<Leader>fx", "<cmd>Trouble qflist toggle<cr>")
-		vim.keymap.set("n", "<Leader>fX", "<cmd>Trouble loclist toggle<cr>")
+		vim.keymap.set("n", "<Leader>fl", "<CMD>Trouble loclist toggle<CR>")
+		vim.keymap.set("n", "<Leader>fL", "<CMD>Trouble qflist toggle<CR>")
 	end,
 }
