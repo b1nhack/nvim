@@ -6,8 +6,8 @@ return {
 		"<Leader>fd",
 		"<Leader>fD",
 
-		"<Leader>fl",
-		"<Leader>fL",
+		"<Leader>fx",
+		"<Leader>fX",
 	},
 
 	config = function()
@@ -106,7 +106,7 @@ return {
 		vim.keymap.set("n", "<Leader>fd", "<CMD>Trouble diagnostics toggle filter.buf=0<CR>")
 		vim.keymap.set("n", "<Leader>fD", "<CMD>Trouble diagnostics toggle<CR>")
 
-		vim.keymap.set("n", "<Leader>fl", "<CMD>Trouble loclist toggle<CR>")
-		vim.keymap.set("n", "<Leader>fL", "<CMD>Trouble qflist toggle<CR>")
+		vim.keymap.set("n", "<Leader>fx", "<CMD>Trouble loclist toggle<CR>")
+		vim.keymap.set("n", "<Leader>fX", "<CMD>Trouble qflist toggle<CR>")
 	end,
 }
