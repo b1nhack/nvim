@@ -48,8 +48,9 @@ return {
 
 		cmp.setup({
 			sources = cmp.config.sources({
-				{ name = "nvim_lsp" },
+				{ name = "async_path" },
 				{ name = "luasnip" },
+				{ name = "nvim_lsp" },
 			}, {
 				{
 					name = "buffer",
@@ -65,8 +66,6 @@ return {
 						end,
 					},
 				},
-			}, {
-				{ name = "async_path" },
 			}),
 
 			mapping = {
