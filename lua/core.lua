@@ -1,6 +1,6 @@
 vim.o.mouse = ""
 
-vim.o.timeoutlen = 300
+vim.o.timeoutlen = 299
 
 vim.o.backupdir = vim.fn.expand("~/.cache/nvim/backup")
 vim.o.directory = vim.fn.expand("~/.cache/nvim/swap")
