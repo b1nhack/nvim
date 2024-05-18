@@ -28,7 +28,6 @@ vim.o.colorcolumn = "80"
 vim.o.display = "lastline,uhex"
 
 -- behavior
-vim.o.inccommand = "split"
 vim.o.shortmess = "tToOCFI"
 vim.o.virtualedit = "block"
 vim.o.splitbelow = true
