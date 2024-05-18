@@ -86,6 +86,21 @@ return {
 					end
 				end),
 
+				["<C-h>"] = cmp.mapping(function(fallback)
+					if cmp.visible_docs() then
+						cmp.scroll_docs(-5)
+					else
+						fallback()
+					end
+				end),
+				["<C-b>"] = cmp.mapping(function(fallback)
+					if cmp.visible_docs() then
+						cmp.scroll_docs(5)
+					else
+						fallback()
+					end
+				end),
+
 				["<CR>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then
 						if luasnip.expandable() then
