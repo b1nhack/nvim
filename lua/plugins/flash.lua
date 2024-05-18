@@ -16,10 +16,6 @@ return {
 
 			search = {
 				multi_window = false,
-
-				mode = function(str)
-					return "\\<" .. str
-				end,
 			},
 
 			jump = {
