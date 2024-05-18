@@ -47,6 +47,8 @@ return {
 		}
 
 		cmp.setup({
+			preselect = cmp.PreselectMode.None,
+
 			sources = cmp.config.sources({
 				{ name = "async_path" },
 				{ name = "luasnip" },
