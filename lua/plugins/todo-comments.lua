@@ -9,7 +9,7 @@ return {
 		"TodoTelescope",
 	},
 	keys = {
-		"<Leader>to",
+		"<Leader>ft",
 	},
 
 	config = function()
@@ -33,6 +33,6 @@ return {
 			},
 		})
 
-		vim.keymap.set("n", "<Leader>to", "<CMD>TodoTrouble<CR>")
+		vim.keymap.set("n", "<Leader>ft", "<CMD>TodoTrouble<CR>")
 	end,
 }
