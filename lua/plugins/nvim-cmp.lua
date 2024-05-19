@@ -11,6 +11,16 @@ return {
 			name = "cmp-async-path",
 			url = "https://codeberg.org/FelipeLema/cmp-async-path",
 		},
+		{
+			"petertriho/cmp-git",
+			dependencies = {
+				"nvim-lua/plenary.nvim",
+			},
+
+			config = function()
+				require("cmp_git").setup()
+			end,
+		},
 	},
 	event = { "InsertEnter", "CmdlineEnter" },
 
@@ -196,6 +206,16 @@ return {
 					return true
 				end
 			end,
+		})
+
+		-- To use git you need to install the plugin petertriho/cmp-git and uncomment lines below
+		-- Set configuration for specific filetype.
+		cmp.setup.filetype("gitcommit", {
+			sources = cmp.config.sources({
+				{ name = "git" },
+			}, {
+				{ name = "buffer" },
+			}),
 		})
 
 		-- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
