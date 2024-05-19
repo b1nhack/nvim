@@ -70,6 +70,10 @@ return {
 					colored_indent_levels = false,
 				},
 				ufo = true,
+				navic = {
+					enabled = false,
+					custom_bg = "NONE", -- "lualine" will set background to mantle
+				},
 			},
 		})
 
