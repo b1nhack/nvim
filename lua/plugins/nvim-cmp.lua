@@ -54,6 +54,9 @@ return {
 			Event = " ",
 			Operator = " ",
 			TypeParameter = " ",
+
+			Version = "󰰪 ",
+			Feature = " ",
 		}
 
 		cmp.setup({
