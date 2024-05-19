@@ -156,6 +156,8 @@ return {
 						fallback()
 					end
 				end, { "i", "s" }),
+
+				["<C-k>"] = cmp.mapping.abort(),
 			},
 
 			snippet = {
