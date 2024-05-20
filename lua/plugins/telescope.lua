@@ -131,7 +131,7 @@ return {
 						["<Up>"] = actions.move_selection_previous,
 
 						["<CR>"] = actions.select_default,
-						["<C-h>"] = actions.select_horizontal,
+						["<C-s>"] = actions.select_horizontal,
 						["<C-v>"] = actions.select_vertical,
 						-- ["<C-t>"] = actions.select_tab,
 
@@ -175,7 +175,7 @@ return {
 
 						["<esc>"] = actions.close,
 						["<CR>"] = actions.select_default,
-						["<C-h>"] = actions.select_horizontal,
+						["<C-s>"] = actions.select_horizontal,
 						["<C-v>"] = actions.select_vertical,
 						-- ["<C-t>"] = actions.select_tab,
 

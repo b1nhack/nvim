@@ -28,8 +28,7 @@ return {
 				["<esc>"] = "close",
 				["<cr>"] = "jump",
 				-- ["<2-leftmouse>"] = "",
-				-- ["<c-s>"] = "",
-				["<c-h>"] = "jump_split",
+				["<c-s>"] = "jump_split",
 				["<c-v>"] = "jump_vsplit",
 				-- go down to next item (accepts count)
 				-- e = "next",
