@@ -26,6 +26,7 @@ return {
 				"stylua",
 				"shfmt",
 				"clang-format",
+				"mdformat",
 			},
 
 			-- automatically install / update on startup. If set to false nothing

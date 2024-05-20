@@ -18,6 +18,7 @@ return {
 				zsh = { "shfmt" },
 				rust = { "rustfmt" },
 				c = { "clang-format" },
+				markdown = { "mdformat" },
 
 				["*"] = { "injected" },
 			},
