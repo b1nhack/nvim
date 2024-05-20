@@ -1,6 +1,6 @@
 return {
 	"echasnovski/mini.surround",
-	version = "*",
+	version = false,
 	event = { "BufReadPost", "BufWritePost", "BufNewFile" },
 
 	config = function()

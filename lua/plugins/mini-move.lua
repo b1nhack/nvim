@@ -1,6 +1,6 @@
 return {
 	"echasnovski/mini.move",
-	version = "*",
+	version = false,
 	event = { "BufReadPost", "BufWritePost", "BufNewFile" },
 
 	config = function()

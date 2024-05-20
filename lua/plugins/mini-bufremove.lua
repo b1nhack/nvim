@@ -1,6 +1,6 @@
 return {
 	"echasnovski/mini.bufremove",
-	version = "*",
+	version = false,
 	keys = {
 		"<Leader>bd",
 	},
