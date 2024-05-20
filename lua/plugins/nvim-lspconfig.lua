@@ -42,13 +42,8 @@ return {
 
 				local opts = { buffer = bufnr }
 				vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-				vim.keymap.set("n", "gk", vim.lsp.buf.signature_help, opts)
 				vim.keymap.set({ "n", "x" }, "<C-CR>", vim.lsp.buf.code_action, opts)
 				vim.keymap.set("n", "<C-j>", vim.lsp.buf.signature_help, opts)
-
-				vim.keymap.set("n", "j", function()
-					vim.lsp.buf.hover()
-				end, opts)
 
 				if client ~= nil then
 					if client.server_capabilities.inlayHintProvider then
