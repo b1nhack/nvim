@@ -17,6 +17,7 @@ return {
 				-- LSP
 				"lua_ls",
 				"clangd",
+				"marksman",
 
 				-- DAP
 				"codelldb",
