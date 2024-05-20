@@ -71,7 +71,7 @@ return {
 				},
 				ufo = true,
 				navic = {
-					enabled = false,
+					enabled = true,
 					custom_bg = "NONE", -- "lualine" will set background to mantle
 				},
 				headlines = true,
