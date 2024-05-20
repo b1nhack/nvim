@@ -74,6 +74,7 @@ return {
 					enabled = false,
 					custom_bg = "NONE", -- "lualine" will set background to mantle
 				},
+				headlines = true,
 			},
 		})
 
