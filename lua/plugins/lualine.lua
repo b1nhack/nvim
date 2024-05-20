@@ -15,15 +15,6 @@ return {
 			end
 		end
 
-		local trouble = require("trouble")
-		local symbols = trouble.statusline({
-			mode = "lsp_document_symbols",
-			groups = {},
-			title = false,
-			filter = { range = true },
-			format = "{kind_icon}{symbol.name:Normal}",
-		})
-
 		require("lualine").setup({
 			options = {
 				theme = "catppuccin",
@@ -31,8 +22,8 @@ return {
 				section_separators = { left = "", right = "" },
 				globalstatus = true,
 				refresh = {
-					statusline = 200, -- Note these are in mili second and default is 1000
-					tabline = 200,
+					statusline = 199, -- Note these are in mili second and default is 1000
+					tabline = 199,
 				},
 				disabled_filetypes = {
 					statusline = {
@@ -49,7 +40,7 @@ return {
 				lualine_a = {
 					{
 						function()
-							return [[󰀵 ]]
+							return [[ ]]
 						end,
 
 						separator = { left = "", right = "" },
@@ -81,14 +72,6 @@ return {
 					},
 				},
 
-				lualine_c = {
-					"filename",
-					{
-						symbols.get,
-						cond = symbols.has,
-					},
-				},
-
 				lualine_x = {
 					{
 						require("lazy.status").updates,
@@ -108,7 +91,11 @@ return {
 				},
 
 				lualine_z = {
-					"location",
+					{
+						"location",
+						separator = { left = "", right = "" },
+						padding = 0,
+					},
 					{
 						"datetime",
 						-- options: default, us, uk, iso, or your own format string ("%H:%M", etc..)
@@ -122,7 +109,7 @@ return {
 				lualine_a = {
 					{
 						function()
-							return [[󰀵 ]]
+							return [[ ]]
 						end,
 						separator = { left = "", right = "" },
 					},
