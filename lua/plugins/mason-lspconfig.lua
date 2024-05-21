@@ -2,6 +2,7 @@ return {
 	"williamboman/mason-lspconfig.nvim",
 	dependencies = {
 		"nvim-navbuddy",
+		"neoconf.nvim",
 		"neodev.nvim",
 		"mason.nvim",
 		"neovim/nvim-lspconfig",
