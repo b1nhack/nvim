@@ -39,6 +39,7 @@ vim.o.history = 1000
 vim.o.jumpoptions = "stack"
 vim.o.shada = ""
 vim.o.wrapscan = false
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
