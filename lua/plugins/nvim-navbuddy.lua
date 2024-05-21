@@ -1,15 +1,7 @@
 return {
 	"SmiteshP/nvim-navbuddy",
 	dependencies = {
-		{
-			"SmiteshP/nvim-navic",
-
-			config = function()
-				require("nvim-navic").setup({
-					highlight = true,
-				})
-			end,
-		},
+		"nvim-navic",
 		"MunifTanjim/nui.nvim",
 	},
 
