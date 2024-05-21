@@ -25,6 +25,8 @@ return {
 				"markdown_inline",
 				"toml",
 				"ron",
+				"json",
+				"jsonc",
 			},
 			sync_install = false,
 
