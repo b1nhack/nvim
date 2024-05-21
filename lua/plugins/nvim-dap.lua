@@ -5,6 +5,10 @@ return {
 		"nvim-treesitter",
 		"nvim-dap-virtual-text",
 		"mason-nvim-dap.nvim",
+		{
+			"b1nhack/nvim-json5",
+			build = "./install.sh",
+		},
 	},
 	keys = {
 		"<Leader>db",
