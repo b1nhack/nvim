@@ -6,25 +6,25 @@ return {
 	init = function()
 		vim.api.nvim_create_autocmd("FileType", {
 			pattern = {
-				"lspinfo",
-				"checkhealth",
-				"help",
-				"man",
-				"gitcommit",
 				"TelescopePrompt",
 				"TelescopeResults",
-				"dashboard",
-				"lazy",
-				"mason",
-				"oil",
-				"neotest-summary",
-				"noice",
-				"dapui_scopes",
+				"checkhealth",
+				"dap-repl",
 				"dapui_breakpoints",
+				"dapui_console",
+				"dapui_scopes",
 				"dapui_stacks",
 				"dapui_watches",
-				"dap-repl",
-				"dapui_console",
+				"dashboard",
+				"gitcommit",
+				"help",
+				"lazy",
+				"lspinfo",
+				"man",
+				"mason",
+				"neotest-summary",
+				"noice",
+				"oil",
 				"spectre_panel",
 				"trouble",
 			},
@@ -36,10 +36,10 @@ return {
 		vim.api.nvim_create_autocmd("BufEnter", {
 			callback = function()
 				local pattern = {
-					"terminal",
 					"nofile",
-					"quickfix",
 					"prompt",
+					"quickfix",
+					"terminal",
 				}
 
 				for _, p in pairs(pattern) do

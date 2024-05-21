@@ -27,11 +27,11 @@ return {
 				},
 				disabled_filetypes = {
 					statusline = {
-						"dashboard",
-						"trouble",
 						"checkhealth",
+						"dashboard",
 						"neotest-summary",
 						"spectre_panel",
+						"trouble",
 					},
 				},
 			},
@@ -150,10 +150,10 @@ return {
 
 			extensions = {
 				"lazy",
-				"mason",
-				"oil",
-				"nvim-dap-ui",
 				"man",
+				"mason",
+				"nvim-dap-ui",
+				"oil",
 				"quickfix",
 			},
 		})

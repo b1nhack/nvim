@@ -15,18 +15,18 @@ return {
 			-- start
 			ensure_installed = {
 				-- LSP
-				"lua_ls",
 				"clangd",
+				"lua_ls",
 				"marksman",
 
 				-- DAP
 				"codelldb",
 
 				-- Formatter
-				"stylua",
-				"shfmt",
 				"clang-format",
 				"mdformat",
+				"shfmt",
+				"stylua",
 			},
 
 			-- automatically install / update on startup. If set to false nothing

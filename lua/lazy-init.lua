@@ -13,11 +13,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local commands = require("lazy.view.config").commands
-commands.install = nil
-commands.update = nil
-commands.clean = nil
 commands.check = nil
+commands.clean = nil
+commands.install = nil
 commands.restore.button = false
+commands.update = nil
 
 -- https://github.com/folke/lazy.nvim/discussions/1196#discussioncomment-7761858
 local user_grp = vim.api.nvim_create_augroup("LazyUserGroup", { clear = true })
@@ -65,9 +65,6 @@ require("lazy").setup(
 				disabled_plugins = {
 					"editorconfig",
 					"gzip",
-					-- "man",
-					-- "matchit",
-					-- "matchparen",
 					"netrwPlugin",
 					"osc52",
 					"rplugin",
@@ -77,6 +74,9 @@ require("lazy").setup(
 					"tohtml",
 					"tutor",
 					"zipPlugin",
+					-- "man",
+					-- "matchit",
+					-- "matchparen",
 				},
 			},
 		},
