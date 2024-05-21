@@ -48,11 +48,6 @@ return {
 				if client ~= nil then
 					if client.server_capabilities.inlayHintProvider then
 						vim.lsp.inlay_hint.enable()
-
-						vim.keymap.set("n", "<Leader>h", function()
-							local current_setting = vim.lsp.inlay_hint.is_enabled({ bufnr })
-							vim.lsp.inlay_hint.enable(not current_setting, { bufnr = bufnr })
-						end, { buffer = bufnr, desc = "[lsp] toggle inlay hints" })
 					end
 				end
 			end,
