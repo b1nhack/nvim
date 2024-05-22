@@ -11,7 +11,7 @@ end
 M.project_files = function()
 	local opts = {} -- define here if you want to define something
 
-	if is_git_repo then
+	if is_git_repo() then
 		builtin.git_files(opts)
 	else
 		builtin.find_files(opts)
