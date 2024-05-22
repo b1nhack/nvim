@@ -4,6 +4,8 @@ return {
 	event = "VeryLazy",
 
 	config = function()
+		local navic = require("nvim-navic")
+
 		local function diff_source()
 			local gitsigns = vim.b.gitsigns_status_dict
 			if gitsigns then
@@ -140,6 +142,17 @@ return {
 
 			winbar = {
 				lualine_c = {
+					{
+						function()
+							return [[󰑱 ]]
+						end,
+						padding = { left = 3, right = 0 },
+						color = "NavicText",
+
+						cond = function()
+							return navic.is_available()
+						end,
+					},
 					{
 						"navic",
 						color_correction = nil,
