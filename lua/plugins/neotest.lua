@@ -6,10 +6,8 @@ return {
 		"antoinemadec/FixCursorHold.nvim",
 		"nvim-treesitter",
 	},
-	event = { "BufReadPost", "BufWritePost", "BufNewFile" },
 	keys = {
 		"<Leader>tt",
-		"<Leader>tp",
 		"<Leader>tl",
 	},
 
@@ -48,9 +46,6 @@ return {
 
 		vim.keymap.set("n", "<Leader>tt", function()
 			require("neotest").summary.toggle()
-		end)
-
-		vim.keymap.set("n", "<Leader>tp", function()
 			require("neotest").output_panel.toggle()
 		end)
 
