@@ -66,4 +66,5 @@
   "trouble.nvim": { "branch": "dev", "commit": "e2185bf6e63ef9bd75f1819f43846e2b0f10953b" },
   "vim-illuminate": { "branch": "master", "commit": "5eeb7951fc630682c322e88a9bbdae5c224ff0aa" },
   "vim-kitty-navigator": { "branch": "master", "commit": "20abf8613aa228a5def1ae02cd9da0f2d210352a" }
+  "vim-kitty": { "branch": "main", "commit": "f16222cbfd061eda28e832dd407df6d6ec995a67" }
 }
