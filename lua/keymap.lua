@@ -78,6 +78,9 @@ vim.keymap.set({ "n", "x" }, "gt", "<CMD>tabnew<CR>")
 vim.keymap.set({ "n", "x" }, "[t", "<CMD>tabprevious<CR>")
 vim.keymap.set({ "n", "x" }, "]t", "<CMD>tabnext<CR>")
 
+-- Jumps
+vim.keymap.set({ "n", "x" }, "<C-k>", "<C-i>")
+
 -- Duplicate line
 vim.keymap.set("i", "<C-d>", "<Esc>yy$p$a")
 vim.keymap.set("n", "<C-d>", "yy$p$")

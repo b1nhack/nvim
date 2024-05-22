@@ -7,16 +7,16 @@ return {
 		require("mini.move").setup({
 			mappings = {
 				-- Move visual selection in Visual mode. Defaults are Alt (Meta) + hjkl.
-				left = "<C-k>",
-				right = "<C-m>",
-				down = "<C-b>",
-				up = "<C-h>",
+				left = "<M-k>",
+				right = "<M-m>",
+				down = "<M-b>",
+				up = "<M-h>",
 
 				-- Move current line in Normal mode
-				line_left = "<C-k>",
-				line_right = "<C-m>",
-				line_down = "<C-b>",
-				line_up = "<C-h>",
+				line_left = "<M-k>",
+				line_right = "<M-m>",
+				line_down = "<M-b>",
+				line_up = "<M-h>",
 			},
 		})
 	end,
