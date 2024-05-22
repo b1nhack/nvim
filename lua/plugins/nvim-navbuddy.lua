@@ -99,16 +99,16 @@ return {
 
 				["d"] = actions.delete(), -- Delete scope
 
-				["f"] = actions.fold_create(), -- Create fold of current scope
-				["F"] = actions.fold_delete(), -- Delete fold of current scope
+				["zc"] = actions.fold_create(), -- Create fold of current scope
+				["zo"] = actions.fold_delete(), -- Delete fold of current scope
 
-				["c"] = actions.comment(), -- Comment out current scope
+				["gcc"] = actions.comment(), -- Comment out current scope
 
-				["<enter>"] = actions.select(), -- Goto selected symbol
+				["<Enter>"] = actions.select(), -- Goto selected symbol
 				["o"] = actions.select(),
 
-				["E"] = actions.move_down(), -- Move focused node down
-				["U"] = actions.move_up(), -- Move focused node up
+				["<M-b>"] = actions.move_down(), -- Move focused node down
+				["<M-h>"] = actions.move_up(), -- Move focused node up
 
 				["<C-p>"] = actions.toggle_preview(), -- Show preview of current node
 
@@ -117,12 +117,11 @@ return {
 
 				["t"] = actions.telescope({ -- Fuzzy finder at current level.
 					layout_config = { -- All options that can be
-						height = 0.60, -- passed to telescope.nvim's
-						width = 0.60, -- default can be passed here.
+						height = 0.59, -- passed to telescope.nvim's
+						width = 0.59, -- default can be passed here.
 						prompt_position = "top",
-						preview_width = 0.50,
 					},
-					layout_strategy = "horizontal",
+					layout_strategy = "flex",
 				}),
 
 				["g?"] = actions.help(), -- Open mappings help window
