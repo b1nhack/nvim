@@ -29,6 +29,36 @@ return {
 		local luasnip = require("luasnip")
 		local icons = require("global").icons
 
+		local other_mapping = {
+			["<C-u>"] = {
+				c = function(fallback)
+					if cmp.visible() then
+						cmp.select_prev_item()
+					else
+						fallback()
+					end
+				end,
+			},
+			["<C-e>"] = {
+				c = function(fallback)
+					if cmp.visible() then
+						cmp.select_next_item()
+					else
+						fallback()
+					end
+				end,
+			},
+			["<C-k>"] = {
+				c = function(fallback)
+					if cmp.visible() then
+						cmp.abort()
+					else
+						fallback()
+					end
+				end,
+			},
+		}
+
 		local kind_icons = {
 			Class = icons.Class,
 			Color = icons.Color,
@@ -157,7 +187,13 @@ return {
 					end
 				end, { "i", "s" }),
 
-				["<C-k>"] = cmp.mapping.abort(),
+				["<C-k>"] = function(fallback)
+					if cmp.visible() then
+						cmp.abort()
+					else
+						fallback()
+					end
+				end,
 			},
 
 			snippet = {
@@ -225,7 +261,7 @@ return {
 
 		-- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
 		cmp.setup.cmdline({ "/", "?" }, {
-			mapping = cmp.mapping.preset.cmdline(),
+			mapping = other_mapping,
 			sources = {
 				{ name = "buffer" },
 			},
@@ -233,7 +269,7 @@ return {
 
 		-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
 		cmp.setup.cmdline(":", {
-			mapping = cmp.mapping.preset.cmdline(),
+			mapping = other_mapping,
 			sources = cmp.config.sources({
 				{ name = "async_path" },
 			}, {
