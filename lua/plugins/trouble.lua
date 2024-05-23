@@ -8,6 +8,12 @@ return {
 
 		"<Leader>fx",
 		"<Leader>fX",
+
+		"gr",
+		"gd",
+		"gy",
+		"gi",
+		"gD",
 	},
 
 	config = function()
@@ -15,6 +21,7 @@ return {
 
 		require("trouble").setup({
 			focus = true,
+			pinned = true,
 
 			-- Key mappings can be set to the name of a builtin action,
 			-- or you can define your own custom action.
@@ -27,7 +34,7 @@ return {
 				o = "jump_close",
 				["<esc>"] = "close",
 				["<cr>"] = "jump",
-				-- ["<2-leftmouse>"] = "",
+				-- ["<2-leftmouse>"] = "jump",
 				["<c-s>"] = "jump_split",
 				["<c-v>"] = "jump_vsplit",
 				-- go down to next item (accepts count)
@@ -47,15 +54,15 @@ return {
 				zC = "fold_close_recursive",
 				za = "fold_toggle",
 				zA = "fold_toggle_recursive",
-				-- zm = "fold_more",
-				-- zM = "fold_close_all",
-				-- zr = "fold_reduce",
-				-- zR = "fold_open_all",
-				-- zx = "fold_update",
-				-- zX = "fold_update_all",
-				-- zn = "fold_disable",
-				-- zN = "fold_enable",
-				-- zi = "fold_toggle_enable",
+				zm = "fold_more",
+				zM = "fold_close_all",
+				zr = "fold_reduce",
+				zR = "fold_open_all",
+				zx = "fold_update",
+				zX = "fold_update_all",
+				zn = "fold_disable",
+				zN = "fold_enable",
+				zi = "fold_toggle_enable",
 			},
 
 			---@type table<string, trouble.Mode>
@@ -109,5 +116,11 @@ return {
 
 		vim.keymap.set("n", "<Leader>fx", "<CMD>Trouble loclist toggle<CR>")
 		vim.keymap.set("n", "<Leader>fX", "<CMD>Trouble qflist toggle<CR>")
+
+		vim.keymap.set("n", "gr", "<CMD>Trouble lsp_references toggle<CR>")
+		vim.keymap.set("n", "gd", "<CMD>Trouble lsp_definitions toggle<CR>")
+		vim.keymap.set("n", "gy", "<CMD>Trouble lsp_type_definitions toggle<CR>")
+		vim.keymap.set("n", "gi", "<CMD>Trouble lsp_implementations toggle<CR>")
+		vim.keymap.set("n", "gD", "<CMD>Trouble lsp_declarations toggle<CR>")
 	end,
 }

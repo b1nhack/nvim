@@ -24,10 +24,6 @@ return {
 		"<Leader>fb",
 		"<Leader>fh",
 
-		"gr",
-		"gd",
-		"gy",
-		"gi",
 		"<Leader>fl",
 	},
 
@@ -287,10 +283,6 @@ return {
 		vim.keymap.set("n", "<Leader>fb", builtin.buffers)
 		vim.keymap.set("n", "<Leader>fh", builtin.help_tags)
 
-		vim.keymap.set("n", "gr", builtin.lsp_references)
-		vim.keymap.set("n", "gd", builtin.lsp_definitions)
-		vim.keymap.set("n", "gy", builtin.lsp_type_definitions)
-		vim.keymap.set("n", "gi", builtin.lsp_implementations)
 		vim.keymap.set("n", "<Leader>fl", builtin.resume)
 	end,
 }
