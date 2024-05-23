@@ -49,10 +49,6 @@ return {
 				disabled_filetypes = {
 					statusline = {
 						"checkhealth",
-						"dashboard",
-						"neotest-summary",
-						"spectre_panel",
-						"trouble",
 					},
 				},
 			},
