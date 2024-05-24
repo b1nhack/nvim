@@ -27,6 +27,8 @@ vim.o.showcmd = false
 vim.o.showmode = false
 vim.o.signcolumn = "yes"
 vim.o.termguicolors = true
+vim.o.wildmenu = false
+vim.o.wildchar = 0
 
 -- behavior
 vim.o.fileformat = "unix"
