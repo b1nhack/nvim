@@ -111,7 +111,7 @@ return {
 					{
 						"location",
 						separator = { left = "", right = "" },
-						padding = 0,
+						padding = { left = 1, right = 0 },
 					},
 					{
 						"datetime",
