@@ -30,33 +30,27 @@ return {
 		local icons = require("global").icons
 
 		local other_mapping = {
-			["<C-u>"] = {
-				c = function(fallback)
-					if cmp.visible() then
-						cmp.select_prev_item()
-					else
-						fallback()
-					end
-				end,
-			},
-			["<C-e>"] = {
-				c = function(fallback)
-					if cmp.visible() then
-						cmp.select_next_item()
-					else
-						fallback()
-					end
-				end,
-			},
-			["<C-k>"] = {
-				c = function(fallback)
-					if cmp.visible() then
-						cmp.abort()
-					else
-						fallback()
-					end
-				end,
-			},
+			["<C-u>"] = cmp.mapping(function(fallback)
+				if cmp.visible() then
+					cmp.select_prev_item()
+				else
+					fallback()
+				end
+			end, { "c" }),
+			["<C-e>"] = cmp.mapping(function(fallback)
+				if cmp.visible() then
+					cmp.select_next_item()
+				else
+					fallback()
+				end
+			end, { "c" }),
+			["<C-k>"] = cmp.mapping(function(fallback)
+				if cmp.visible() then
+					cmp.abort()
+				else
+					fallback()
+				end
+			end, { "c" }),
 		}
 
 		local kind_icons = {
@@ -187,13 +181,13 @@ return {
 					end
 				end, { "i", "s" }),
 
-				["<C-k>"] = function(fallback)
+				["<C-k>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then
 						cmp.abort()
 					else
 						fallback()
 					end
-				end,
+				end),
 			},
 
 			snippet = {
