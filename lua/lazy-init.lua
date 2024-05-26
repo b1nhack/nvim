@@ -40,6 +40,8 @@ require("lazy").setup(
 			lazy = true, -- should plugins be lazy-loaded?
 		},
 
+		local_spec = false,
+
 		ui = {
 			border = "rounded",
 			custom_keys = {
