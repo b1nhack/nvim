@@ -20,7 +20,7 @@ return {
 		local win = {
 			{
 				function()
-					return [[󰑱 ]]
+					return [[ ]]
 				end,
 				padding = { left = 3, right = 0 },
 				color = "NavicText",
