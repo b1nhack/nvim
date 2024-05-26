@@ -18,7 +18,6 @@ vim.o.wildignorecase = true
 -- ui
 vim.o.colorcolumn = "80"
 vim.o.cursorline = true
-vim.o.display = "lastline,uhex"
 vim.o.listchars = "tab:󰌒 "
 vim.o.number = true
 vim.o.relativenumber = true
@@ -32,12 +31,11 @@ vim.o.wildchar = 0
 
 -- behavior
 vim.o.fileformat = "unix"
-vim.o.fileignorecase = false
 vim.o.history = 9999
 vim.o.jumpoptions = "stack,view"
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 vim.o.shada = ""
-vim.o.shortmess = "tToOCFI"
+vim.o.shortmess = "tToOCFcsI"
 vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.virtualedit = "block"
@@ -45,8 +43,8 @@ vim.o.wrapscan = false
 
 vim.o.cindent = true
 vim.o.copyindent = true
-vim.o.shiftwidth = 4
 vim.o.smartindent = true
+vim.o.shiftwidth = 4
 vim.o.tabstop = 4
 
 vim.o.completeopt = "menu,menuone,noselect,noinsert,popup"
