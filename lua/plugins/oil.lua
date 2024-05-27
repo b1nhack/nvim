@@ -6,6 +6,7 @@ return {
 
 	config = function()
 		require("oil").setup({
+			---@diagnostic disable-next-line: assign-type-mismatch
 			cleanup_delay_ms = false,
 			keymaps = {
 				["g?"] = "actions.show_help",
