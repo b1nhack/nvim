@@ -6,10 +6,18 @@ return {
 	cmd = "Spectre",
 	keys = {
 		"<Leader>s",
+		"<Leader>S",
+		{ "<Leader>s", mode = "x" },
 	},
 
 	config = function()
 		require("spectre").setup({
+			highlight = {
+				ui = "Title",
+				search = "diffRemoved",
+				replace = "diffAdded",
+			},
+
 			mapping = {
 				["tab"] = {
 					map = "<Tab>",
@@ -32,19 +40,13 @@ return {
 					desc = "open file",
 				},
 				["send_to_qf"] = {
-					map = "<C-q>",
-					cmd = "<cmd>lua require('spectre.actions').send_to_qf()<CR>",
-					desc = "send all items to quickfix",
+					map = "<Nop>",
 				},
 				["replace_cmd"] = {
-					map = "c",
-					cmd = "<cmd>lua require('spectre.actions').replace_cmd()<CR>",
-					desc = "input replace command",
+					map = "<Nop>",
 				},
 				["show_option_menu"] = {
-					map = "o",
-					cmd = "<cmd>lua require('spectre').show_options()<CR>",
-					desc = "show options",
+					map = "<Nop>",
 				},
 				["run_current_replace"] = {
 					map = "r",
@@ -62,22 +64,16 @@ return {
 					desc = "change result view mode",
 				},
 				["change_replace_sed"] = {
-					map = "rs",
-					cmd = "<cmd>lua require('spectre').change_engine_replace('sed')<CR>",
-					desc = "use sed to replace",
+					map = "<Nop>",
 				},
 				["change_replace_oxi"] = {
-					map = "ro",
-					cmd = "<cmd>lua require('spectre').change_engine_replace('oxi')<CR>",
-					desc = "use oxi to replace",
+					map = "<Nop>",
 				},
 				["toggle_live_update"] = {
-					map = "tu",
-					cmd = "<cmd>lua require('spectre').toggle_live_update()<CR>",
-					desc = "update when vim writes to file",
+					map = "<Nop>",
 				},
 				["toggle_ignore_case"] = {
-					map = "ti",
+					map = "tc",
 					cmd = "<cmd>lua require('spectre').change_options('ignore-case')<CR>",
 					desc = "toggle ignore case",
 				},
@@ -94,11 +90,17 @@ return {
 				-- you can put your mapping here it only use normal mode
 			},
 
-			is_block_ui_break = true,
+			is_insert_mode = true,
 		})
 
 		vim.keymap.set("n", "<Leader>s", '<cmd>lua require("spectre").toggle()<CR>', {
 			desc = "Toggle Spectre",
+		})
+		vim.keymap.set("n", "<Leader>S", '<cmd>lua require("spectre").open_file_search()<CR>', {
+			desc = "Search on current file",
+		})
+		vim.keymap.set("x", "<Leader>s", '<esc><cmd>lua require("spectre").open_visual()<CR>', {
+			desc = "Search current word",
 		})
 	end,
 }
