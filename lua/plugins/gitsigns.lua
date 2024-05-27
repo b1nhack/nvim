@@ -12,13 +12,6 @@ return {
 				changedelete = { text = " " },
 				untracked = { text = "┆" },
 			},
-			current_line_blame = true, -- Toggle with `:Gitsigns toggle_current_line_blame`
-			current_line_blame_opts = {
-				delay = 500,
-			},
-			current_line_blame_formatter_opts = {
-				relative_time = true,
-			},
 
 			on_attach = function(bufnr)
 				local gitsigns = require("gitsigns")
