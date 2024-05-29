@@ -1,9 +1,5 @@
 local bufnr = vim.api.nvim_get_current_buf()
 
-vim.keymap.set("n", "<Leader><CR>", function()
-	vim.cmd.RustLsp("codeAction") -- supports rust-analyzer's grouping
-end, { buffer = bufnr })
-
 vim.keymap.set("n", "<Leader>rd", function()
 	vim.cmd.RustLsp("debug")
 end, { buffer = bufnr })
@@ -40,19 +36,11 @@ vim.keymap.set("n", "<Leader>re", function()
 	vim.cmd.RustLsp({ "moveItem", "down" })
 end, { buffer = bufnr })
 
-vim.keymap.set("n", "<Leader>ra", function()
-	vim.cmd.RustLsp({ "hover", "actions" })
-end, { buffer = bufnr })
-
-vim.keymap.set("n", "<Leader>rhr", function()
-	vim.cmd.RustLsp({ "hover", "range" })
-end, { buffer = bufnr })
-
-vim.keymap.set("n", "<Leader>rhe", function()
+vim.keymap.set("n", "<Leader>e", function()
 	vim.cmd.RustLsp("explainError")
 end, { buffer = bufnr })
 
-vim.keymap.set("n", "<Leader>rhd", function()
+vim.keymap.set("n", "<Leader>rh", function()
 	vim.cmd.RustLsp("renderDiagnostic")
 end, { buffer = bufnr })
 
@@ -62,12 +50,4 @@ end, { buffer = bufnr })
 
 vim.keymap.set("n", "<Leader>rp", function()
 	vim.cmd.RustLsp("parentModule")
-end, { buffer = bufnr })
-
-vim.keymap.set("n", "<Leader>rj", function()
-	vim.cmd.RustLsp("joinLines")
-end, { buffer = bufnr })
-
-vim.keymap.set("n", "<Leader>rg", function()
-	vim.cmd.RustLsp({ "crateGraph", "DOT" })
 end, { buffer = bufnr })
