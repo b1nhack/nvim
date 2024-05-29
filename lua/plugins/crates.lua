@@ -4,7 +4,7 @@ return {
 
 	config = function()
 		require("crates").setup({
-			autoupdate_throttle = 299,
+			autoupdate_throttle = 300,
 			max_parallel_requests = 99,
 			disable_invalid_feature_diagnostic = true,
 

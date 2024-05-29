@@ -15,14 +15,14 @@ return {
 				border = "rounded", -- "rounded", "double", "solid", "none"
 				-- or an array with eight chars building up the border in a clockwise fashion
 				-- starting with the top-left corner. eg: { "╔", "═" ,"╗", "║", "╝", "═", "╚", "║" }.
-				size = "59%", -- Or table format example: { height = "40%", width = "100%"}
-				position = "59%", -- Or table format example: { row = "100%", col = "0%"}
+				size = "60%", -- Or table format example: { height = "40%", width = "100%"}
+				position = "60%", -- Or table format example: { row = "100%", col = "0%"}
 				sections = {
 					left = {
-						size = "19%",
+						size = "20%",
 					},
 					mid = {
-						size = "39%",
+						size = "40%",
 					},
 					right = {
 						-- No size option for right most section. It fills to
@@ -117,8 +117,8 @@ return {
 
 				["t"] = actions.telescope({ -- Fuzzy finder at current level.
 					layout_config = { -- All options that can be
-						height = 0.59, -- passed to telescope.nvim's
-						width = 0.59, -- default can be passed here.
+						height = 0.60, -- passed to telescope.nvim's
+						width = 0.60, -- default can be passed here.
 						prompt_position = "top",
 					},
 					layout_strategy = "flex",

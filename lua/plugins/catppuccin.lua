@@ -1,7 +1,7 @@
 return {
 	"catppuccin/nvim",
 	name = "catppuccin",
-	priority = 1000,
+	priority = 999,
 	lazy = false,
 
 	config = function()
@@ -10,7 +10,7 @@ return {
 			dim_inactive = {
 				enabled = true, -- dims the background color of inactive window
 				shade = "dark",
-				percentage = 0.19, -- percentage of the shade to apply to the inactive window
+				percentage = 0.20, -- percentage of the shade to apply to the inactive window
 			},
 
 			default_integrations = false,

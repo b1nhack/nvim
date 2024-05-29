@@ -4,7 +4,7 @@ return {
 
 	config = function()
 		require("illuminate").configure({
-			delay = 199,
+			delay = 200,
 			modes_allowlist = {
 				"n",
 				"x",
@@ -32,7 +32,7 @@ return {
 				"spectre_panel",
 				"trouble",
 			},
-			large_file_cutoff = 1999,
+			large_file_cutoff = 2000,
 			large_file_overrides = {
 				providers = { "lsp" },
 			},

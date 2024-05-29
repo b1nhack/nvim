@@ -50,13 +50,13 @@ return {
 
 		---@diagnostic disable-next-line: missing-fields
 		require("ufo").setup({
-			open_fold_hl_timeout = 199,
+			open_fold_hl_timeout = 200,
 			fold_virt_text_handler = handler,
 			preview = {
 				win_config = {
 					border = "rounded",
-					winblend = 19,
-					maxheight = 19,
+					winblend = 20,
+					maxheight = 20,
 				},
 				mappings = {
 					scrollB = "",

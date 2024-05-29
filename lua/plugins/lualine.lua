@@ -43,8 +43,8 @@ return {
 				section_separators = { left = "", right = "" },
 				globalstatus = true,
 				refresh = {
-					statusline = 199, -- Note these are in mili second and default is 1000
-					tabline = 199,
+					statusline = 200, -- Note these are in mili second and default is 1000
+					tabline = 200,
 				},
 				disabled_filetypes = {
 					statusline = {
