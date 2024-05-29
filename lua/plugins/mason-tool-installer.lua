@@ -18,6 +18,7 @@ return {
 				"clangd",
 				"lua_ls",
 				"marksman",
+				"zls",
 
 				-- DAP
 				"codelldb",
