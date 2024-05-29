@@ -29,12 +29,6 @@ return {
 				"shfmt",
 				"stylua",
 			},
-
-			-- automatically install / update on startup. If set to false nothing
-			-- will happen on startup. You can use :MasonToolsInstall or
-			-- :MasonToolsUpdate to install tools and check for updates.
-			-- Default: true
-			run_on_start = false,
 		})
 	end,
 }
