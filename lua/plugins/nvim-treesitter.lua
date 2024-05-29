@@ -14,6 +14,9 @@ return {
 			ensure_installed = {
 				"bash",
 				"c",
+				"diff",
+				"git_rebase",
+				"gitcommit",
 				"json",
 				"jsonc",
 				"lua",
