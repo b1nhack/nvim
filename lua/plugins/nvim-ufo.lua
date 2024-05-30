@@ -67,7 +67,7 @@ return {
 					scrollY = "",
 					jumpTop = "",
 					jumpBot = "",
-					close = "<Esc>",
+					close = "q",
 					switch = "j",
 					trace = "<CR>",
 				},

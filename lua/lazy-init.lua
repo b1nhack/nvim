@@ -19,19 +19,6 @@ commands.install = nil
 commands.restore.button = false
 commands.update = nil
 
--- https://github.com/folke/lazy.nvim/discussions/1196#discussioncomment-7761858
-local user_grp = vim.api.nvim_create_augroup("LazyUserGroup", { clear = true })
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "lazy",
-	desc = "Quit lazy with <Esc>",
-	callback = function()
-		vim.keymap.set("n", "<Esc>", function()
-			vim.api.nvim_win_close(0, false)
-		end, { buffer = true, nowait = true })
-	end,
-	group = user_grp,
-})
-
 require("lazy").setup(
 	"plugins",
 	-- opts
@@ -43,7 +30,6 @@ require("lazy").setup(
 		local_spec = false,
 
 		ui = {
-			border = "rounded",
 			custom_keys = {
 				-- You can define custom key maps here. If present, the description will
 				-- be shown in the help menu.

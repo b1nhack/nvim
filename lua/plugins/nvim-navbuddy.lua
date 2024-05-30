@@ -73,7 +73,6 @@ return {
 			-- mappings are used for keys
 			-- that are not set by user
 			mappings = {
-				["<esc>"] = actions.close(), -- Close and cursor to original location
 				["q"] = actions.close(),
 
 				["e"] = actions.next_sibling(), -- down
