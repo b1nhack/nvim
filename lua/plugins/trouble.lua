@@ -13,6 +13,8 @@ return {
 		"gy",
 		"gi",
 		"gD",
+		"fo",
+		"fi",
 	},
 
 	config = function()
@@ -21,12 +23,6 @@ return {
 		require("trouble").setup({
 			focus = true,
 
-			---@type table<string, trouble.Mode>
-			modes = {
-				symbols = {
-					focus = true,
-				},
-			},
 			icons = {
 				---@type trouble.Indent.symbols
 				indent = {
@@ -71,12 +67,14 @@ return {
 		vim.keymap.set("n", "<Leader>fD", "<CMD>Trouble diagnostics toggle<CR>")
 
 		vim.keymap.set("n", "<Leader>fx", "<CMD>Trouble loclist toggle<CR>")
-		vim.keymap.set("n", "<Leader>fX", "<CMD>Trouble qflist toggle<CR>")
+		vim.keymap.set("n", "<Leader>fX", "<CMD>Trouble quickfix toggle<CR>")
 
-		vim.keymap.set("n", "gr", "<CMD>Trouble lsp_references toggle<CR>")
-		vim.keymap.set("n", "gd", "<CMD>Trouble lsp_definitions toggle<CR>")
-		vim.keymap.set("n", "gy", "<CMD>Trouble lsp_type_definitions toggle<CR>")
-		vim.keymap.set("n", "gi", "<CMD>Trouble lsp_implementations toggle<CR>")
-		vim.keymap.set("n", "gD", "<CMD>Trouble lsp_declarations toggle<CR>")
+		vim.keymap.set("n", "gr", "<CMD>Trouble lsp_references toggle auto_jump=true<CR>")
+		vim.keymap.set("n", "gd", "<CMD>Trouble lsp_definitions toggle auto_jump=true<CR>")
+		vim.keymap.set("n", "gy", "<CMD>Trouble lsp_type_definitions toggle auto_jump=true<CR>")
+		vim.keymap.set("n", "gi", "<CMD>Trouble lsp_implementations toggle auto_jump=true<CR>")
+		vim.keymap.set("n", "gD", "<CMD>Trouble lsp_declarations toggle auto_jump=true<CR>")
+		vim.keymap.set("n", "fo", "<CMD>Trouble lsp_outgoing_calls toggle<CR>")
+		vim.keymap.set("n", "fi", "<CMD>Trouble lsp_incoming_calls toggle<CR>")
 	end,
 }
