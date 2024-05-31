@@ -255,6 +255,9 @@ return {
 
 		-- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
 		cmp.setup.cmdline({ "/", "?" }, {
+			completion = {
+				keyword_length = 3,
+			},
 			mapping = other_mapping,
 			sources = {
 				{ name = "buffer" },
@@ -263,6 +266,9 @@ return {
 
 		-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
 		cmp.setup.cmdline(":", {
+			completion = {
+				keyword_length = 3,
+			},
 			mapping = other_mapping,
 			sources = cmp.config.sources({
 				{ name = "async_path" },
