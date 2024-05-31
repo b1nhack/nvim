@@ -29,6 +29,7 @@ return {
 				"toml",
 				"vim",
 				"vimdoc",
+				"yaml",
 				"zig",
 			},
 			sync_install = false,
