@@ -9,7 +9,7 @@ return {
 			---@diagnostic disable-next-line: assign-type-mismatch
 			cleanup_delay_ms = false,
 			keymaps = {
-				["g?"] = "actions.show_help",
+				["?"] = "actions.show_help",
 				["<CR>"] = "actions.select",
 				["<C-v>"] = "actions.select_vsplit",
 				["<C-s>"] = "actions.select_split",

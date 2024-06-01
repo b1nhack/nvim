@@ -123,7 +123,7 @@ return {
 					layout_strategy = "flex",
 				}),
 
-				["g?"] = actions.help(), -- Open mappings help window
+				["?"] = actions.help(), -- Open mappings help window
 			},
 			lsp = {
 				auto_attach = true, -- If set to true, you don't need to manually use attach function
