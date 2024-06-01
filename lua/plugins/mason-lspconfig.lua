@@ -6,6 +6,7 @@ return {
 		"neodev.nvim",
 		"mason.nvim",
 		"neovim/nvim-lspconfig",
+		"mason-tool-installer.nvim",
 	},
 	event = { "BufReadPost", "BufWritePost", "BufNewFile" },
 
