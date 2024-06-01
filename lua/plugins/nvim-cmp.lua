@@ -53,6 +53,33 @@ return {
 			end, { "c" }),
 		}
 
+		local cmdline = {
+			completion = {
+				keyword_length = 3,
+			},
+			mapping = other_mapping,
+			sources = cmp.config.sources({
+				{ name = "async_path" },
+			}, {
+				{ name = "cmdline" },
+			}),
+			---@diagnostic disable-next-line: missing-fields
+			matching = { disallow_symbol_nonprefix_matching = false },
+
+			-- https://github.com/hrsh7th/nvim-cmp/wiki/Advanced-techniques#disabling-cmdline-completion-for-certain-commands-such-as-increname
+			enabled = function()
+				-- Set of commands where cmp will be disabled
+				local disabled = {
+					IncRename = true,
+				}
+				-- Get first word of cmdline
+				local cmd = vim.fn.getcmdline():match("%S+")
+				-- Return true if cmd isn't disabled
+				-- else call/return cmp.close(), which returns false
+				return not disabled[cmd] or cmp.close()
+			end,
+		}
+
 		local kind_icons = {
 			Class = icons.Class,
 			Color = icons.Color,
@@ -267,31 +294,7 @@ return {
 		})
 
 		-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-		cmp.setup.cmdline(":", {
-			completion = {
-				keyword_length = 3,
-			},
-			mapping = other_mapping,
-			sources = cmp.config.sources({
-				{ name = "async_path" },
-			}, {
-				{ name = "cmdline" },
-			}),
-			---@diagnostic disable-next-line: missing-fields
-			matching = { disallow_symbol_nonprefix_matching = false },
-
-			-- https://github.com/hrsh7th/nvim-cmp/wiki/Advanced-techniques#disabling-cmdline-completion-for-certain-commands-such-as-increname
-			enabled = function()
-				-- Set of commands where cmp will be disabled
-				local disabled = {
-					IncRename = true,
-				}
-				-- Get first word of cmdline
-				local cmd = vim.fn.getcmdline():match("%S+")
-				-- Return true if cmd isn't disabled
-				-- else call/return cmp.close(), which returns false
-				return not disabled[cmd] or cmp.close()
-			end,
-		})
+		cmp.setup.cmdline(":", cmdline)
+		cmp.setup.filetype("vim", cmdline)
 	end,
 }
