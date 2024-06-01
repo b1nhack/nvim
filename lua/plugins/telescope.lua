@@ -274,6 +274,7 @@ return {
 		telescope.load_extension("fzf")
 		telescope.load_extension("luasnip")
 		telescope.load_extension("dap")
+		telescope.load_extension("notify")
 
 		local builtin = require("telescope.builtin")
 		local func = require("telescope-function")
