@@ -1,5 +1,3 @@
--- leader
-vim.g.mapleader = " "
 vim.keymap.set({ "n", "x" }, "<Space>", "<Nop>")
 
 -- Left-right motions
