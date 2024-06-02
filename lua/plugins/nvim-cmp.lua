@@ -114,6 +114,8 @@ return {
 			preselect = cmp.PreselectMode.None,
 
 			sources = cmp.config.sources({
+				{ name = "lazydev" },
+			}, {
 				{ name = "async_path" },
 				{ name = "luasnip" },
 				{ name = "nvim_lsp" },
