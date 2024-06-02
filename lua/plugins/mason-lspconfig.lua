@@ -3,7 +3,6 @@ return {
 	dependencies = {
 		"nvim-navbuddy",
 		"neoconf.nvim",
-		"neodev.nvim",
 		"mason.nvim",
 		"neovim/nvim-lspconfig",
 		"mason-tool-installer.nvim",
