@@ -32,13 +32,13 @@ return {
 					install_package = "j",
 					---@since 1.0.0
 					-- Keymap to reinstall/update the package under the current cursor position
-					update_package = "s",
+					update_package = "o",
 					---@since 1.0.0
 					-- Keymap to check for new version for the package under the current cursor position
 					check_package_version = "c",
 					---@since 1.0.0
 					-- Keymap to update all installed packages
-					update_all_packages = "S",
+					update_all_packages = "O",
 					---@since 1.0.0
 					-- Keymap to check which installed packages are outdated
 					check_outdated_packages = "C",

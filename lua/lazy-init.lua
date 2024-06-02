@@ -17,8 +17,8 @@ commands.check = nil
 commands.clean = nil
 commands.install = nil
 commands.restore.button = false
-commands.update.key_plugin = "m"
-commands.update.key = "M"
+commands.update.key_plugin = "o"
+commands.update.key = "O"
 
 require("lazy").setup(
 	"plugins",
