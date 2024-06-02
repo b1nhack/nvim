@@ -1,7 +1,12 @@
 return {
 	"echasnovski/mini.move",
 	version = false,
-	event = { "BufReadPost", "BufWritePost", "BufNewFile" },
+	keys = {
+		{ "<M-h>", mode = { "n", "x" } },
+		{ "<M-b>", mode = { "n", "x" } },
+		{ "<M-k>", mode = { "n", "x" } },
+		{ "<M-m>", mode = { "n", "x" } },
+	},
 
 	config = function()
 		require("mini.move").setup({
