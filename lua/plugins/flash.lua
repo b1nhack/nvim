@@ -40,6 +40,9 @@ return {
 					jump_labels = true,
 					multi_line = false,
 					label = { exclude = "uenikardc" },
+					jump = {
+						autojump = true,
+					},
 				},
 
 				treesitter = {
