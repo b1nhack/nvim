@@ -1,7 +1,12 @@
 return {
 	"echasnovski/mini.surround",
 	version = false,
-	event = { "BufReadPost", "BufWritePost", "BufNewFile" },
+	keys = {
+		{ "gsa", mode = { "n", "x" } },
+		"gsd",
+		"gsr",
+		"gsl",
+	},
 
 	config = function()
 		require("mini.surround").setup({
