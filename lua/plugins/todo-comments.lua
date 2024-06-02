@@ -31,6 +31,14 @@ return {
 				NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
 				TEST = { icon = "󰰤 ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
 			},
+
+			-- highlighting of the line containing the todo comment
+			-- * before: highlights before the keyword (typically comment characters)
+			-- * keyword: highlights of the keyword
+			-- * after: highlights after the keyword (todo text)
+			highlight = {
+				multiline = false, -- enable multine todo comments
+			},
 		})
 
 		vim.keymap.set("n", "<Leader>ft", "<CMD>TodoTrouble<CR>")
