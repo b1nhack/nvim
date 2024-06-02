@@ -4,8 +4,7 @@ return {
 		"nvim-navbuddy",
 		"neoconf.nvim",
 		"mason.nvim",
-		"neovim/nvim-lspconfig",
-		"mason-tool-installer.nvim",
+		"nvim-lspconfig",
 	},
 	event = { "BufReadPost", "BufWritePost", "BufNewFile" },
 
