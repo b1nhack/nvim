@@ -1,5 +1,6 @@
 return {
 	"mfussenegger/nvim-dap",
+	version = "*",
 	dependencies = {
 		"nvim-dap-ui",
 		"nvim-treesitter",
