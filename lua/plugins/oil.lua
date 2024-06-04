@@ -6,8 +6,20 @@ return {
 
 	config = function()
 		require("oil").setup({
+			columns = {
+				-- "icon",
+				-- "permissions",
+				-- "size",
+				-- "mtime",
+			},
+
 			---@diagnostic disable-next-line: assign-type-mismatch
 			cleanup_delay_ms = false,
+
+			win_options = {
+				signcolumn = "yes",
+			},
+
 			keymaps = {
 				["?"] = "actions.show_help",
 				["<CR>"] = "actions.select",
@@ -16,18 +28,22 @@ return {
 				["<C-t>"] = "actions.select_tab",
 				["<C-p>"] = "actions.preview",
 				["<C-c>"] = "actions.close",
-				["<C-l>"] = "actions.refresh",
+				["r"] = "actions.refresh",
 				["-"] = "actions.parent",
 				["_"] = "actions.open_cwd",
-				["`"] = "actions.cd",
-				["~"] = "actions.tcd",
-				["gs"] = "actions.change_sort",
+				["`"] = false,
+				["~"] = false,
+				["gs"] = false,
 				["gx"] = false,
-				["g."] = "actions.toggle_hidden",
+				["g."] = false,
 				["g\\"] = false,
 			},
 			-- Set to false to disable all of the above keymaps
 			use_default_keymaps = false,
+
+			view_options = {
+				show_hidden = true,
+			},
 		})
 
 		vim.keymap.set("n", "<Leader>a", "<CMD>Oil<CR>")
