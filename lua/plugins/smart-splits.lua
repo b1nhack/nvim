@@ -7,13 +7,6 @@ return {
 		local splits = require("smart-splits")
 
 		splits.setup({
-			-- Ignored buffer types (only while resizing)
-			ignored_buftypes = {
-				"nofile",
-				"quickfix",
-				"prompt",
-			},
-
 			at_edge = "stop",
 			-- when moving cursor between splits left or right,
 			-- place the cursor on the same row of the *screen*
@@ -24,7 +17,7 @@ return {
 			resize_mode = {
 				-- keys to use for moving in resize mode
 				-- in order of left, down, up' right
-				resize_keys = { "u", "e", "n", "i" },
+				resize_keys = { "n", "e", "u", "i" },
 			},
 			-- disable multiplexer navigation if current multiplexer pane is zoomed
 			-- this functionality is only supported on tmux and Wezterm due to kitty
