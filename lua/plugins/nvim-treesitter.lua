@@ -12,15 +12,23 @@ return {
 		---@diagnostic disable-next-line: missing-fields
 		configs.setup({
 			ensure_installed = {
+				"bash",
+				"c",
 				"diff",
 				"git_rebase",
 				"gitcommit",
 				"json",
 				"jsonc",
+				"lua",
+				"markdown",
+				"markdown_inline",
+				"query",
 				"regex",
 				"ron",
 				"rust",
 				"toml",
+				"vim",
+				"vimdoc",
 				"yaml",
 				"zig",
 			},
