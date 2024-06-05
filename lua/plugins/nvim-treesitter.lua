@@ -17,6 +17,7 @@ return {
 				"diff",
 				"git_rebase",
 				"gitcommit",
+				"ini",
 				"json",
 				"jsonc",
 				"lua",
