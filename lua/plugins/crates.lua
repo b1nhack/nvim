@@ -4,7 +4,6 @@ return {
 
 	config = function()
 		require("crates").setup({
-			autoupdate_throttle = 300,
 			max_parallel_requests = 99,
 			disable_invalid_feature_diagnostic = true,
 
@@ -43,8 +42,8 @@ return {
 				show_version_date = true,
 
 				keys = {
-					jump_forward = { "<c-]>" },
-					jump_back = { "<c-t>" },
+					jump_forward = { "<C-k>" },
+					jump_back = { "<C-o>" },
 				},
 			},
 		})
