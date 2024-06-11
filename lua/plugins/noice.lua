@@ -42,6 +42,19 @@ return {
 					},
 					view = "mini",
 				},
+
+				{
+					filter = {
+						event = "msg_show",
+						any = {
+							{ find = "E385: Search hit BOTTOM without match for: " },
+							{ find = "E384: Search hit TOP without match for: " },
+							{ find = "/%w+" },
+							{ find = "?%w+" },
+						},
+					},
+					skip = true,
+				},
 			},
 
 			-- you can enable a preset for easier configuration
