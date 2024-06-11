@@ -32,7 +32,6 @@ vim.o.termguicolors = true
 vim.o.wildmenu = false
 vim.o.wildchar = 0
 vim.o.winblend = 20
-vim.o.pumblend = 20
 vim.o.fillchars = table.concat({
 	"horiz:═",
 	"horizdown:╦",
