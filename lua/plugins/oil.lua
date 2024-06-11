@@ -40,10 +40,6 @@ return {
 			},
 			-- Set to false to disable all of the above keymaps
 			use_default_keymaps = false,
-
-			view_options = {
-				show_hidden = true,
-			},
 		})
 
 		vim.keymap.set("n", "<Leader>a", "<CMD>Oil<CR>")
