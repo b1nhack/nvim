@@ -26,10 +26,11 @@ return {
 		})
 
 		vim.keymap.set("n", "<Leader>kw", function()
-			local name = vim.fn.input("SessionName: ")
-			if check_string(name) then
-				MiniSessions.write(name)
-			end
+			vim.ui.input({ prompt = "SessionName: " }, function(input)
+				if check_string(input) then
+					MiniSessions.write(input)
+				end
+			end)
 		end)
 
 		vim.keymap.set("n", "<Leader>ks", function()
