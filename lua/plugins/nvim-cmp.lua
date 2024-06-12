@@ -232,11 +232,9 @@ return {
 			window = {
 				completion = {
 					border = "rounded",
-					winblend = 20,
 				},
 				documentation = {
 					border = "rounded",
-					winblend = 20,
 				},
 			},
 
