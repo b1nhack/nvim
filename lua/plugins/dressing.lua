@@ -6,6 +6,7 @@ return {
 		require("dressing").setup({
 			input = {
 				title_pos = "center",
+				relative = "win",
 			},
 
 			select = {
