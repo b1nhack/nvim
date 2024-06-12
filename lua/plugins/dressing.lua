@@ -5,7 +5,7 @@ return {
 	config = function()
 		require("dressing").setup({
 			input = {
-				title_pos = "'center'",
+				title_pos = "center",
 			},
 
 			select = {
