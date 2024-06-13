@@ -16,7 +16,9 @@ vim.keymap.set({ "n", "x" }, "E", "9j")
 
 -- Text object motions
 vim.keymap.set({ "n", "x" }, "h", "e")
-vim.keymap.set({ "n", "x" }, "H", "E")
+vim.keymap.set({ "n", "x" }, "H", "5e")
+
+vim.keymap.set({ "n", "x" }, "B", "5b")
 
 -- Pattern searches
 -- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
