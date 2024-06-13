@@ -35,7 +35,7 @@ return {
 				["~"] = false,
 				["gs"] = false,
 				["gx"] = false,
-				["g."] = false,
+				["g."] = "actions.toggle_hidden",
 				["g\\"] = false,
 			},
 			-- Set to false to disable all of the above keymaps
