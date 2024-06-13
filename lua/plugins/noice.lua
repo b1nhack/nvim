@@ -49,8 +49,6 @@ return {
 						any = {
 							{ find = "E385: Search hit BOTTOM without match for: " },
 							{ find = "E384: Search hit TOP without match for: " },
-							{ find = "/%w+" },
-							{ find = "?%w+" },
 						},
 					},
 					skip = true,
