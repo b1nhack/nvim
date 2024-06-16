@@ -14,7 +14,7 @@ return {
 
 	config = function()
 		require("todo-comments").setup({
-			sign_priority = 9, -- sign priority
+			sign_priority = 99, -- sign priority
 
 			-- keywords recognized as todo comments
 			keywords = {
