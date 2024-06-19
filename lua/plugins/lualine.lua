@@ -17,25 +17,6 @@ return {
 			end
 		end
 
-		local win = {
-			{
-				function()
-					return [[ ]]
-				end,
-				padding = { left = 3, right = 0 },
-				color = "NavicText",
-
-				cond = function()
-					return navic.is_available()
-				end,
-			},
-			{
-				"navic",
-				color_correction = nil,
-				navic_opts = nil,
-			},
-		}
-
 		require("lualine").setup({
 			options = {
 				theme = "catppuccin",
@@ -153,13 +134,6 @@ return {
 						show_modified_status = false, -- Shows a symbol next to the tab name if the file has been modified.
 					},
 				},
-			},
-
-			winbar = {
-				lualine_c = win,
-			},
-			inactive_winbar = {
-				lualine_c = win,
 			},
 
 			extensions = {
