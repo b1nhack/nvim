@@ -3,6 +3,7 @@ return {
 
 	init = function()
 		vim.diagnostic.config({
+			underline = false,
 			virtual_text = false,
 			severity_sort = true,
 			signs = {
