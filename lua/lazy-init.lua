@@ -30,6 +30,13 @@ require("lazy").setup(
 
 		local_spec = false,
 
+		pkg = {
+			sources = {
+				"lazy",
+				"packspec",
+			},
+		},
+
 		ui = {
 			custom_keys = {
 				-- You can define custom key maps here. If present, the description will
