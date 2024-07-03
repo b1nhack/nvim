@@ -14,6 +14,7 @@ return {
 			ensure_installed = {
 				"bash",
 				"c",
+				"capnp",
 				"diff",
 				"git_rebase",
 				"gitcommit",
