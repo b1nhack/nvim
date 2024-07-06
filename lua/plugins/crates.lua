@@ -5,7 +5,7 @@ return {
 	config = function()
 		require("crates").setup({
 			max_parallel_requests = 99,
-			disable_invalid_feature_diagnostic = true,
+			enable_update_available_warning = false,
 
 			lsp = {
 				enabled = true,
@@ -33,6 +33,14 @@ return {
 				actions = true,
 				completion = true,
 				hover = true,
+			},
+
+			completion = {
+				crates = {
+					enabled = true,
+					max_results = 8,
+					min_chars = 3,
+				},
 			},
 
 			popup = {
