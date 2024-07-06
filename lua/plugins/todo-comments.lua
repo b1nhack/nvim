@@ -8,9 +8,6 @@ return {
 		"TodoTrouble",
 		"TodoTelescope",
 	},
-	keys = {
-		"<Leader>ft",
-	},
 
 	config = function()
 		require("todo-comments").setup({
@@ -48,7 +45,5 @@ return {
 				multiline = false, -- enable multine todo comments
 			},
 		})
-
-		vim.keymap.set("n", "<Leader>ft", "<CMD>TodoTrouble<CR>")
 	end,
 }
