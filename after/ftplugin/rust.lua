@@ -36,11 +36,11 @@ vim.keymap.set("n", "<Leader>re", function()
 	vim.cmd.RustLsp({ "moveItem", "down" })
 end, { buffer = bufnr })
 
-vim.keymap.set("n", "<Leader>e", function()
+vim.keymap.set("n", "<Leader>rhe", function()
 	vim.cmd.RustLsp("explainError")
 end, { buffer = bufnr })
 
-vim.keymap.set("n", "<Leader>rh", function()
+vim.keymap.set("n", "<Leader>rhd", function()
 	vim.cmd.RustLsp("renderDiagnostic")
 end, { buffer = bufnr })
 
