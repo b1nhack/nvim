@@ -20,7 +20,7 @@ return {
 	},
 
 	config = function()
-		local icons = require("global").icons
+		local icons = require("config.global").icons
 
 		require("trouble").setup({
 			focus = true,

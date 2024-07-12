@@ -277,7 +277,7 @@ return {
 		telescope.load_extension("notify")
 
 		local builtin = require("telescope.builtin")
-		local func = require("telescope-function")
+		local func = require("config.telescope")
 
 		vim.keymap.set("n", "<Leader>ff", func.project_files)
 		vim.keymap.set("n", "<Leader>fg", func.live_grep_from_project_git_root)

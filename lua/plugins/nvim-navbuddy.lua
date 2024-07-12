@@ -8,7 +8,7 @@ return {
 	config = function()
 		local navbuddy = require("nvim-navbuddy")
 		local actions = require("nvim-navbuddy.actions")
-		local icons = require("global").icons
+		local icons = require("config.global").icons
 
 		navbuddy.setup({
 			window = {

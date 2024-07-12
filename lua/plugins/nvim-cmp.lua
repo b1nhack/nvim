@@ -27,7 +27,7 @@ return {
 	config = function()
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
-		local icons = require("global").icons
+		local icons = require("config.global").icons
 
 		local other_mapping = {
 			["<C-u>"] = cmp.mapping(function(fallback)
