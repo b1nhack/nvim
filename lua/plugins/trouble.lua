@@ -1,5 +1,6 @@
 return {
 	"folke/trouble.nvim",
+	cmd = "Trouble",
 	keys = {
 		"<Leader>fs",
 		"<Leader>fd",
@@ -24,7 +25,6 @@ return {
 
 		require("trouble").setup({
 			focus = true,
-			warn_no_results = false,
 
 			icons = {
 				---@type trouble.Indent.symbols
@@ -72,7 +72,7 @@ return {
 		vim.keymap.set("n", "<Leader>fx", "<CMD>Trouble loclist toggle<CR>")
 		vim.keymap.set("n", "<Leader>fX", "<CMD>Trouble quickfix toggle<CR>")
 
-		vim.keymap.set("n", "<Leader>ft", "<CMD>TodoTrouble<CR>")
+		vim.keymap.set("n", "<Leader>ft", "<CMD>Trouble todo<CR>")
 
 		vim.keymap.set("n", "gr", "<CMD>Trouble lsp_references toggle auto_jump=true<CR>")
 		vim.keymap.set("n", "gd", "<CMD>Trouble lsp_definitions toggle auto_jump=true<CR>")
