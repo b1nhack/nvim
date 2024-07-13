@@ -22,6 +22,7 @@ return {
 			},
 			signs_staged_enable = false,
 			attach_to_untracked = true,
+			sign_priority = 9,
 
 			preview_config = {
 				-- Options passed to nvim_open_win
