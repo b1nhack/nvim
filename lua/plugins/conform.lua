@@ -1,10 +1,13 @@
 return {
 	"stevearc/conform.nvim",
 	event = "BufWritePre",
-	cmd = { "ConformInfo" },
-	keys = {
-		"<Leader>f",
+	cmd = {
+		"ConformInfo",
 	},
+
+	init = function()
+		vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
+	end,
 
 	config = function()
 		require("conform").setup({
@@ -20,16 +23,11 @@ return {
 			},
 
 			format_on_save = {
-				-- These options will be passed to conform.format()
+				-- I recommend these options. See :help conform.format for details.
+				lsp_format = "fallback",
 				timeout_ms = 500,
-				lsp_fallback = true,
+				undojoin = true,
 			},
 		})
-
-		vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
-
-		vim.keymap.set("n", "<Leader>f", function()
-			require("conform").format({ async = true, lsp_fallback = true })
-		end)
 	end,
 }
