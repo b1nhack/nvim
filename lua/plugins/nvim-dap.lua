@@ -6,10 +6,6 @@ return {
 		"nvim-treesitter",
 		"nvim-dap-virtual-text",
 		"mason-nvim-dap.nvim",
-		{
-			"b1nhack/nvim-json5",
-			build = "./install.sh",
-		},
 	},
 	keys = {
 		"<Leader>db",
@@ -30,8 +26,6 @@ return {
 		dap.listeners.before.event_exited.dapui_config = function()
 			dapui.close()
 		end
-
-		require("dap.ext.vscode").json_decode = require("json5").parse
 
 		-- stylua: ignore start
 		local sign = vim.fn.sign_define
