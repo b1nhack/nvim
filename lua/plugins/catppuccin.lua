@@ -76,6 +76,7 @@ return {
 				},
 				headlines = true,
 				harpoon = true,
+				nvim_surround = true,
 			},
 		})
 
