@@ -1,5 +1,6 @@
 vim.o.mouse = ""
 vim.g.mapleader = " "
+vim.g.maplocalleader = ","
 
 vim.o.timeoutlen = 300
 
