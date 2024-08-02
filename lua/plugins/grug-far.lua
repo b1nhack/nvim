@@ -15,7 +15,7 @@ return {
 			minSearchChars = 3,
 			searchOnInsertLeave = true,
 			maxWorkers = 9,
-			windowCreationCommand = "tabnew %",
+			windowCreationCommand = "tabnew",
 			wrap = false,
 			transient = true,
 			history = {
