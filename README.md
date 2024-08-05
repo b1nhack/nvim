@@ -2,6 +2,8 @@
 
 Neovim IDE + Colemak
 
+![nvim](https://github.com/user-attachments/assets/3c63cd78-6dbe-4bd0-9eed-ce4ee0ae823e)
+
 # ⚡️ Requirements
 
 - [Kitty terminal](https://github.com/kovidgoyal/kitty)
@@ -20,6 +22,7 @@ Neovim IDE + Colemak
   ```sh
   # required
   mv ~/.config/nvim{,.bak}
+
   # optional but recommended
   mv ~/.local/share/nvim{,.bak}
   mv ~/.local/state/nvim{,.bak}
@@ -44,7 +47,7 @@ Neovim IDE + Colemak
   nvim
   ```
 
-Waiting for initialization to complete.
+  Waiting for initialization to complete.
 
 - Check if everything is working correctly
 
