@@ -2,9 +2,9 @@
 
 Neovim IDE + Colemak
 
-![nvim](https://github.com/user-attachments/assets/3c63cd78-6dbe-4bd0-9eed-ce4ee0ae823e)
+![neovim](https://github.com/user-attachments/assets/ba467e73-1418-4cca-932f-6b2cb4d5fdc4)
 
-# ⚡️ Requirements
+## ⚡️ Requirements
 
 - [Kitty terminal](https://github.com/kovidgoyal/kitty)
 - Neovim >= 0.10.0 (needs to be built with LuaJIT)
@@ -15,7 +15,7 @@ Neovim IDE + Colemak
 - [sharkdp/fd](https://github.com/sharkdp/fd)
 - [atanunq/viu](https://github.com/atanunq/viu)
 
-# 🚀 Getting Started
+## 🚀 Getting Started
 
 - Make a backup of your current Neovim files
 
