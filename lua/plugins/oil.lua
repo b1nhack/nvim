@@ -1,7 +1,7 @@
 return {
 	"stevearc/oil.nvim",
 	-- Optional dependencies
-	dependencies = { "nvim-tree/nvim-web-devicons" },
+	dependencies = { { "echasnovski/mini.icons", opts = {} } },
 	event = "VeryLazy",
 
 	config = function()
