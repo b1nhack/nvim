@@ -36,11 +36,8 @@ require("lazy").setup({
 
 	local_spec = false,
 
-	pkg = {
-		sources = {
-			"lazy",
-			"packspec",
-		},
+	rocks = {
+		enabled = false,
 	},
 
 	ui = {
