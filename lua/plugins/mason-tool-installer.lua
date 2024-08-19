@@ -9,10 +9,8 @@ return {
 			-- start
 			ensure_installed = {
 				-- LSP
-				"clangd",
 				"lua-language-server",
 				"marksman",
-				"zls",
 
 				-- DAP
 				"codelldb",
