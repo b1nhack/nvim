@@ -33,7 +33,6 @@
   "mini.move": { "branch": "main", "commit": "4caa1c212f5ca3d1633d21cfb184808090ed74b1" },
   "mini.pairs": { "branch": "main", "commit": "927d19cbdd0e752ab1c7eed87072e71d2cd6ff51" },
   "mini.sessions": { "branch": "main", "commit": "3c80dcf01d9901ff3e4a40328bee8a44c65718b2" },
-  "neomutt.vim": { "branch": "main", "commit": "6be7b75cfb24d9a8026a05e017993f3b4bb5a197" },
   "neoconf.nvim": { "branch": "main", "commit": "226a67022dca4d0cc5f196350af79220b39e971c" },
   "neotest": { "branch": "master", "commit": "32ff2ac21135a372a42b38ae131e531e64833bd3" },
   "noice.nvim": { "branch": "main", "commit": "448bb9c524a7601035449210838e374a30153172" },
