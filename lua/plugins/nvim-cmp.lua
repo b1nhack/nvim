@@ -55,7 +55,7 @@ return {
 
 		local cmdline = {
 			completion = {
-				keyword_length = 3,
+				keyword_length = 2,
 			},
 			mapping = other_mapping,
 			sources = cmp.config.sources({
@@ -285,7 +285,7 @@ return {
 		-- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
 		cmp.setup.cmdline({ "/", "?" }, {
 			completion = {
-				keyword_length = 3,
+				keyword_length = 2,
 			},
 			mapping = other_mapping,
 			sources = {
