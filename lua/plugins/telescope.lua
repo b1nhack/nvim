@@ -91,7 +91,8 @@ return {
 								end
 							end
 							vim.fn.jobstart({
-								"viu",
+								"catimg",
+								"-w$(tput cols)",
 								filepath, -- Terminal image viewer command
 							}, { on_stdout = send_output, stdout_buffered = true, pty = true })
 						else
