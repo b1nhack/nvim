@@ -22,7 +22,10 @@ return {
 			end,
 
 			["lua_ls"] = function()
-				require("lsp.lua_ls")
+				local lsp = require("config.lsp")
+
+				lsp.lua_ls()
+				lsp.clangd()
 			end,
 		})
 	end,
