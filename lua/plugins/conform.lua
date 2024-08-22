@@ -22,8 +22,6 @@ return {
 			rust = { "rustfmt" },
 			sh = { "shfmt" },
 			zsh = { "shfmt" },
-
-			["*"] = { "injected" },
 		},
 
 		-- Set default options
