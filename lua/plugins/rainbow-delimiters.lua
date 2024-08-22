@@ -1,7 +1,7 @@
 return {
-	"hiphish/rainbow-delimiters.nvim",
-	dependencies = {
-		"nvim-treesitter",
-	},
-	event = { "BufReadPost", "BufWritePost", "BufNewFile" },
+  'hiphish/rainbow-delimiters.nvim',
+  dependencies = {
+    'nvim-treesitter',
+  },
+  event = { 'BufReadPost', 'BufWritePost', 'BufNewFile' },
 }

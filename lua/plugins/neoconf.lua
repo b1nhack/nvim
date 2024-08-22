@@ -1,7 +1,7 @@
 return {
-	"folke/neoconf.nvim",
+  'folke/neoconf.nvim',
 
-	config = function()
-		require("neoconf").setup()
-	end,
+  config = function()
+    require('neoconf').setup()
+  end,
 }

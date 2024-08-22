@@ -1,9 +1,9 @@
 return {
-	"echasnovski/mini.pairs",
-	version = false,
-	event = "InsertEnter",
+  'echasnovski/mini.pairs',
+  version = false,
+  event = 'InsertEnter',
 
-	config = function()
-		require("mini.pairs").setup()
-	end,
+  config = function()
+    require('mini.pairs').setup()
+  end,
 }
