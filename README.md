@@ -2,7 +2,7 @@
 
 Neovim IDE + Colemak
 
-![neovim](https://github.com/user-attachments/assets/ba467e73-1418-4cca-932f-6b2cb4d5fdc4)
+![nvim](https://github.com/user-attachments/assets/c9ff3ffc-aad1-44de-8384-399d540cf868)
 
 ## ⚡️ Requirements
 
