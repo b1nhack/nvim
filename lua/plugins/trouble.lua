@@ -16,8 +16,8 @@ return {
     'gy',
     'gi',
     'gD',
-    'fo',
-    'fi',
+    'gu',
+    'ge',
   },
 
   config = function()
@@ -79,7 +79,7 @@ return {
     vim.keymap.set('n', 'gy', '<CMD>Trouble lsp_type_definitions toggle auto_jump=true<CR>')
     vim.keymap.set('n', 'gi', '<CMD>Trouble lsp_implementations toggle auto_jump=true<CR>')
     vim.keymap.set('n', 'gD', '<CMD>Trouble lsp_declarations toggle auto_jump=true<CR>')
-    vim.keymap.set('n', 'fo', '<CMD>Trouble lsp_outgoing_calls toggle<CR>')
-    vim.keymap.set('n', 'fi', '<CMD>Trouble lsp_incoming_calls toggle<CR>')
+    vim.keymap.set('n', 'gu', '<CMD>Trouble lsp_outgoing_calls toggle<CR>')
+    vim.keymap.set('n', 'ge', '<CMD>Trouble lsp_incoming_calls toggle<CR>')
   end,
 }
