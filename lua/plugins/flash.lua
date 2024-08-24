@@ -12,7 +12,7 @@ return {
 
   config = function()
     require('flash').setup({
-      labels = 'arstdhneioqwfpgjluyzxcvbkm',
+      labels = 'arstneiodhbkmluypfwgjqvcxz',
 
       search = {
         multi_window = false,
@@ -42,7 +42,7 @@ return {
         },
 
         treesitter = {
-          labels = 'arstdhneioqwfpgjluyzxcvbkm',
+          labels = 'arstneiodhbkmluypfwgjqvcxz',
         },
       },
 
