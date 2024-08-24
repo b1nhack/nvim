@@ -13,9 +13,9 @@ return {
         normal_cur_line = 'ySS',
         visual = 'gs',
         visual_line = 'gS',
-        delete = 'ds',
-        change = 'cs',
-        change_line = 'cS',
+        delete = 'yd',
+        change = 'yc',
+        change_line = false,
       },
     })
   end,
