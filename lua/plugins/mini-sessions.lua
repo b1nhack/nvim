@@ -9,12 +9,12 @@ return {
   config = function()
     local function check_string(str)
       if str == nil or str == '' then
-        vim.notify('SessionName cannot be empty', vim.log.levels.WARN)
+        vim.notify('SessionName cannot be empty.', vim.log.levels.WARN)
         return false
       end
 
       if str:match('%W') then
-        vim.notify('SessionName can only contain alphanumeric', vim.log.levels.WARN)
+        vim.notify('SessionName can only contain alphanumeric.', vim.log.levels.WARN)
         return false
       end
       return true
