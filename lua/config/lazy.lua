@@ -65,7 +65,7 @@ require('lazy').setup({
   performance = {
     rtp = {
       disabled_plugins = {
-        'editorconfig',
+        -- 'editorconfig',
         'gzip',
         'netrwPlugin',
         'osc52',
