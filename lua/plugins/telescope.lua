@@ -137,8 +137,8 @@ return {
             -- ["<C-f>"] = actions.preview_scrolling_left,
             -- ["<C-k>"] = actions.preview_scrolling_right,
 
-            ['<PageUp>'] = actions.results_scrolling_up,
-            ['<PageDown>'] = actions.results_scrolling_down,
+            -- ['<PageUp>'] = actions.results_scrolling_up,
+            -- ['<PageDown>'] = actions.results_scrolling_down,
             -- ["<M-f>"] = actions.results_scrolling_left,
             -- ["<M-k>"] = actions.results_scrolling_right,
 
@@ -150,12 +150,14 @@ return {
             ['<C-/>'] = actions.which_key,
             ['<C-_>'] = actions.which_key, -- keys from pressing <C-/>
             ['<C-w>'] = { '<c-s-w>', type = 'command' },
-            -- ["<C-r><C-w>"] = actions.insert_original_cword,
+            -- ['<C-r><C-w>'] = actions.insert_original_cword,
+            -- ['<C-r><C-a>'] = actions.insert_original_cWORD,
+            -- ['<C-r><C-f>'] = actions.insert_original_cfile,
+            -- ['<C-r><C-l>'] = actions.insert_original_cline,
 
             -- disable c-j because we dont want to allow new lines #2123
             ['<C-j>'] = actions.nop,
             ['<C-p>'] = action_layout.toggle_preview,
-            ['<c-s>'] = flash,
             ['<C-t>'] = open_with_trouble,
           },
           n = {
@@ -183,9 +185,17 @@ return {
 
             ['e'] = actions.move_selection_next,
             ['u'] = actions.move_selection_previous,
-            ['U'] = actions.move_to_top,
-            ['M'] = actions.move_to_middle,
-            ['E'] = actions.move_to_bottom,
+            ['U'] = function(prompt_bufnr)
+              for _ = 1, 9 do
+                actions.move_selection_previous(prompt_bufnr)
+              end
+            end,
+            -- ['M'] = actions.move_to_middle,
+            ['E'] = function(prompt_bufnr)
+              for _ = 1, 9 do
+                actions.move_selection_next(prompt_bufnr)
+              end
+            end,
 
             ['<Down>'] = actions.move_selection_next,
             ['<Up>'] = actions.move_selection_previous,
@@ -197,8 +207,8 @@ return {
             -- ["<C-f>"] = actions.preview_scrolling_left,
             -- ["<C-k>"] = actions.preview_scrolling_right,
 
-            ['<PageUp>'] = actions.results_scrolling_up,
-            ['<PageDown>'] = actions.results_scrolling_down,
+            -- ['<PageUp>'] = actions.results_scrolling_up,
+            -- ['<PageDown>'] = actions.results_scrolling_down,
             -- ["<M-f>"] = actions.results_scrolling_left,
             -- ["<M-k>"] = actions.results_scrolling_right,
 
