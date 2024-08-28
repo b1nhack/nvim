@@ -11,6 +11,7 @@ return {
         -- LSP
         'lua-language-server',
         'marksman',
+        'python-lsp-server',
 
         -- DAP
         'codelldb',
