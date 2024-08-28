@@ -22,6 +22,7 @@ return {
       rust = { 'rustfmt' },
       sh = { 'shfmt' },
       zsh = { 'shfmt' },
+      python = { 'black' },
     },
 
     -- Set default options
