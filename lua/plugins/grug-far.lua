@@ -24,11 +24,11 @@ return {
     })
 
     vim.keymap.set('n', '<Leader>s', function()
-      grug_far.grug_far()
+      grug_far.open()
     end)
 
     vim.keymap.set('x', '<Leader>s', function()
-      grug_far.grug_far({
+      grug_far.open({
         prefills = {
           search = vim.fn.expand('<cword>'),
         },
@@ -36,7 +36,7 @@ return {
     end)
 
     vim.keymap.set('n', '<Leader>S', function()
-      grug_far.grug_far({
+      grug_far.open({
         prefills = {
           paths = vim.fn.expand('%'),
         },
@@ -44,7 +44,7 @@ return {
     end)
 
     vim.keymap.set('x', '<Leader>S', function()
-      grug_far.grug_far({
+      grug_far.open({
         prefills = {
           search = vim.fn.expand('<cword>'),
           paths = vim.fn.expand('%'),
