@@ -1,5 +1,6 @@
 return {
   'MagicDuck/grug-far.nvim',
+  dependencies = 'echasnovski/mini.icons',
   cmd = {
     'GrugFar',
   },
@@ -21,6 +22,7 @@ return {
       history = {
         maxHistoryLines = 9999,
       },
+      fileIconsProvider = 'mini.icons',
     })
 
     vim.keymap.set('n', '<Leader>s', function()
