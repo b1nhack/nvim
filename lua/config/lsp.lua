@@ -27,10 +27,4 @@ M.lua_ls = function()
   })
 end
 
-M.clangd = function()
-  lspconfig.clangd.setup({
-    capabilities = capabilities,
-  })
-end
-
 return M

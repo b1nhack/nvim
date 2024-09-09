@@ -24,7 +24,6 @@ return {
         local lsp = require('config.lsp')
 
         lsp.lua_ls()
-        lsp.clangd()
       end,
     })
   end,

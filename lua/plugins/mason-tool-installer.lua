@@ -9,6 +9,7 @@ return {
       -- start
       ensure_installed = {
         -- LSP
+        'clangd',
         'lua-language-server',
         'marksman',
         'python-lsp-server',
@@ -17,11 +18,11 @@ return {
         'codelldb',
 
         -- Formatter
+        'black',
         'clang-format',
         'mdformat',
         'shfmt',
         'stylua',
-        'black',
       },
 
       -- if set to true this will check each tool for updates. If updates
