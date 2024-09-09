@@ -17,12 +17,13 @@ return {
     -- Define your formatters
     formatters_by_ft = {
       c = { 'clang-format' },
+      cpp = { 'clang-format' },
       lua = { 'stylua' },
       markdown = { 'mdformat' },
+      python = { 'black' },
       rust = { 'rustfmt' },
       sh = { 'shfmt' },
       zsh = { 'shfmt' },
-      python = { 'black' },
     },
 
     -- Set default options
