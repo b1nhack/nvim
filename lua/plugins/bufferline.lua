@@ -11,15 +11,16 @@ return {
       options = {
         mode = 'tabs',
         style_preset = bufferline.style_preset.minimal,
-        close_command = false,
-        right_mouse_command = false,
-        left_mouse_command = false,
-        middle_mouse_command = false,
+        close_command = nil,
+        right_mouse_command = nil,
+        left_mouse_command = nil,
+        middle_mouse_command = nil,
 
-        custom_filter = function(buf_number, buf_numbers)
+        custom_filter = function(buf_number, _)
           if vim.bo[buf_number].filetype ~= 'oil' then
             return true
           end
+          return false
         end,
 
         show_buffer_close_icons = false,
