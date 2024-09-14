@@ -1,6 +1,7 @@
 vim.o.mouse = ''
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ','
+vim.g.c_syntax_for_h = 1
 
 vim.o.timeoutlen = 300
 
