@@ -14,7 +14,7 @@ return {
 
     grug_far.setup({
       minSearchChars = 3,
-      searchOnInsertLeave = true,
+      normalModeSearch = true,
       maxWorkers = 9,
       windowCreationCommand = 'tabnew',
       wrap = false,
