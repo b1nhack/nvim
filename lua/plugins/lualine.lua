@@ -20,6 +20,7 @@ return {
         theme = 'catppuccin',
         component_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },
+        always_show_tabline = false,
         globalstatus = true,
         refresh = {
           statusline = 200, -- Note these are in mili second and default is 1000
@@ -110,7 +111,5 @@ return {
         'quickfix',
       },
     })
-
-    vim.o.showtabline = 1
   end,
 }
