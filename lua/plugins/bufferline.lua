@@ -32,6 +32,9 @@ return {
         hover = {
           enabled = false,
         },
+        pick = {
+          alphabet = 'arstneiodhbkmluypfwgjqvcxzARSTNEIODHBKMLUYPFWGJQVCXZ1234567890',
+        },
       },
       highlights = require('catppuccin.groups.integrations.bufferline').get(),
     }
