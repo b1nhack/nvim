@@ -76,33 +76,6 @@ return {
         preview = {
           msg_bg_fillchar = '',
           filesize_limit = 1, -- MB
-          mime_hook = function(filepath, bufnr, opts)
-            local is_image = function(image_path)
-              local image_extensions = { 'png', 'jpg', 'gif', 'svg', 'ico', 'jpeg', 'bmp', 'webp' }
-              local split_path = vim.split(image_path:lower(), '.', { plain = true })
-              local extension = split_path[#split_path]
-              return vim.tbl_contains(image_extensions, extension)
-            end
-            if is_image(filepath) then
-              local term = vim.api.nvim_open_term(bufnr, {})
-              local function send_output(_, data, _)
-                for _, d in ipairs(data) do
-                  vim.api.nvim_chan_send(term, d .. '\r\n')
-                end
-              end
-              vim.fn.jobstart({
-                'catimg',
-                '-w$(tput cols)',
-                filepath, -- Terminal image viewer command
-              }, { on_stdout = send_output, stdout_buffered = true, pty = true })
-            else
-              require('telescope.previewers.utils').set_preview_message(
-                bufnr,
-                opts.winid,
-                'Binary cannot be previewed'
-              )
-            end
-          end,
         },
 
         -- https://github.com/nvim-telescope/telescope.nvim/blob/master/lua/telescope/mappings.lua#L133
