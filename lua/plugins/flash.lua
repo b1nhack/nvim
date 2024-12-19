@@ -19,7 +19,7 @@ return {
       },
 
       jump = {
-        autojump = true,
+        autojump = false,
       },
 
       label = {
@@ -37,7 +37,7 @@ return {
           multi_line = false,
           label = { exclude = 'uenikardc' },
           jump = {
-            autojump = true,
+            autojump = false,
           },
         },
 
