@@ -27,4 +27,16 @@ M.lua_ls = function()
   })
 end
 
+M.nixd = function()
+  lspconfig.nixd.setup({
+    settings = {
+      nixd = {
+        formatting = {
+          command = { 'nixfmt' },
+        },
+      },
+    },
+  })
+end
+
 return M

@@ -24,6 +24,7 @@ return {
         local lsp = require('config.lsp')
 
         lsp.lua_ls()
+        lsp.nixd()
       end,
     })
   end,
