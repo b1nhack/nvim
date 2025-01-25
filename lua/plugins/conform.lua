@@ -17,7 +17,7 @@ return {
     -- Define your formatters
     formatters_by_ft = {
       c = { 'clang-format' },
-      cpp = { 'clang-format' },
+      h = { 'clang-format' },
       lua = { 'stylua' },
       markdown = { 'mdformat' },
       python = { 'black' },
