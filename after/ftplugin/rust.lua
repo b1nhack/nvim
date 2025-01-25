@@ -1,13 +1,5 @@
 local bufnr = vim.api.nvim_get_current_buf()
 
-vim.keymap.set('n', '<Leader>rd', function()
-  vim.cmd.RustLsp('debug')
-end, { buffer = bufnr })
-
-vim.keymap.set('n', '<Leader>rD', function()
-  vim.cmd.RustLsp('debuggables')
-end, { buffer = bufnr })
-
 vim.keymap.set('n', '<Leader>rr', function()
   vim.cmd.RustLsp('run')
 end, { buffer = bufnr })

@@ -13,9 +13,6 @@ return {
         'marksman',
         'python-lsp-server',
 
-        -- DAP
-        'codelldb',
-
         -- Formatter
         'black',
         'clang-format',
