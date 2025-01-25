@@ -29,6 +29,7 @@ end
 
 M.nixd = function()
   lspconfig.nixd.setup({
+    capabilities = capabilities,
     settings = {
       nixd = {
         formatting = {
