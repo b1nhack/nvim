@@ -11,10 +11,6 @@ return {
 
     '<Leader>ft',
 
-    'gr',
-    'gd',
-    'gy',
-    'gi',
     'gD',
     'gu',
     'ge',
@@ -74,10 +70,6 @@ return {
 
     vim.keymap.set('n', '<Leader>ft', '<CMD>Trouble todo<CR>')
 
-    vim.keymap.set('n', 'gr', '<CMD>Trouble lsp_references toggle auto_jump=true<CR>')
-    vim.keymap.set('n', 'gd', '<CMD>Trouble lsp_definitions toggle auto_jump=true<CR>')
-    vim.keymap.set('n', 'gy', '<CMD>Trouble lsp_type_definitions toggle auto_jump=true<CR>')
-    vim.keymap.set('n', 'gi', '<CMD>Trouble lsp_implementations toggle auto_jump=true<CR>')
     vim.keymap.set('n', 'gD', '<CMD>Trouble lsp_declarations toggle auto_jump=true<CR>')
     vim.keymap.set('n', 'gu', '<CMD>Trouble lsp_outgoing_calls toggle<CR>')
     vim.keymap.set('n', 'ge', '<CMD>Trouble lsp_incoming_calls toggle<CR>')

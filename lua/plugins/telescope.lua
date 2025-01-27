@@ -21,6 +21,11 @@ return {
     '<Leader>fb',
     '<Leader>fh',
 
+    'gr',
+    'gd',
+    'gy',
+    'gi',
+
     '<Leader>fl',
   },
 
@@ -35,6 +40,7 @@ return {
     local add_to_trouble = require('trouble.sources.telescope').add
 
     local function flash(prompt_bufnr)
+      ---@diagnostic disable-next-line: missing-fields
       require('flash').jump({
         pattern = '^',
         label = {
@@ -263,6 +269,11 @@ return {
     vim.keymap.set('n', '<Leader>fg', func.live_grep_from_project_git_root)
     vim.keymap.set('n', '<Leader>fb', builtin.buffers)
     vim.keymap.set('n', '<Leader>fh', builtin.help_tags)
+
+    vim.keymap.set('n', 'gr', builtin.lsp_references)
+    vim.keymap.set('n', 'gd', builtin.lsp_definitions)
+    vim.keymap.set('n', 'gy', builtin.lsp_type_definitions)
+    vim.keymap.set('n', 'gi', builtin.lsp_implementations)
 
     vim.keymap.set('n', '<Leader>fl', builtin.resume)
   end,
