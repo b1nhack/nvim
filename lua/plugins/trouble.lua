@@ -21,6 +21,8 @@ return {
 
     require('trouble').setup({
       focus = true,
+      warn_no_results = false,
+      open_no_results = true,
 
       icons = {
         ---@type trouble.Indent.symbols
