@@ -43,13 +43,18 @@ return {
         local client = vim.lsp.get_client_by_id(ev.data.client_id)
 
         local opts = { buffer = bufnr }
+        vim.keymap.set('n', '<Leader>e', function()
+          if client ~= nil and client.name == 'rust-analyzer' then
+            vim.cmd.RustLsp('renderDiagnostic')
+          else
+            vim.diagnostic.open_float({ border = 'rounded' })
+          end
+        end, opts)
         vim.keymap.set({ 'n', 'x' }, '<C-CR>', vim.lsp.buf.code_action, opts)
         vim.keymap.set('n', '<C-j>', vim.lsp.buf.signature_help, opts)
 
-        if client ~= nil then
-          if client.server_capabilities.inlayHintProvider then
-            vim.lsp.inlay_hint.enable()
-          end
+        if client ~= nil and client.server_capabilities.inlayHintProvider then
+          vim.lsp.inlay_hint.enable()
         end
       end,
     })
