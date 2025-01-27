@@ -57,11 +57,7 @@ return {
           indentscope_color = 'lavender', -- catppuccin color (eg. `lavender`) Default: text
         },
 
-        dap = true,
-        dap_ui = true,
         markdown = true,
-        neotest = true,
-        treesitter_context = true,
         flash = true,
         lsp_trouble = true,
         indent_blankline = {
