@@ -13,7 +13,6 @@ Neovim IDE + Colemak
 - A C compiler for nvim-treesitter. See [here](https://github.com/nvim-treesitter/nvim-treesitter#requirements)
 - [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep) >= 14 recommended
 - [sharkdp/fd](https://github.com/sharkdp/fd)
-- [atanunq/viu](https://github.com/atanunq/viu)
 
 ## 🚀 Getting Started
 
