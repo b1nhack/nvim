@@ -18,6 +18,7 @@ return {
         'diff',
         'git_rebase',
         'gitcommit',
+        'html',
         'ini',
         'json',
         'jsonc',
