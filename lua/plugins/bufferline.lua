@@ -39,6 +39,6 @@ return {
       highlights = require('catppuccin.groups.integrations.bufferline').get(),
     }
 
-    vim.keymap.set('n', '<Leader>bs', '<CMD>BufferLinePick<CR>')
+    vim.keymap.set('n', '<Leader>bp', '<CMD>BufferLinePick<CR>')
   end,
 }
