@@ -16,10 +16,7 @@ return {
       dependencies = {
         'nvim-lua/plenary.nvim',
       },
-
-      config = function()
-        require('cmp_git').setup()
-      end,
+      opts = {},
     },
   },
   event = { 'InsertEnter', 'CmdlineEnter' },
@@ -114,8 +111,6 @@ return {
       preselect = cmp.PreselectMode.None,
 
       sources = cmp.config.sources({
-        { name = 'lazydev' },
-      }, {
         { name = 'async_path' },
         { name = 'luasnip' },
         { name = 'render-markdown' },
