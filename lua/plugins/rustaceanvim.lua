@@ -16,10 +16,6 @@ return {
           end, { buffer = bufnr })
         end,
       },
-
-      dap = {
-        disable = true,
-      },
     }
   end,
 }
