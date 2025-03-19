@@ -17,7 +17,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local commands = require('lazy.view.config').commands
-commands.clean = nil
 commands.install = nil
 commands.restore.button = false
 commands.check.key_plugin = 'c'
