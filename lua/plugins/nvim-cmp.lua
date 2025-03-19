@@ -259,16 +259,14 @@ return {
         end,
       },
 
-      -- https://github.com/hrsh7th/nvim-cmp/pull/676#issuecomment-1002532096
+      -- https://github.com/hrsh7th/nvim-cmp/pull/676#issuecomment-2736795535
       enabled = function()
-        if
-          require('cmp.config.context').in_treesitter_capture('comment') == true
-          or require('cmp.config.context').in_syntax_group('Comment')
-        then
-          return false
-        else
-          return true
-        end
+        local disabled = false
+        disabled = disabled or (vim.api.nvim_get_option_value('buftype', { buf = 0 }) == 'prompt')
+        disabled = disabled or (vim.fn.reg_recording() ~= '')
+        disabled = disabled or (vim.fn.reg_executing() ~= '')
+        disabled = disabled or require('cmp.config.context').in_treesitter_capture('comment')
+        return not disabled
       end,
     })
 
