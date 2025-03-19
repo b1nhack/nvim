@@ -18,6 +18,8 @@ return {
         })
       end,
 
+      lsp.nixd(),
+
       ['lua_ls'] = function()
         lsp.lua_ls()
       end,
