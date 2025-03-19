@@ -5,10 +5,6 @@ return {
 
   config = function()
     vim.g.rustaceanvim = {
-      tools = {
-        test_executor = 'neotest',
-      },
-
       server = {
         on_attach = function(_, bufnr)
           vim.keymap.set({ 'n', 'x' }, '<C-CR>', function()

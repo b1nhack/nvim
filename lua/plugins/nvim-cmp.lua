@@ -60,7 +60,6 @@ return {
       }, {
         { name = 'cmdline' },
       }),
-      ---@diagnostic disable-next-line: missing-fields
       matching = { disallow_symbol_nonprefix_matching = false },
 
       -- https://github.com/hrsh7th/nvim-cmp/wiki/Advanced-techniques#disabling-cmdline-completion-for-certain-commands-such-as-increname
@@ -238,7 +237,6 @@ return {
         entries = { name = 'custom', selection_order = 'near_cursor' },
       },
 
-      ---@diagnostic disable-next-line: missing-fields
       formatting = {
         format = function(entry, vim_item)
           -- Kind icons

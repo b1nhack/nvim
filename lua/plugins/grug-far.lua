@@ -4,52 +4,57 @@ return {
     'GrugFar',
   },
   keys = {
-    { '<Leader>s', mode = { 'n', 'x' } },
-    { '<Leader>S', mode = { 'n', 'x' } },
+    {
+      '<Leader>s',
+      function()
+        require('grug-far').open()
+      end,
+      mode = 'n',
+    },
+    {
+      '<Leader>s',
+      function()
+        require('grug-far').open({
+          prefills = {
+            search = vim.fn.expand('<cword>'),
+          },
+        })
+      end,
+      mode = 'x',
+    },
+    {
+      '<Leader>S',
+      function()
+        require('grug-far').open({
+          prefills = {
+            paths = vim.fn.expand('%'),
+          },
+        })
+      end,
+      mode = 'n',
+    },
+    {
+      '<Leader>S',
+      function()
+        require('grug-far').open({
+          prefills = {
+            search = vim.fn.expand('<cword>'),
+            paths = vim.fn.expand('%'),
+          },
+        })
+      end,
+      mode = 'x',
+    },
   },
 
-  config = function()
-    local grug_far = require('grug-far')
-
-    grug_far.setup({
-      minSearchChars = 3,
-      normalModeSearch = true,
-      maxWorkers = 9,
-      windowCreationCommand = 'tabnew',
-      wrap = false,
-      transient = true,
-      history = {
-        maxHistoryLines = 9999,
-      },
-    })
-
-    vim.keymap.set('n', '<Leader>s', function()
-      grug_far.open()
-    end)
-
-    vim.keymap.set('x', '<Leader>s', function()
-      grug_far.open({
-        prefills = {
-          search = vim.fn.expand('<cword>'),
-        },
-      })
-    end)
-
-    vim.keymap.set('n', '<Leader>S', function()
-      grug_far.open({
-        prefills = {
-          paths = vim.fn.expand('%'),
-        },
-      })
-    end)
-
-    vim.keymap.set('x', '<Leader>S', function()
-      grug_far.open({
-        prefills = {
-          search = vim.fn.expand('<cword>'),
-          paths = vim.fn.expand('%'),
-        },
-      })
-    end)
-  end,
+  ---@module 'grug-far'
+  ---@type GrugFarOptions
+  opts = {
+    minSearchChars = 3,
+    normalModeSearch = true,
+    maxWorkers = 9,
+    windowCreationCommand = 'tabnew',
+    wrap = false,
+    transient = true,
+  },
 }

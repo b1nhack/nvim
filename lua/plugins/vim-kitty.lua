@@ -1,6 +1,4 @@
 return {
   'fladson/vim-kitty',
-  ft = {
-    'kitty',
-  },
+  ft = 'kitty',
 }

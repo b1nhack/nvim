@@ -1,6 +1,8 @@
 local M = {}
 
-local builtin = require('telescope.builtin')
+local builtin = function()
+  return require('telescope.builtin')
+end
 
 local function is_git_repo()
   vim.fn.system('git rev-parse --is-inside-work-tree')
@@ -12,9 +14,9 @@ M.project_files = function()
   local opts = {} -- define here if you want to define something
 
   if is_git_repo() then
-    builtin.git_files(opts)
+    builtin().git_files(opts)
   else
-    builtin.find_files(opts)
+    builtin().find_files(opts)
   end
 end
 
@@ -32,7 +34,7 @@ M.live_grep_from_project_git_root = function()
     }
   end
 
-  builtin.live_grep(opts)
+  builtin().live_grep(opts)
 end
 
 return M

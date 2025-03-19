@@ -30,10 +30,6 @@ return {
   end,
 
   config = function()
-    vim.keymap.set('n', '<Leader>e', function()
-      vim.diagnostic.open_float({ border = 'rounded' })
-    end)
-
     -- Use LspAttach autocommand to only map the following keys
     -- after the language server attaches to the current buffer
     vim.api.nvim_create_autocmd('LspAttach', {

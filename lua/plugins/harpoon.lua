@@ -4,20 +4,22 @@ return {
   dependencies = {
     'nvim-lua/plenary.nvim',
   },
+  -- stylua: ignore
   keys = {
-    '<Leader>O',
-    '<Leader>o',
-    '<Leader>1',
-    '<Leader>2',
-    '<Leader>3',
-    '<Leader>4',
-    '<Leader>5',
+    { '<Leader>O', function() require('harpoon'):list():add() end },
+    { '<Leader>o', function() local harpoon = require('harpoon') harpoon.ui:toggle_quick_menu(harpoon:list()) end },
+    { '<Leader>1', function() require('harpoon'):list():select(1) end },
+    { '<Leader>2', function() require('harpoon'):list():select(2) end },
+    { '<Leader>3', function() require('harpoon'):list():select(3) end },
+    { '<Leader>4', function() require('harpoon'):list():select(4) end },
+    { '<Leader>5', function() require('harpoon'):list():select(5) end },
+    { '[p', function() require('harpoon'):list():prev() end },
+    { ']p', function() require('harpoon'):list():next() end },
   },
+  opts = {},
 
   config = function()
     local harpoon = require('harpoon')
-
-    harpoon:setup()
 
     harpoon:extend({
       UI_CREATE = function(cx)
@@ -34,28 +36,5 @@ return {
         end, { buffer = cx.bufnr })
       end,
     })
-
-    vim.keymap.set('n', '<Leader>O', function()
-      harpoon:list():add()
-    end)
-    vim.keymap.set('n', '<Leader>o', function()
-      harpoon.ui:toggle_quick_menu(harpoon:list())
-    end)
-
-    vim.keymap.set('n', '<Leader>1', function()
-      harpoon:list():select(1)
-    end)
-    vim.keymap.set('n', '<Leader>2', function()
-      harpoon:list():select(2)
-    end)
-    vim.keymap.set('n', '<Leader>3', function()
-      harpoon:list():select(3)
-    end)
-    vim.keymap.set('n', '<Leader>4', function()
-      harpoon:list():select(4)
-    end)
-    vim.keymap.set('n', '<Leader>5', function()
-      harpoon:list():select(5)
-    end)
   end,
 }

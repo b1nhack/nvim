@@ -3,19 +3,12 @@ return {
   dependencies = {
     'nvim-treesitter',
   },
+  -- stylua: ignore
   keys = {
-    'J',
+    { 'J', function() require('treesj').toggle() end },
   },
 
-  config = function()
-    local treesj = require('treesj')
-
-    treesj.setup({
-      use_default_keymaps = false,
-    })
-
-    vim.keymap.set('n', 'J', function()
-      treesj.toggle()
-    end)
-  end,
+  opts = {
+    use_default_keymaps = false,
+  },
 }

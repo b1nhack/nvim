@@ -1,3 +1,8 @@
+local func = require('config.telescope')
+local builtin = function()
+  return require('telescope.builtin')
+end
+
 return {
   'nvim-telescope/telescope.nvim',
   branch = '0.1.x',
@@ -15,18 +20,19 @@ return {
     },
   },
   cmd = 'Telescope',
+  -- stylua: ignore
   keys = {
-    '<Leader>ff',
-    '<Leader>fg',
-    '<Leader>fb',
-    '<Leader>fh',
+    { '<Leader>ff', func.project_files },
+    { '<Leader>fg', func.live_grep_from_project_git_root },
+    { '<Leader>fb', function() builtin().buffers() end },
+    { '<Leader>fh', function() builtin().help_tags() end },
 
-    'gr',
-    'gd',
-    'gy',
-    'gi',
+    { 'gr', function() builtin().lsp_references() end },
+    { 'gd', function() builtin().lsp_definitions() end },
+    { 'gy', function() builtin().lsp_type_definitions() end },
+    { 'gi', function() builtin().lsp_implementations() end },
 
-    '<Leader>fl',
+    { '<Leader>fl', function() builtin().resume() end },
   },
 
   config = function()
@@ -35,12 +41,10 @@ return {
     local action_layout = require('telescope.actions.layout')
 
     local open_with_trouble = require('trouble.sources.telescope').open
-
     -- Use this to add more results without clearing the trouble list
     local add_to_trouble = require('trouble.sources.telescope').add
 
     local function flash(prompt_bufnr)
-      ---@diagnostic disable-next-line: missing-fields
       require('flash').jump({
         pattern = '^',
         label = {
@@ -84,81 +88,34 @@ return {
         -- https://github.com/nvim-telescope/telescope.nvim/blob/master/lua/telescope/mappings.lua#L133
         default_mappings = {
           i = {
-            -- ["<LeftMouse>"] = {
-            -- 	actions.mouse_click,
-            -- 	type = "action",
-            -- 	opts = { expr = true },
-            -- },
-            -- ["<2-LeftMouse>"] = {
-            -- 	actions.double_mouse_click,
-            -- 	type = "action",
-            -- 	opts = { expr = true },
-            -- },
-
-            -- ["<C-n>"] = actions.move_selection_next,
-            -- ["<C-p>"] = actions.move_selection_previous,
-
             ['<C-c>'] = actions.close,
-
             ['<Down>'] = actions.move_selection_next,
             ['<Up>'] = actions.move_selection_previous,
-
             ['<CR>'] = actions.select_default,
             ['<C-s>'] = actions.select_horizontal,
             ['<C-v>'] = actions.select_vertical,
-            -- ["<C-t>"] = actions.select_tab,
-
             ['<C-u>'] = actions.preview_scrolling_up,
             ['<C-e>'] = actions.preview_scrolling_down,
-            -- ["<C-f>"] = actions.preview_scrolling_left,
-            -- ["<C-k>"] = actions.preview_scrolling_right,
-
-            -- ['<PageUp>'] = actions.results_scrolling_up,
-            -- ['<PageDown>'] = actions.results_scrolling_down,
-            -- ["<M-f>"] = actions.results_scrolling_left,
-            -- ["<M-k>"] = actions.results_scrolling_right,
-
             ['<Tab>'] = actions.toggle_selection + actions.move_selection_worse,
             ['<S-Tab>'] = actions.toggle_selection + actions.move_selection_better,
             ['<C-q>'] = add_to_trouble,
-            -- ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
             ['<C-l>'] = actions.complete_tag,
             ['<C-/>'] = actions.which_key,
             ['<C-_>'] = actions.which_key, -- keys from pressing <C-/>
             ['<C-w>'] = { '<c-s-w>', type = 'command' },
-            -- ['<C-r><C-w>'] = actions.insert_original_cword,
-            -- ['<C-r><C-a>'] = actions.insert_original_cWORD,
-            -- ['<C-r><C-f>'] = actions.insert_original_cfile,
-            -- ['<C-r><C-l>'] = actions.insert_original_cline,
-
             -- disable c-j because we dont want to allow new lines #2123
             ['<C-j>'] = actions.nop,
             ['<C-p>'] = action_layout.toggle_preview,
             ['<C-t>'] = open_with_trouble,
           },
           n = {
-            -- ["<LeftMouse>"] = {
-            -- 	actions.mouse_click,
-            -- 	type = "action",
-            -- 	opts = { expr = true },
-            -- },
-            -- ["<2-LeftMouse>"] = {
-            -- 	actions.double_mouse_click,
-            -- 	type = "action",
-            -- 	opts = { expr = true },
-            -- },
-
             ['q'] = actions.close,
             ['<CR>'] = actions.select_default,
             ['<C-s>'] = actions.select_horizontal,
             ['<C-v>'] = actions.select_vertical,
-            -- ["<C-t>"] = actions.select_tab,
-
             ['<Tab>'] = actions.toggle_selection + actions.move_selection_worse,
             ['<S-Tab>'] = actions.toggle_selection + actions.move_selection_better,
             ['<C-q>'] = add_to_trouble,
-            -- ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
-
             ['e'] = actions.move_selection_next,
             ['u'] = actions.move_selection_previous,
             ['U'] = function(prompt_bufnr)
@@ -166,28 +123,17 @@ return {
                 actions.move_selection_previous(prompt_bufnr)
               end
             end,
-            -- ['M'] = actions.move_to_middle,
             ['E'] = function(prompt_bufnr)
               for _ = 1, 9 do
                 actions.move_selection_next(prompt_bufnr)
               end
             end,
-
             ['<Down>'] = actions.move_selection_next,
             ['<Up>'] = actions.move_selection_previous,
             ['gg'] = actions.move_to_top,
             ['G'] = actions.move_to_bottom,
-
             ['<C-u>'] = actions.preview_scrolling_up,
             ['<C-e>'] = actions.preview_scrolling_down,
-            -- ["<C-f>"] = actions.preview_scrolling_left,
-            -- ["<C-k>"] = actions.preview_scrolling_right,
-
-            -- ['<PageUp>'] = actions.results_scrolling_up,
-            -- ['<PageDown>'] = actions.results_scrolling_down,
-            -- ["<M-f>"] = actions.results_scrolling_left,
-            -- ["<M-k>"] = actions.results_scrolling_right,
-
             ['?'] = actions.which_key,
             ['<C-p>'] = action_layout.toggle_preview,
             ['s'] = flash,
@@ -257,24 +203,9 @@ return {
       },
     })
 
-    telescope.load_extension('noice')
-    telescope.load_extension('fzf')
+    telescope.load_extension('harpoon')
     telescope.load_extension('luasnip')
+    telescope.load_extension('noice')
     telescope.load_extension('notify')
-
-    local builtin = require('telescope.builtin')
-    local func = require('config.telescope')
-
-    vim.keymap.set('n', '<Leader>ff', func.project_files)
-    vim.keymap.set('n', '<Leader>fg', func.live_grep_from_project_git_root)
-    vim.keymap.set('n', '<Leader>fb', builtin.buffers)
-    vim.keymap.set('n', '<Leader>fh', builtin.help_tags)
-
-    vim.keymap.set('n', 'gr', builtin.lsp_references)
-    vim.keymap.set('n', 'gd', builtin.lsp_definitions)
-    vim.keymap.set('n', 'gy', builtin.lsp_type_definitions)
-    vim.keymap.set('n', 'gi', builtin.lsp_implementations)
-
-    vim.keymap.set('n', '<Leader>fl', builtin.resume)
   end,
 }

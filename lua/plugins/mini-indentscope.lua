@@ -5,29 +5,7 @@ return {
 
   init = function()
     vim.api.nvim_create_autocmd('FileType', {
-      pattern = {
-        'TelescopePrompt',
-        'TelescopeResults',
-        'checkhealth',
-        'dap-repl',
-        'dapui_breakpoints',
-        'dapui_console',
-        'dapui_scopes',
-        'dapui_stacks',
-        'dapui_watches',
-        'gitcommit',
-        'help',
-        'lazy',
-        'lspinfo',
-        'man',
-        'mason',
-        'neotest-summary',
-        'neotest-output-panel',
-        'noice',
-        'oil',
-        'spectre_panel',
-        'trouble',
-      },
+      pattern = require('config.global').exclude_types,
       callback = function()
         vim.b.miniindentscope_disable = true
       end,
@@ -51,29 +29,29 @@ return {
     })
   end,
 
-  config = function()
-    require('mini.indentscope').setup({
-      draw = {
-        delay = 200,
+  opts = {
+    draw = {
+      delay = 200,
 
-        -- Animation rule for scope's first drawing. A function which, given
-        -- next and total step numbers, returns wait time (in ms). See
-        -- |MiniIndentscope.gen_animation| for builtin options. To disable
-        -- animation, use `require('mini.indentscope').gen_animation.none()`.
-        animation = require('mini.indentscope').gen_animation.none(),
-      },
-      mappings = {
-        -- Textobjects
-        object_scope = 'kk',
-        object_scope_with_border = 'ak',
+      -- Animation rule for scope's first drawing. A function which, given
+      -- next and total step numbers, returns wait time (in ms). See
+      -- |MiniIndentscope.gen_animation| for builtin options. To disable
+      -- animation, use `require('mini.indentscope').gen_animation.none()`.
+      animation = function()
+        return require('mini.indentscope').gen_animation.none()()
+      end,
+    },
+    mappings = {
+      -- Textobjects
+      object_scope = 'kk',
+      object_scope_with_border = 'ak',
 
-        -- Motions (jump to respective border line; if not present - body line)
-        goto_top = '[k',
-        goto_bottom = ']k',
-      },
+      -- Motions (jump to respective border line; if not present - body line)
+      goto_top = '[k',
+      goto_bottom = ']k',
+    },
 
-      options = { try_as_border = true },
-      symbol = '│',
-    })
-  end,
+    options = { try_as_border = true },
+    symbol = '│',
+  },
 }

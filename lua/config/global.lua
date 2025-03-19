@@ -39,4 +39,19 @@ M.icons = {
   Version = '󰰪 ',
 }
 
+M.exclude_types = {
+  'TelescopePrompt',
+  'TelescopeResults',
+  'checkhealth',
+  'gitcommit',
+  'help',
+  'lazy',
+  'lspinfo',
+  'man',
+  'mason',
+  'noice',
+  'oil',
+  'trouble',
+}
+
 return M
