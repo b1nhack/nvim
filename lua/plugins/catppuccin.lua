@@ -71,10 +71,6 @@ return {
         colored_indent_levels = false,
       },
       ufo = true,
-      navic = {
-        enabled = true,
-        custom_bg = 'NONE', -- "lualine" will set background to mantle
-      },
       harpoon = true,
       nvim_surround = true,
       grug_far = true,
