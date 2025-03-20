@@ -12,7 +12,6 @@
   "conform.nvim": { "branch": "master", "commit": "db8a4a9edb217067b1d7a2e0362c74bfe9cc944d" },
   "crates.nvim": { "branch": "main", "commit": "403a0abef0e2aec12749a534dc468d6fd50c6741" },
   "cscope_maps.nvim": { "branch": "main", "commit": "eaec5a81c99db98794a246bc30e311fbcef99854" },
-  "dressing.nvim": { "branch": "master", "commit": "2d7c2db2507fa3c4956142ee607431ddb2828639" },
   "flash.nvim": { "branch": "main", "commit": "3c942666f115e2811e959eabbdd361a025db8b63" },
   "friendly-snippets": { "branch": "main", "commit": "efff286dd74c22f731cdec26a70b46e5b203c619" },
   "gitsigns.nvim": { "branch": "main", "commit": "7010000889bfb6c26065e0b0f7f1e6aa9163edd9" },
