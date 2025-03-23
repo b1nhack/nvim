@@ -1,7 +1,7 @@
 return {
   'catppuccin/nvim',
   name = 'catppuccin',
-  priority = 999,
+  priority = 1000,
   lazy = false,
 
   init = function()
@@ -25,12 +25,6 @@ return {
       treesitter = true,
       rainbow_delimiters = true,
       noice = true,
-      illuminate = {
-        enabled = true,
-        lsp = true,
-      },
-
-      notify = true,
       telescope = {
         enabled = true,
         -- style = "nvchad"
@@ -65,16 +59,15 @@ return {
       markdown = true,
       flash = true,
       lsp_trouble = true,
-      indent_blankline = {
-        enabled = true,
-        scope_color = 'lavender', -- catppuccin color (eg. `lavender`) Default: text
-        colored_indent_levels = false,
-      },
       ufo = true,
       harpoon = true,
       nvim_surround = true,
       grug_far = true,
       render_markdown = true,
+      snacks = {
+        enabled = true,
+        indent_scope_color = 'lavender', -- catppuccin color (eg. `lavender`) Default: text
+      },
     },
   },
 }
