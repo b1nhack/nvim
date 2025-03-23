@@ -6,8 +6,8 @@ return {
   },
   -- stylua: ignore
   keys = {
-    { '<Leader>O', function() require('harpoon'):list():add() end },
-    { '<Leader>o', function() local harpoon = require('harpoon') harpoon.ui:toggle_quick_menu(harpoon:list()) end },
+    { '<Leader>o', function() require('harpoon'):list():add() end },
+    { '<Leader>g', function() local harpoon = require('harpoon') harpoon.ui:toggle_quick_menu(harpoon:list()) end },
     { '<Leader>1', function() require('harpoon'):list():select(1) end },
     { '<Leader>2', function() require('harpoon'):list():select(2) end },
     { '<Leader>3', function() require('harpoon'):list():select(3) end },
