@@ -1,7 +1,6 @@
 return {
   'knubie/vim-kitty-navigator',
   build = 'cp ./*.py ~/.config/kitty/',
-  event = 'VeryLazy',
   keys = {
     { '<M-u>', '<CMD>KittyNavigateUp<CR>', mode = { 'n', 'x' } },
     { '<M-e>', '<CMD>KittyNavigateDown<CR>', mode = { 'n', 'x' } },
