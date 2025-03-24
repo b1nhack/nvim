@@ -20,7 +20,6 @@ return {
 
     default_integrations = false,
     integrations = {
-      cmp = true,
       mason = true,
       treesitter = true,
       rainbow_delimiters = true,
@@ -68,6 +67,7 @@ return {
         enabled = true,
         indent_scope_color = 'lavender', -- catppuccin color (eg. `lavender`) Default: text
       },
+      blink_cmp = true,
     },
   },
 }

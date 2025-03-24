@@ -12,12 +12,6 @@ return {
       'nvim-telescope/telescope-fzf-native.nvim',
       build = 'make',
     },
-    {
-      'benfowler/telescope-luasnip.nvim',
-      dependencies = {
-        'LuaSnip',
-      },
-    },
   },
   cmd = 'Telescope',
   -- stylua: ignore
@@ -204,7 +198,6 @@ return {
     })
 
     telescope.load_extension('harpoon')
-    telescope.load_extension('luasnip')
     telescope.load_extension('noice')
   end,
 }
