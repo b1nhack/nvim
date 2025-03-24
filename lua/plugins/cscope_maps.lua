@@ -6,7 +6,6 @@ return {
   ---@type CsMapsConfig
   opts = {
     cscope = {
-      picker = 'telescope',
       skip_picker_for_single_result = true,
     },
   },

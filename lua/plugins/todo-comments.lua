@@ -7,6 +7,9 @@ return {
     'TodoLocList',
     'TodoTelescope',
   },
+  keys = {
+    { '<Leader>ft', '<CMD>Trouble todo<CR>' },
+  },
 
   ---@module 'todo-comments'
   ---@type TodoConfig

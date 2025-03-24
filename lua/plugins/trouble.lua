@@ -2,7 +2,6 @@ local icons = require('config.global').icons
 
 return {
   'folke/trouble.nvim',
-  dependencies = { 'todo-comments.nvim' },
   cmd = 'Trouble',
   keys = {
     { '<Leader>fs', '<CMD>Trouble symbols toggle<CR>' },
@@ -11,8 +10,6 @@ return {
 
     { '<Leader>fx', '<CMD>Trouble loclist toggle<CR>' },
     { '<Leader>fX', '<CMD>Trouble quickfix toggle<CR>' },
-
-    { '<Leader>ft', '<CMD>Trouble todo<CR>' },
 
     { 'gD', '<CMD>Trouble lsp_declarations toggle auto_jump=true<CR>' },
     { 'gu', '<CMD>Trouble lsp_outgoing_calls toggle<CR>' },

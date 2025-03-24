@@ -1,7 +1,16 @@
 return {
   'kylechui/nvim-surround',
   version = '*', -- Use for stability; omit to use `main` branch for the latest features
-  event = 'VeryLazy',
+  keys = {
+    'ys',
+    'yss',
+    'yS',
+    'ySS',
+    { 'gs', mode = 'x' },
+    { 'gS', mode = 'x' },
+    'yd',
+    'yc',
+  },
 
   ---@module 'nvim-surround'
   ---@type user_options

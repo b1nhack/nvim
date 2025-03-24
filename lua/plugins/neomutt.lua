@@ -1,4 +1,4 @@
 return {
   'neomutt/neomutt.vim',
-  lazy = false,
+  ft = 'neomuttrc',
 }
