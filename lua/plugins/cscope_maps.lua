@@ -1,6 +1,6 @@
 return {
   'dhananjaylatkar/cscope_maps.nvim',
-  event = 'VeryLazy',
+  ft = { 'c', 'h' },
 
   ---@module 'cscope_maps'
   ---@type CsMapsConfig
