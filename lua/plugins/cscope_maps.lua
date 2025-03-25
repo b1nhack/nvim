@@ -1,6 +1,12 @@
 return {
   'dhananjaylatkar/cscope_maps.nvim',
-  ft = { 'c', 'h' },
+  cmd = {
+    'Cscope',
+    'Cs',
+    'Cstag',
+    'CsPrompt',
+    'CsStackView',
+  },
 
   ---@module 'cscope_maps'
   ---@type CsMapsConfig
