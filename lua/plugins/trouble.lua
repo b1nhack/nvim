@@ -4,7 +4,7 @@ return {
   'folke/trouble.nvim',
   cmd = 'Trouble',
   keys = {
-    { '<Leader>fs', '<CMD>Trouble symbols toggle<CR>' },
+    { '<Leader>fs', '<CMD>Trouble symbols toggle focus=true<CR>' },
     { '<Leader>fd', '<CMD>Trouble diagnostics toggle filter.buf=0<CR>' },
     { '<Leader>fD', '<CMD>Trouble diagnostics toggle<CR>' },
 
