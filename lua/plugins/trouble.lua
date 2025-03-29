@@ -19,7 +19,6 @@ return {
   ---@type trouble.Config
   opts = {
     focus = true,
-    warn_no_results = false,
 
     icons = {
       ---@type trouble.Indent.symbols
