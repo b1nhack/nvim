@@ -1,7 +1,13 @@
 return {
   'WhoIsSethDaniel/mason-tool-installer.nvim',
   dependencies = 'mason.nvim',
-  lazy = false,
+  cmd = {
+    'MasonToolsInstall',
+    'MasonToolsInstallSync',
+    'MasonToolsUpdate',
+    'MasonToolsUpdateSync',
+    'MasonToolsClean',
+  },
 
   opts = {
     -- a list of all tools you want to ensure are installed upon
@@ -24,7 +30,7 @@ return {
     -- are available the tool will be updated. This setting does not
     -- affect :MasonToolsUpdate or :MasonToolsInstall.
     -- Default: false
-    auto_update = true,
+    auto_update = false,
 
     -- set a delay (in ms) before the installation starts. This is only
     -- effective if run_on_start is set to true.
