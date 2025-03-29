@@ -11,9 +11,6 @@ return {
     { '<Leader>fd', '<CMD>Trouble diagnostics toggle filter.buf=0<CR>' },
     { '<Leader>fD', '<CMD>Trouble diagnostics toggle<CR>' },
 
-    { '<Leader>fx', '<CMD>Trouble loclist toggle<CR>' },
-    { '<Leader>fX', '<CMD>Trouble quickfix toggle<CR>' },
-
     { 'gu', '<CMD>Trouble lsp_outgoing_calls toggle<CR>' },
     { 'ge', '<CMD>Trouble lsp_incoming_calls toggle<CR>' },
   },
