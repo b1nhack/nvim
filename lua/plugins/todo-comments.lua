@@ -5,7 +5,6 @@ return {
   cmd = {
     'TodoQuickFix',
     'TodoLocList',
-    'TodoTelescope',
   },
   keys = {
     { '<Leader>ft', '<CMD>Trouble todo<CR>' },

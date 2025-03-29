@@ -40,8 +40,6 @@ M.icons = {
 }
 
 M.exclude_types = {
-  'TelescopePrompt',
-  'TelescopeResults',
   'checkhealth',
   'gitcommit',
   'help',

@@ -24,10 +24,6 @@ return {
       treesitter = true,
       rainbow_delimiters = true,
       noice = true,
-      telescope = {
-        enabled = true,
-        -- style = "nvchad"
-      },
 
       semantic_tokens = true,
       native_lsp = {

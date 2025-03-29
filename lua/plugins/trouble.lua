@@ -11,7 +11,6 @@ return {
     { '<Leader>fx', '<CMD>Trouble loclist toggle<CR>' },
     { '<Leader>fX', '<CMD>Trouble quickfix toggle<CR>' },
 
-    { 'gD', '<CMD>Trouble lsp_declarations toggle auto_jump=true<CR>' },
     { 'gu', '<CMD>Trouble lsp_outgoing_calls toggle<CR>' },
     { 'ge', '<CMD>Trouble lsp_incoming_calls toggle<CR>' },
   },
