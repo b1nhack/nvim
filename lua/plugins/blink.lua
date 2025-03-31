@@ -32,7 +32,7 @@ return {
     sources = {
       default = { 'lsp', 'path', 'snippets', 'buffer' },
       providers = {
-        path = { name = 'PATH' },
+        path = { name = 'PATH', opts = { show_hidden_files_by_default = true } },
         snippets = {
           name = 'SNIP',
           should_show_items = function(ctx)
