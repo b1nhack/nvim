@@ -7,6 +7,17 @@ return {
     'CsPrompt',
     'CsStackView',
   },
+  keys = {
+    '<Leader>ca',
+    '<Leader>cc',
+    '<Leader>cd',
+    '<Leader>ce',
+    '<Leader>cf',
+    '<Leader>cg',
+    '<Leader>ci',
+    '<Leader>cs',
+    '<Leader>ct',
+  },
 
   ---@module 'cscope_maps'
   ---@type CsMapsConfig
