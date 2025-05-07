@@ -58,6 +58,7 @@ return {
       h = { 'clang-format' },
       lua = { 'stylua' },
       markdown = { 'mdformat' },
+      nix = { 'nixfmt' },
       python = { 'black' },
       rust = { 'rustfmt' },
       sh = { 'shfmt' },
