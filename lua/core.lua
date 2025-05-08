@@ -19,6 +19,13 @@ vim.o.smartcase = true
 vim.o.infercase = true
 vim.o.wildignorecase = true
 
+vim.o.foldmethod = 'expr'
+vim.o.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.o.foldtext = ''
+vim.o.foldcolumn = '0'
+vim.o.foldlevel = 99
+vim.o.foldlevelstart = 99
+
 -- ui
 vim.o.colorcolumn = '+1'
 vim.o.cursorline = true
@@ -35,12 +42,14 @@ vim.o.wildmenu = false
 vim.o.wildchar = 0
 vim.o.fillchars = table.concat({
   'horiz:═',
-  'horizdown:╦',
   'horizup:╩',
+  'horizdown:╦',
   'vert:║',
-  'verthoriz:╬',
   'vertleft:╣',
   'vertright:╠',
+  'verthoriz:╬',
+
+  'fold: ',
 }, ',')
 
 -- behavior
