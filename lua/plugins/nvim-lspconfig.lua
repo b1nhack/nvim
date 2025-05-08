@@ -1,6 +1,12 @@
 return {
   'neovim/nvim-lspconfig',
   event = { 'BufReadPost', 'BufWritePost', 'BufNewFile' },
+  cmd = {
+    'LspInfo',
+    'LspStart',
+    'LspStop',
+    'LspRestart',
+  },
 
   init = function()
     vim.diagnostic.config({
@@ -31,27 +37,60 @@ return {
   end,
 
   config = function()
-    -- Use LspAttach autocommand to only map the following keys
-    -- after the language server attaches to the current buffer
     vim.api.nvim_create_autocmd('LspAttach', {
-      group = vim.api.nvim_create_augroup('UserLspConfig', {}),
       callback = function(ev)
         local bufnr = ev.buf
+        local opts = { buffer = bufnr }
         local client = vim.lsp.get_client_by_id(ev.data.client_id)
 
-        local opts = { buffer = bufnr }
+        if client == nil then
+          return
+        end
+
+        vim.opt.omnifunc = nil
+
+        vim.keymap.del('n', 'grn')
+        vim.keymap.del('n', 'gra')
+        vim.keymap.del('n', 'grr')
+        vim.keymap.del('n', 'gri')
+        vim.keymap.del('n', 'gO')
+        vim.keymap.del('i', '<C-s>')
+
+        vim.keymap.set('n', 'j', vim.lsp.buf.signature_help, opts)
+        vim.keymap.set('n', '<C-CR>', vim.lsp.buf.code_action, opts)
+        vim.keymap.set('n', '<Leader>rn', vim.lsp.buf.rename, opts)
+
         vim.keymap.set('n', '<Leader>e', function()
-          if client ~= nil and client.name == 'rust-analyzer' then
+          if client.name == 'rust-analyzer' then
             vim.cmd.RustLsp('renderDiagnostic')
           else
             vim.diagnostic.open_float({ border = 'rounded' })
           end
         end, opts)
-        vim.keymap.set({ 'n', 'x' }, '<C-CR>', vim.lsp.buf.code_action, opts)
-        vim.keymap.set('n', '<C-j>', vim.lsp.buf.signature_help, opts)
 
-        if client ~= nil and client.server_capabilities.inlayHintProvider then
-          vim.lsp.inlay_hint.enable()
+        if client.server_capabilities.inlayHintProvider then
+          vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+        end
+      end,
+    })
+
+    vim.api.nvim_create_autocmd('LspDetach', {
+      callback = function(ev)
+        local bufnr = ev.buf
+        local opts = { buffer = bufnr }
+        local client = vim.lsp.get_client_by_id(ev.data.client_id)
+
+        if client == nil then
+          return
+        end
+
+        vim.keymap.del('n', 'j', opts)
+        vim.keymap.del('n', '<C-CR>', opts)
+        vim.keymap.del('n', '<Leader>rn', opts)
+        vim.keymap.del('n', '<Leader>e', opts)
+
+        if client.server_capabilities.inlayHintProvider then
+          vim.lsp.inlay_hint.enable(false, { bufnr = bufnr })
         end
       end,
     })
