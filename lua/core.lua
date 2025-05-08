@@ -50,6 +50,7 @@ vim.o.fillchars = table.concat({
   'verthoriz:╬',
 
   'fold: ',
+  'diff: ',
 }, ',')
 
 -- behavior
