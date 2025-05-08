@@ -206,7 +206,6 @@ return {
     quickfile = { enabled = true },
     -- enable when https://github.com/folke/snacks.nvim/issues/1621 close
     -- scope = { enabled = true },
-    scroll = { enabled = true },
     statuscolumn = { enabled = true },
     words = { enabled = true },
   },
