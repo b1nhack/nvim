@@ -29,7 +29,7 @@ vim.o.foldlevelstart = 99
 -- ui
 vim.o.colorcolumn = '+1'
 vim.o.cursorline = true
-vim.o.listchars = table.concat({ 'extends:', 'nbsp:󱁐', 'tab:󰌒 ' }, ',')
+vim.o.listchars = table.concat({ 'tab:<->', 'extends:', 'precedes:', 'nbsp:󱁐' }, ',')
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.ruler = false
@@ -68,8 +68,6 @@ vim.o.wrapscan = false
 vim.o.switchbuf = 'useopen'
 vim.o.breakindent = true
 vim.o.splitkeep = 'screen'
-vim.opt.iskeyword:append('-')
-vim.o.formatlistpat = [[^\s*[0-9\-\+\*]\+[\.\)]*\s\+]]
 vim.o.formatoptions = 'rqnl1j'
 
 vim.o.cindent = true
@@ -94,7 +92,7 @@ vim.api.nvim_create_autocmd('FileType', {
     -- Don't auto-wrap comments and don't insert comment leader after hitting 'o'
     -- If don't do this on `FileType`, this keeps reappearing due to being set in
     -- filetype plugins.
-    vim.cmd('setlocal formatoptions-=c formatoptions-=o')
+    vim.opt.formatoptions:remove { 'o', 'c' }
   end,
   desc = [[Ensure proper 'formatoptions']],
 })
