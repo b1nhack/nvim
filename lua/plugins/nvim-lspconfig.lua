@@ -34,6 +34,13 @@ return {
         },
       },
     })
+
+    vim.keymap.del('n', 'grn')
+    vim.keymap.del('n', 'gra')
+    vim.keymap.del('n', 'grr')
+    vim.keymap.del('n', 'gri')
+    vim.keymap.del('n', 'gO')
+    vim.keymap.del('i', '<C-s>')
   end,
 
   config = function()
@@ -47,14 +54,8 @@ return {
           return
         end
 
-        vim.opt.omnifunc = nil
-
-        vim.keymap.del('n', 'grn')
-        vim.keymap.del('n', 'gra')
-        vim.keymap.del('n', 'grr')
-        vim.keymap.del('n', 'gri')
-        vim.keymap.del('n', 'gO')
-        vim.keymap.del('i', '<C-s>')
+        vim.bo[ev.buf].omnifunc = nil
+        vim.bo[ev.buf].formatexpr = nil
 
         vim.keymap.set('n', 'j', vim.lsp.buf.signature_help, opts)
         vim.keymap.set('n', '<C-CR>', vim.lsp.buf.code_action, opts)
