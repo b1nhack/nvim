@@ -103,7 +103,6 @@ return {
     extensions = {
       'lazy',
       'man',
-      'mason',
       'oil',
       'quickfix',
     },

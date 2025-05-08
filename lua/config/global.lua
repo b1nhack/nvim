@@ -7,7 +7,6 @@ M.exclude_types = {
   'lazy',
   'lspinfo',
   'man',
-  'mason',
   'noice',
   'oil',
   'trouble',

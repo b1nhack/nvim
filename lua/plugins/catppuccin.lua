@@ -20,7 +20,6 @@ return {
 
     default_integrations = false,
     integrations = {
-      mason = true,
       treesitter = true,
       rainbow_delimiters = true,
       noice = true,
@@ -54,7 +53,6 @@ return {
       markdown = true,
       flash = true,
       lsp_trouble = true,
-      ufo = true,
       harpoon = true,
       nvim_surround = true,
       grug_far = true,
