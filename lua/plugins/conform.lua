@@ -63,6 +63,8 @@ return {
       rust = { 'rustfmt' },
       sh = { 'shfmt' },
       zsh = { 'shfmt' },
+
+      ['_'] = { 'trim_whitespace' },
     },
 
     -- Set default options
