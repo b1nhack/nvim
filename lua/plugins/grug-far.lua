@@ -48,7 +48,7 @@ return {
   },
 
   ---@module 'grug-far'
-  ---@type GrugFarOptions
+  ---@type grug.far.Options
   opts = {
     minSearchChars = 3,
     normalModeSearch = true,
