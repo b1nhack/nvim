@@ -17,6 +17,7 @@ return {
     '<Leader>ci',
     '<Leader>cs',
     '<Leader>ct',
+    '<C-]>',
   },
 
   ---@module 'cscope_maps'
