@@ -53,7 +53,6 @@ return {
       markdown = true,
       flash = true,
       lsp_trouble = true,
-      harpoon = true,
       nvim_surround = true,
       grug_far = true,
       render_markdown = true,
