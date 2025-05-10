@@ -204,7 +204,7 @@ return {
     },
     notifier = { enabled = true },
     quickfile = { enabled = true },
-    -- enable when https://github.com/folke/snacks.nvim/issues/1621 close
+    -- TODO: enable when https://github.com/folke/snacks.nvim/issues/1621 close
     -- scope = { enabled = true },
     statuscolumn = { enabled = true },
     words = { enabled = true },

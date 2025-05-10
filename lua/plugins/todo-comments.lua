@@ -12,6 +12,7 @@ return {
 
   ---@module 'todo-comments'
   ---@type TodoConfig
+  -- TODO: I need a option to disable warning on no results
   opts = {
     sign_priority = 8, -- sign priority
 
