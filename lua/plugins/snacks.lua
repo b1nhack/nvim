@@ -46,11 +46,6 @@ return {
       layout = { cycle = false },
       prompt = ' ',
       formatters = { selected = { show_always = true, unselected = false } },
-      actions = {
-        trouble_open = function(...)
-          require('trouble.sources.snacks').actions.trouble_open(...)
-        end,
-      },
       win = {
         -- input window
         input = {
@@ -90,7 +85,6 @@ return {
             ['<c-j>'] = false,
             ['<c-k>'] = false,
             ['<c-n>'] = false,
-            ['<c-q>'] = 'trouble_open',
             ['<c-s>'] = { 'edit_split', mode = { 'i', 'n' } },
             ['<c-t>'] = { 'tab', mode = { 'n', 'i' } },
             ['<c-u>'] = false,
@@ -146,7 +140,6 @@ return {
             ['<c-j>'] = false,
             ['<c-k>'] = false,
             ['<c-n>'] = false,
-            ['<c-q>'] = 'trouble_open',
             ['<c-s>'] = 'edit_split',
             ['<c-t>'] = 'tab',
             ['<c-u>'] = false,
