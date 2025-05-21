@@ -13,7 +13,6 @@ return {
     ensure_installed = {
       'bash',
       'c',
-      'capnp',
       'diff',
       'git_rebase',
       'gitcommit',
@@ -28,13 +27,10 @@ return {
       'python',
       'query',
       'regex',
-      'ron',
       'rust',
       'toml',
       'vim',
       'vimdoc',
-      'yaml',
-      'zig',
     },
 
     highlight = {
