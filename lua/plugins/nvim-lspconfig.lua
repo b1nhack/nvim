@@ -54,8 +54,8 @@ return {
           return
         end
 
-        vim.bo[ev.buf].omnifunc = nil
-        vim.bo[ev.buf].formatexpr = nil
+        vim.bo[bufnr].omnifunc = nil
+        vim.bo[bufnr].formatexpr = nil
 
         vim.keymap.set('n', 'j', vim.lsp.buf.hover, opts)
         vim.keymap.set('n', '<C-CR>', vim.lsp.buf.code_action, opts)
@@ -80,6 +80,8 @@ return {
         if client == nil then
           return
         end
+
+        vim.bo[bufnr].tagfunc = nil
 
         vim.keymap.del('n', 'j', opts)
         vim.keymap.del('n', '<C-CR>', opts)
