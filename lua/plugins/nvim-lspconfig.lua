@@ -57,7 +57,7 @@ return {
         vim.bo[ev.buf].omnifunc = nil
         vim.bo[ev.buf].formatexpr = nil
 
-        vim.keymap.set('n', 'j', vim.lsp.buf.signature_help, opts)
+        vim.keymap.set('n', 'j', vim.lsp.buf.hover, opts)
         vim.keymap.set('n', '<C-CR>', vim.lsp.buf.code_action, opts)
         vim.keymap.set('n', '<Leader>rn', vim.lsp.buf.rename, opts)
 
