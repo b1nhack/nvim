@@ -62,11 +62,7 @@ return {
         vim.keymap.set('n', '<Leader>rn', vim.lsp.buf.rename, opts)
 
         vim.keymap.set('n', '<Leader>e', function()
-          if client.name == 'rust-analyzer' then
-            vim.cmd.RustLsp('renderDiagnostic')
-          else
-            vim.diagnostic.open_float({ border = 'rounded' })
-          end
+          vim.diagnostic.open_float({ border = 'rounded' })
         end, opts)
 
         if client.server_capabilities.inlayHintProvider then
