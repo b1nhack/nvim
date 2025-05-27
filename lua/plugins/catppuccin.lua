@@ -55,7 +55,6 @@ return {
       lsp_trouble = true,
       nvim_surround = true,
       grug_far = true,
-      render_markdown = true,
       snacks = {
         enabled = true,
         indent_scope_color = 'lavender', -- catppuccin color (eg. `lavender`) Default: text
