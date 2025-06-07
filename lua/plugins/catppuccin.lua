@@ -59,7 +59,9 @@ return {
         enabled = true,
         indent_scope_color = 'lavender', -- catppuccin color (eg. `lavender`) Default: text
       },
-      blink_cmp = true,
+      blink_cmp = {
+        style = 'bordered',
+      },
     },
   },
 }
