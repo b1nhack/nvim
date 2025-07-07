@@ -29,6 +29,8 @@ return {
         'jsonc',
         -- lua
         'lua',
+        -- make
+        'make',
         -- markdown markdown_inline
         'markdown',
         -- nix
@@ -70,6 +72,7 @@ return {
       'json',
       'jsonc',
       'lua',
+      'make',
       'markdown',
       'markdown_inline',
       'nix',
