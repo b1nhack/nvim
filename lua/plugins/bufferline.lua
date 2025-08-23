@@ -39,7 +39,7 @@ return {
     },
     ---@diagnostic disable-next-line: assign-type-mismatch
     highlights = function()
-      local catppuccin = require('catppuccin.groups.integrations.bufferline').get()
+      local catppuccin = require('catppuccin.groups.integrations.bufferline').get_theme()
       if type(catppuccin) == 'function' then
         return catppuccin()
       else
