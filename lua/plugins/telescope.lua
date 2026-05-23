@@ -63,21 +63,16 @@ return {
 
     telescope.setup({
       defaults = {
-        scroll_strategy = 'limit',
-        layout_strategy = 'flex',
-        prompt_prefix = ' ',
-        selection_caret = ' ',
-        multi_icon = ' ',
-        dynamic_preview_title = true,
         sorting_strategy = 'ascending',
+        scroll_strategy = 'limit',
         layout_config = {
           prompt_position = 'top',
         },
 
-        preview = {
-          msg_bg_fillchar = '',
-          filesize_limit = 1, -- MB
-        },
+        prompt_prefix = ' ',
+        selection_caret = ' ',
+        multi_icon = ' ',
+        dynamic_preview_title = true,
 
         -- https://github.com/nvim-telescope/telescope.nvim/blob/master/lua/telescope/mappings.lua#L133
         default_mappings = {
@@ -134,12 +129,20 @@ return {
             ['<C-t>'] = open_with_trouble,
           },
         },
+
+        preview = {
+          msg_bg_fillchar = '',
+          filesize_limit = 1, -- MB
+        },
+
+        history = false,
       },
 
       pickers = {
         find_files = {
           previewer = false,
         },
+
         buffers = {
           mappings = {
             i = {
@@ -186,6 +189,7 @@ return {
         lsp_type_definitions = { initial_mode = 'normal', reuse_win = true, theme = 'ivy' },
         lsp_implementations = { initial_mode = 'normal', reuse_win = true, theme = 'ivy' },
       },
+
       extensions = {
         fzf = {
           fuzzy = true, -- false will only do exact matching
