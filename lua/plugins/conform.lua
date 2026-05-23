@@ -57,7 +57,6 @@ return {
       c = { 'clang-format' },
       h = { 'clang-format' },
       lua = { 'stylua' },
-      nix = { 'nixfmt' },
       python = { 'black' },
       rust = { 'rustfmt' },
       sh = { 'shfmt' },
