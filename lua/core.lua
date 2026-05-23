@@ -38,6 +38,7 @@ vim.o.cmdheight = 0
 vim.o.signcolumn = 'yes'
 vim.o.termguicolors = true
 vim.o.wildmenu = false
+vim.o.winborder = 'rounded'
 vim.o.wildchar = 0
 vim.o.fillchars = table.concat({
   'horiz:═',
