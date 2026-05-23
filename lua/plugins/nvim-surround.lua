@@ -1,32 +1,26 @@
 return {
   'kylechui/nvim-surround',
-  version = '*', -- Use for stability; omit to use `main` branch for the latest features
   keys = {
-    'ys',
-    'yss',
-    'yS',
-    'ySS',
-    { 'gs', mode = 'x' },
-    { 'gS', mode = 'x' },
+    { 'ys', mode = 'x' },
     'yd',
     'yc',
   },
 
-  ---@module 'nvim-surround'
-  ---@type user_options
-  opts = {
-    keymaps = {
-      insert = false,
-      insert_line = false,
-      normal = 'ys',
-      normal_cur = 'yss',
-      normal_line = 'yS',
-      normal_cur_line = 'ySS',
-      visual = 'gs',
-      visual_line = 'gS',
-      delete = 'yd',
-      change = 'yc',
-      change_line = false,
-    },
-  },
+  init = function()
+    vim.g.nvim_surround_no_mappings = true
+  end,
+
+  config = function()
+    vim.keymap.set('x', 'ys', '<Plug>(nvim-surround-visual)', {
+      desc = 'Add a surrounding pair around a visual selection',
+    })
+
+    vim.keymap.set('n', 'yd', '<Plug>(nvim-surround-delete)', {
+      desc = 'Delete a surrounding pair',
+    })
+
+    vim.keymap.set('n', 'yc', '<Plug>(nvim-surround-change)', {
+      desc = 'Change a surrounding pair',
+    })
+  end,
 }
