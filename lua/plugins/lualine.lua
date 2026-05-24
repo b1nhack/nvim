@@ -44,6 +44,7 @@ return {
 
         'mode',
       },
+
       lualine_b = {
         {
           'b:gitsigns_head',
@@ -61,7 +62,7 @@ return {
           --   "nvim_lsp", "nvim_diagnostic", "nvim_workspace_diagnostic", "coc", "ale", "vim_lsp".
           -- or a function that returns a table as such:
           --   { error=error_cnt, warn=warn_cnt, info=info_cnt, hint=hint_cnt }
-          sources = { 'nvim_lsp' },
+          sources = { 'nvim_diagnostic' },
 
           symbols = { error = ' ', warn = ' ', info = ' ', hint = '󰌶 ' },
         },
