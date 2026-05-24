@@ -25,7 +25,7 @@ return {
   ---@type CsMapsConfig
   opts = {
     cscope = {
-      picker = 'snacks',
+      picker = 'telescope',
       skip_picker_for_single_result = true,
       tag = {
         order = { 'tag_picker', 'tag' },
