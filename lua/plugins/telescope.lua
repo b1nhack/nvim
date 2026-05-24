@@ -38,29 +38,6 @@ return {
     -- Use this to add more results without clearing the trouble list
     local add_to_trouble = require('trouble.sources.telescope').add
 
-    local function flash(prompt_bufnr)
-      require('flash').jump({
-        pattern = '^',
-        label = {
-          style = 'overlay',
-          after = { 0, 0 },
-        },
-        search = {
-          multi_window = true,
-          mode = 'search',
-          exclude = {
-            function(win)
-              return vim.bo[vim.api.nvim_win_get_buf(win)].filetype ~= 'TelescopeResults'
-            end,
-          },
-        },
-        action = function(match)
-          local picker = require('telescope.actions.state').get_current_picker(prompt_bufnr)
-          picker:set_selection(match.pos[1] - 1)
-        end,
-      })
-    end
-
     telescope.setup({
       defaults = {
         sorting_strategy = 'ascending',
@@ -125,7 +102,6 @@ return {
             ['<C-e>'] = actions.preview_scrolling_down,
             ['?'] = actions.which_key,
             ['<C-p>'] = action_layout.toggle_preview,
-            ['s'] = flash,
             ['<C-t>'] = open_with_trouble,
           },
         },
