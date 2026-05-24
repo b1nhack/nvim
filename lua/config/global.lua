@@ -5,7 +5,6 @@ M.exclude_types = {
   'gitcommit',
   'help',
   'lazy',
-  'lspinfo',
   'man',
   'noice',
   'oil',
