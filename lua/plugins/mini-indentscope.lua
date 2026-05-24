@@ -5,7 +5,19 @@ return {
 
   init = function()
     vim.api.nvim_create_autocmd('FileType', {
-      pattern = require('config.global').exclude_types,
+      pattern = {
+        'checkhealth',
+        'gitcommit',
+        'help',
+        'lazy',
+        'man',
+        'mason',
+        'noice',
+        'notify',
+        'oil',
+        'trouble',
+      },
+
       callback = function()
         vim.b.miniindentscope_disable = true
       end,
