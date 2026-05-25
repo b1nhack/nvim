@@ -123,3 +123,10 @@ vim.keymap.set(
 
 -- Command-line editing
 vim.keymap.set('c', '<C-v>', '<C-f>')
+
+-- delete treesitter-defaults keymap
+-- `in` conflict with `i` in mode `x` `o`
+vim.keymap.del({ 'x', 'o' }, 'an')
+vim.keymap.del({ 'x', 'o' }, 'in')
+vim.keymap.del('x', ']n')
+vim.keymap.del('x', '[n')
