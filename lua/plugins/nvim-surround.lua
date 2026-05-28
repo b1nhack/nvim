@@ -1,7 +1,7 @@
 return {
   'kylechui/nvim-surround',
   keys = {
-    { 'ys', mode = 'x' },
+    { 'gs', mode = 'x' },
     'yd',
     'yc',
   },
@@ -11,7 +11,7 @@ return {
   end,
 
   config = function()
-    vim.keymap.set('x', 'ys', '<Plug>(nvim-surround-visual)', {
+    vim.keymap.set('x', 'gs', '<Plug>(nvim-surround-visual)', {
       desc = 'Add a surrounding pair around a visual selection',
     })
 
