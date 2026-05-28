@@ -15,7 +15,7 @@ return {
 
   opts = {
     options = {
-      theme = 'catppuccin-nvim',
+      theme = 'tokyonight',
       component_separators = { left = '', right = '' },
       section_separators = { left = '', right = '' },
       always_show_tabline = false,

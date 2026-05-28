@@ -38,8 +38,6 @@ return {
           alphabet = 'arstneiodhbkmluypfwgjqvcxzARSTNEIODHBKMLUYPFWGJQVCXZ1234567890',
         },
       },
-
-      highlights = require('catppuccin.special.bufferline').get_theme(),
     })
   end,
 }
