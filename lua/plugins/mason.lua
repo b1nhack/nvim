@@ -7,7 +7,7 @@ return {
   ---@class MasonSettings
   opts = {
     ui = {
-      backdrop = 0,
+      backdrop = 100,
       icons = {
         package_installed = '✓',
         package_pending = '➜',
