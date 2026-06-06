@@ -1,5 +1,11 @@
 vim.keymap.set({ 'n', 'x' }, '<Space>', '<Nop>')
 
+-- disable mouse
+vim.keymap.set({ '', 'i' }, '<Up>', '<nop>')
+vim.keymap.set({ '', 'i' }, '<Down>', '<nop>')
+vim.keymap.set({ '', 'i' }, '<Left>', '<nop>')
+vim.keymap.set({ '', 'i' }, '<Right>', '<nop>')
+
 -- Left-right motions
 vim.keymap.set({ 'n', 'x' }, 'n', 'h')
 vim.keymap.set({ 'n', 'x' }, 'N', '^')
