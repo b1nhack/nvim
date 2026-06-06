@@ -69,17 +69,7 @@ vim.keymap.set(
 )
 vim.keymap.set({ 'n', 'x' }, 'wi', '<CMD>vsplit<CR>')
 
-vim.keymap.set({ 'n', 'x' }, '<M-u>', '<C-w>k')
-vim.keymap.set({ 'n', 'x' }, '<M-e>', '<C-w>j')
-vim.keymap.set({ 'n', 'x' }, '<M-n>', '<C-w>h')
-vim.keymap.set({ 'n', 'x' }, '<M-i>', '<C-w>l')
-
 vim.keymap.set({ 'n', 'x' }, 'Q', '<CMD>q<CR>')
-
-vim.keymap.set({ 'n', 'x' }, '<S-Up>', '<CMD>resize +5<CR>')
-vim.keymap.set({ 'n', 'x' }, '<S-Down>', '<CMD>resize -5<CR>')
-vim.keymap.set({ 'n', 'x' }, '<S-Left>', '<CMD>vertical resize +5<CR>')
-vim.keymap.set({ 'n', 'x' }, '<S-Right>', '<CMD>vertical resize -5<CR>')
 
 vim.keymap.set({ 'n', 'x' }, 'wt', '<C-w><S-T>')
 
