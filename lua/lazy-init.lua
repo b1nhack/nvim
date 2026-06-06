@@ -41,6 +41,7 @@ require('lazy').setup({
   },
 
   ui = {
+    backdrop = 100,
     wrap = false,
     custom_keys = {
       -- You can define custom key maps here. If present, the description will
