@@ -1,9 +1,9 @@
 return {
-  'RRethy/vim-illuminate',
+  'b1nhack/vim-illuminate',
   event = { 'BufReadPost', 'BufWritePost', 'BufNewFile' },
 
   config = function()
-    require('illuminate').configure({
+    require('illuminate').setup({
       filetypes_denylist = {
         'checkhealth',
         'gitcommit',
@@ -20,7 +20,10 @@ return {
         'n',
         'x',
       },
-      disable_keymaps = true,
+      keymaps = {
+        next = 'ge',
+        prev = 'gu',
+      },
     })
   end,
 }

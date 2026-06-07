@@ -42,6 +42,6 @@
   "tree-sitter-manager.nvim": { "branch": "main", "commit": "75fb910f9f02b07f65248369c437c3b168261421" },
   "treesj": { "branch": "main", "commit": "79aedb401bbdc7e4202f7881eab5f6feb2105b0a" },
   "trouble.nvim": { "branch": "main", "commit": "bd67efe408d4816e25e8491cc5ad4088e708a69a" },
-  "vim-illuminate": { "branch": "master", "commit": "0d1e93684da00ab7c057410fecfc24f434698898" },
+  "vim-illuminate": { "branch": "main", "commit": "436337db580ec83d082f63135ae5f600c6376797" },
   "wezterm-types": { "branch": "main", "commit": "13ab56e813cb5af9a36ae6b4c987ba2558cb3fcb" }
 }
