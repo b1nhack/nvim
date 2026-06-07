@@ -21,7 +21,6 @@
   "mason-tool-installer.nvim": { "branch": "main", "commit": "443f1ef8b5e6bf47045cb2217b6f748a223cf7dc" },
   "mason.nvim": { "branch": "main", "commit": "16ba83bfc8a25f52bb545134f5bee082b195c460" },
   "mini.bufremove": { "branch": "main", "commit": "4cfbb201b2760da79ca6e1a00e9f67cbc99cbb8f" },
-  "mini.cursorword": { "branch": "main", "commit": "a01471856e462144ea53972f22a67e790be68ee6" },
   "mini.icons": { "branch": "main", "commit": "520995f1d75da0e4cc901ee95080b1ff2bc46b94" },
   "mini.indentscope": { "branch": "main", "commit": "ad19b1f02223391f3d40440f7ff10607f0043585" },
   "mini.pairs": { "branch": "main", "commit": "30cf2f01c4aaa2033db67376b9924fa2442c05d6" },
@@ -43,5 +42,6 @@
   "tree-sitter-manager.nvim": { "branch": "main", "commit": "75fb910f9f02b07f65248369c437c3b168261421" },
   "treesj": { "branch": "main", "commit": "79aedb401bbdc7e4202f7881eab5f6feb2105b0a" },
   "trouble.nvim": { "branch": "main", "commit": "bd67efe408d4816e25e8491cc5ad4088e708a69a" },
+  "vim-illuminate": { "branch": "master", "commit": "0d1e93684da00ab7c057410fecfc24f434698898" },
   "wezterm-types": { "branch": "main", "commit": "13ab56e813cb5af9a36ae6b4c987ba2558cb3fcb" }
 }
