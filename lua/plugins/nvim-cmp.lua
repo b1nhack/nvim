@@ -81,7 +81,6 @@ return {
       sources = cmp.config.sources({
         { name = 'async_path' },
         { name = 'luasnip' },
-        { name = 'render-markdown' },
         { name = 'nvim_lsp' },
       }, {
         {
