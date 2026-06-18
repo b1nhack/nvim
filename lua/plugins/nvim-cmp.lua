@@ -21,7 +21,7 @@ return {
   },
   event = { 'InsertEnter', 'CmdlineEnter' },
 
-  config = function()
+  config = function(_, opts)
     local cmp = require('cmp')
     local luasnip = require('luasnip')
 
@@ -78,7 +78,7 @@ return {
     cmp.setup({
       preselect = cmp.PreselectMode.None,
 
-      sources = cmp.config.sources({
+      sources = cmp.config.sources(opts.sources, {
         { name = 'async_path' },
         { name = 'luasnip' },
         { name = 'nvim_lsp' },
