@@ -1,5 +1,6 @@
 return {
   'folke/trouble.nvim',
+  dependencies = { 'mini.icons' },
   cmd = 'Trouble',
   keys = {
     { '<Leader>fs', '<CMD>Trouble symbols toggle focus=true<CR>' },
