@@ -1,6 +1,14 @@
 return {
   'numToStr/Comment.nvim',
-  event = { 'BufReadPost', 'BufWritePost', 'BufNewFile' },
+  keys = {
+    'gcc',
+    'gbc',
+    { 'gc', mode = { 'n', 'x', 'o' } },
+    { 'gb', mode = { 'n', 'x' } },
+    'gcO',
+    'gco',
+    'gcI',
+  },
 
   ---@module 'Comment'
   ---@type CommentConfig
