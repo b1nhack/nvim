@@ -1,6 +1,6 @@
 return {
   'mason-org/mason.nvim',
-  event = 'VeryLazy',
+  lazy = false,
   keys = {
     { '<Leader>m', '<CMD>Mason<CR>' },
   },
