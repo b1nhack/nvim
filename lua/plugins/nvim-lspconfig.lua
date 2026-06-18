@@ -53,7 +53,9 @@ return {
 
         vim.keymap.set('n', 'j', vim.lsp.buf.hover, opts)
         vim.keymap.set('n', '<C-CR>', vim.lsp.buf.code_action, opts)
-        vim.keymap.set('n', '<Leader>rn', vim.lsp.buf.rename, opts)
+        vim.keymap.set('n', '<Leader>rn', function()
+          return ':IncRename ' .. vim.fn.expand('<cword>')
+        end, vim.tbl_extend('force', opts, { expr = true }))
 
         vim.keymap.set('n', '<Leader>e', function()
           vim.diagnostic.open_float({ border = 'rounded' })

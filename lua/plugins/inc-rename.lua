@@ -1,6 +1,6 @@
 return {
   'smjonas/inc-rename.nvim',
-  event = { 'BufReadPost', 'BufWritePost', 'BufNewFile' },
+  event = 'LspAttach',
 
   ---@module 'inc_rename'
   ---@type inc_rename.UserConfig
