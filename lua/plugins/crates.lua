@@ -5,7 +5,6 @@ return {
   ---@module 'crates'
   ---@type Config
   opts = {
-    max_parallel_requests = 99,
     enable_update_available_warning = false,
 
     lsp = {
