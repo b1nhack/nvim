@@ -7,7 +7,7 @@ Neovim IDE + Colemak
 ## ⚡️ Requirements
 
 - [Kitty terminal](https://github.com/kovidgoyal/kitty)
-- Neovim >= 0.10.0 (needs to be built with LuaJIT)
+- Neovim >= 0.11.0 (needs to be built with LuaJIT)
 - Git >= 2.19.0 (for partial clones support)
 - A [Nerd Font](https://www.nerdfonts.com) >= 3.0
 - A C compiler for nvim-treesitter. See [here](https://github.com/nvim-treesitter/nvim-treesitter#requirements)
