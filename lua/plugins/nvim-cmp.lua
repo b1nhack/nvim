@@ -18,6 +18,7 @@ return {
       },
       opts = {},
     },
+    'mini.icons',
   },
   event = { 'InsertEnter', 'CmdlineEnter' },
 
