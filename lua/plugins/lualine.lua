@@ -20,10 +20,6 @@ return {
       section_separators = { left = '', right = '' },
       always_show_tabline = false,
       globalstatus = true,
-      refresh = {
-        statusline = 200, -- Note these are in mili second and default is 1000
-        tabline = 200,
-      },
       disabled_filetypes = {
         statusline = {
           'checkhealth',
