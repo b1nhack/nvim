@@ -1,5 +1,6 @@
 return {
   'mrjones2014/smart-splits.nvim',
+  lazy = false,
   -- stylua: ignore
   keys = {
     { '<M-u>', function() require('smart-splits').move_cursor_up() end },
