@@ -19,6 +19,6 @@ return {
     { '<M-S-i>', function() require('smart-splits').swap_buf_right() end },
   },
   opts = {
-    at_edge = 'stop',
+    move = { at_edge = 'stop' },
   },
 }
