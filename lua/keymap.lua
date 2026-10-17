@@ -33,6 +33,9 @@ vim.keymap.set('x', 'm', "'Nn'[v:searchforward]", { expr = true, desc = 'Next Se
 vim.keymap.set('n', 'M', "'nN'[v:searchforward].'zv'", { expr = true, desc = 'Prev Search Result' })
 vim.keymap.set('x', 'M', "'nN'[v:searchforward]", { expr = true, desc = 'Prev Search Result' })
 
+-- Marks and Motions
+vim.keymap.set('n', 's', 'm')
+
 -- Scrolling
 vim.keymap.set({ 'n', 'x' }, '<C-u>', '9<C-y>')
 vim.keymap.set({ 'n', 'x' }, '<C-e>', '9<C-e>')
