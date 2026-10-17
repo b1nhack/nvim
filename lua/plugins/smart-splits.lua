@@ -1,7 +1,8 @@
 return {
-  'mrjones2014/smart-splits.nvim',
+  'smart-splits-nvim/smart-splits.nvim',
+  version = '^3.0.0',
   lazy = false,
-  -- stylua: ignore
+-- stylua: ignore
   keys = {
     { '<M-u>', function() require('smart-splits').move_cursor_up() end },
     { '<M-e>', function() require('smart-splits').move_cursor_down() end },
@@ -18,7 +19,25 @@ return {
     { '<M-S-n>', function() require('smart-splits').swap_buf_left() end },
     { '<M-S-i>', function() require('smart-splits').swap_buf_right() end },
   },
+  dependencies = {
+    {
+      'smart-splits-nvim/backend-wezterm',
+      opts = {
+        -- name/path of the wezterm binary; used only by :checkhealth's diagnostic version probe,
+        -- never on any hot path (see "How it works")
+        cli_path = 'wezterm',
+      },
+    },
+  },
+
   opts = {
-    move = { at_edge = 'stop', float = 'mux' },
+    move = {
+      at_edge = 'stop',
+      same_row = true,
+    },
+    swap = { move_cursor = true },
+    mux = {
+      backend = 'smart-splits-backend-wezterm',
+    },
   },
 }
