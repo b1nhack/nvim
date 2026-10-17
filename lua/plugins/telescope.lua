@@ -160,10 +160,10 @@ return {
           previewer = false,
         },
 
-        lsp_references = { initial_mode = 'normal', reuse_win = true, theme = 'ivy' },
-        lsp_definitions = { initial_mode = 'normal', reuse_win = true, theme = 'ivy' },
-        lsp_type_definitions = { initial_mode = 'normal', reuse_win = true, theme = 'ivy' },
-        lsp_implementations = { initial_mode = 'normal', reuse_win = true, theme = 'ivy' },
+        lsp_references = { initial_mode = 'normal', theme = 'ivy' },
+        lsp_definitions = { initial_mode = 'normal', theme = 'ivy' },
+        lsp_type_definitions = { initial_mode = 'normal', theme = 'ivy' },
+        lsp_implementations = { initial_mode = 'normal', theme = 'ivy' },
       },
 
       extensions = {
