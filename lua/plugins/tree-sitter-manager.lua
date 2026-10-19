@@ -11,6 +11,7 @@ return {
       -- Default Options
       -- ensure_installed = {}, -- list of parsers to install at the start of a neovim session
       ensure_installed = {
+        'asm',
         'bash',
         'c',
         'diff',
