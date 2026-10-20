@@ -31,10 +31,7 @@ return {
   },
 
   opts = {
-    move = {
-      at_edge = 'stop',
-      same_row = true,
-    },
+    move = { at_edge = 'stop' },
     swap = { move_cursor = true },
     mux = {
       backend = 'smart-splits-backend-wezterm',
