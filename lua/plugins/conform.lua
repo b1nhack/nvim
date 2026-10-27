@@ -56,6 +56,7 @@ return {
     formatters_by_ft = {
       c = { 'clang-format' },
       h = { 'clang-format' },
+      json = { 'jq' },
       lua = { 'stylua' },
       python = { 'black' },
       rust = { 'rustfmt' },

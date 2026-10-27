@@ -11,10 +11,11 @@ return {
       'python-lsp-server',
 
       -- Formatter
-      'clang-format',
-      'stylua',
       'black',
+      'clang-format',
+      'jq',
       'shfmt',
+      'stylua',
     },
 
     debounce_hours = 24,
