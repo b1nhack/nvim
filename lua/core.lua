@@ -11,7 +11,6 @@ vim.o.undodir = vim.fn.stdpath('cache') .. '/undo'
 vim.o.viewdir = vim.fn.stdpath('cache') .. '/view'
 
 vim.o.undofile = true
-vim.o.undoreload = 99
 
 vim.o.ignorecase = true
 vim.o.smartcase = true
