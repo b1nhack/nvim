@@ -11,13 +11,6 @@ return {
       name = 'cmp-async-path',
       url = 'https://codeberg.org/FelipeLema/cmp-async-path',
     },
-    {
-      'petertriho/cmp-git',
-      dependencies = {
-        'nvim-lua/plenary.nvim',
-      },
-      opts = {},
-    },
     'mini.icons',
   },
   event = { 'InsertEnter', 'CmdlineEnter' },
