@@ -55,7 +55,6 @@ return {
     -- Define your formatters
     formatters_by_ft = {
       c = { 'clang-format' },
-      h = { 'clang-format' },
       json = { 'prettier' },
       jsonc = { 'prettier' },
       lua = { 'stylua' },
