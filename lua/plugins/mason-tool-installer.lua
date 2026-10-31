@@ -13,7 +13,7 @@ return {
       -- Formatter
       'black',
       'clang-format',
-      'jq',
+      'prettier',
       'shfmt',
       'stylua',
     },
