@@ -69,7 +69,6 @@ vim.o.formatoptions = 'rqnl1j'
 
 vim.o.cindent = true
 vim.o.copyindent = true
-vim.o.smartindent = true
 vim.o.shiftwidth = 4
 vim.o.tabstop = 4
 
