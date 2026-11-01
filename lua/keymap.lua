@@ -142,11 +142,7 @@ vim.api.nvim_create_autocmd('FileType', {
 })
 
 -- https://github.com/mhinz/vim-galore?tab=readme-ov-file#saner-ctrl-l
-vim.keymap.set(
-  { 'n', 'x' },
-  '<C-l>',
-  '<CMD>nohlsearch<CR><CMD>diffupdate<CR><CMD>syntax sync fromstart<CR><C-l>'
-)
+vim.keymap.set({ 'n', 'x' }, '<C-l>', '<CMD>nohlsearch<CR><C-l>')
 
 -- Command-line editing
 vim.keymap.set('c', '<C-v>', '<C-f>')
