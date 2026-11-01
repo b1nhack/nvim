@@ -4,6 +4,7 @@ return {
 
   config = function()
     require('illuminate').setup({
+      delay = 300,
       filetypes_denylist = {
         'checkhealth',
         'gitcommit',
