@@ -1,6 +1,7 @@
-local func = require('config.telescope')
-local builtin = function()
-  return require('telescope.builtin')
+local defer = function(module, name)
+  return function(...)
+    require(module)[name](...)
+  end
 end
 
 return {
@@ -14,19 +15,18 @@ return {
     },
   },
   cmd = 'Telescope',
-  -- stylua: ignore
   keys = {
-    { '<Leader>ff', func.project_files },
-    { '<Leader>fg', func.live_grep_from_project_git_root },
-    { '<Leader>fb', function() builtin().buffers() end },
-    { '<Leader>fh', function() builtin().help_tags() end },
+    { '<Leader>ff', defer('config.telescope', 'project_files') },
+    { '<Leader>fg', defer('config.telescope', 'live_grep_from_project_git_root') },
+    { '<Leader>fb', defer('telescope.builtin', 'buffers') },
+    { '<Leader>fh', defer('telescope.builtin', 'help_tags') },
 
-    { 'gr', function() builtin().lsp_references() end },
-    { 'gd', function() builtin().lsp_definitions() end },
-    { 'gy', function() builtin().lsp_type_definitions() end },
-    { 'gi', function() builtin().lsp_implementations() end },
+    { 'gr', defer('telescope.builtin', 'lsp_references') },
+    { 'gd', defer('telescope.builtin', 'lsp_definitions') },
+    { 'gy', defer('telescope.builtin', 'lsp_type_definitions') },
+    { 'gi', defer('telescope.builtin', 'lsp_implementations') },
 
-    { '<Leader>fl', function() builtin().resume() end },
+    { '<Leader>fl', defer('telescope.builtin', 'resume') },
   },
 
   config = function()
