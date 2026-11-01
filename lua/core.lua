@@ -4,6 +4,7 @@ vim.g.maplocalleader = ','
 vim.g.c_syntax_for_h = 1
 
 vim.o.timeoutlen = 300
+vim.o.updatetime = 300
 
 vim.o.backupdir = vim.fn.stdpath('cache') .. '/backup'
 vim.o.directory = vim.fn.stdpath('cache') .. '/swap'
