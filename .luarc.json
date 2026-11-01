@@ -1,5 +1,5 @@
 {
-    "diagnostics.disable": [
-        "missing-fields",
-    ]
+  "runtime.version": "LuaJIT",
+  "workspace.checkThirdParty": false,
+  "diagnostics.disable": ["missing-fields"]
 }
