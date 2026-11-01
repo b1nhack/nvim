@@ -133,12 +133,12 @@ return {
         git_bcommits = {
           mappings = {
             i = {
-              ['<C-]>'] = actions.cycle_previewers_next,
-              ['<C-[>'] = actions.cycle_previewers_prev,
+              ['<C-i>'] = actions.cycle_previewers_next,
+              ['<C-n>'] = actions.cycle_previewers_prev,
             },
             n = {
-              ['<C-]>'] = actions.cycle_previewers_next,
-              ['<C-[>'] = actions.cycle_previewers_prev,
+              ['<C-i>'] = actions.cycle_previewers_next,
+              ['<C-n>'] = actions.cycle_previewers_prev,
             },
           },
         },
@@ -146,12 +146,12 @@ return {
         git_commits = {
           mappings = {
             i = {
-              ['<C-]>'] = actions.cycle_previewers_next,
-              ['<C-[>'] = actions.cycle_previewers_prev,
+              ['<C-i>'] = actions.cycle_previewers_next,
+              ['<C-n>'] = actions.cycle_previewers_prev,
             },
             n = {
-              ['<C-]>'] = actions.cycle_previewers_next,
-              ['<C-[>'] = actions.cycle_previewers_prev,
+              ['<C-i>'] = actions.cycle_previewers_next,
+              ['<C-n>'] = actions.cycle_previewers_prev,
             },
           },
         },
