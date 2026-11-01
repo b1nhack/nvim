@@ -1,5 +1,24 @@
 vim.keymap.set({ 'n', 'x' }, '<Space>', '<Nop>')
 
+-- prevent fallback
+vim.keymap.set({ 'n', 'v', 'o', 'i', 'c', 'l', 't' }, '<Tab>', '<Tab>')
+vim.keymap.set({ 'n', 'v', 'o', 'i', 'c', 'l', 't' }, '<C-i>', '<C-i>')
+
+vim.keymap.set({ 'n', 'v', 'o', 'i', 'c', 'l', 't' }, '<CR>', '<CR>')
+vim.keymap.set({ 'n', 'v', 'o', 'i', 'c', 'l', 't' }, '<C-m>', '<C-m>')
+
+vim.keymap.set({ 'n', 'v', 'o', 'i', 'c', 'l', 't' }, '<C-Space>', '<C-Space>')
+vim.keymap.set({ 'n', 'v', 'o', 'i', 'c', 'l', 't' }, '<C-@>', '<C-@>')
+
+vim.keymap.set({ 'n', 'v', 'o', 'i', 'c', 'l', 't' }, '<NL>', '<NL>')
+vim.keymap.set({ 'n', 'v', 'o', 'i', 'c', 'l', 't' }, '<C-j>', '<C-j>')
+
+vim.keymap.set({ 'n', 'v', 'o', 'i', 'c', 'l', 't' }, '<C-^>', '<C-^>')
+vim.keymap.set({ 'n', 'v', 'o', 'i', 'c', 'l', 't' }, '<C-6>', '<C-6>')
+
+vim.keymap.set({ 'n', 'v', 'o', 'i', 'c', 'l', 't' }, '<C-_>', '<C-_>')
+vim.keymap.set({ 'n', 'v', 'o', 'i', 'c', 'l', 't' }, '<C-/>', '<C-/>')
+
 -- disable mouse
 vim.keymap.set({ '', 'i' }, '<Up>', '<nop>')
 vim.keymap.set({ '', 'i' }, '<Down>', '<nop>')
