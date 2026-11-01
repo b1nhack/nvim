@@ -52,7 +52,6 @@ vim.o.fillchars = table.concat({
 }, ',')
 
 -- behavior
-vim.o.fileformat = 'unix'
 vim.o.history = 99
 vim.o.jumpoptions = 'stack,view'
 vim.o.sessionoptions =
