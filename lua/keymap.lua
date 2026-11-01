@@ -130,7 +130,16 @@ vim.keymap.set('i', '<C-->', '<Esc><C-x>a')
 
 -- Add blank line
 vim.keymap.set('n', '<CR>', 'o<Esc>')
-vim.keymap.set('n', '<S-Enter>', 'O<Esc>')
+vim.keymap.set('n', '<S-CR>', 'O<Esc>')
+
+-- restore <CR> in qf/loclist
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'qf',
+  callback = function(args)
+    -- noremap self-map: bypasses the global mapping, restores builtin jump
+    vim.keymap.set('n', '<CR>', '<CR>', { buffer = args.buf })
+  end,
+})
 
 -- https://github.com/mhinz/vim-galore?tab=readme-ov-file#saner-ctrl-l
 vim.keymap.set(
