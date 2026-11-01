@@ -4,6 +4,14 @@ local defer = function(module, name)
   end
 end
 
+local delete_buffer = function(prompt_bufnr)
+  require('telescope.actions.state')
+    .get_current_picker(prompt_bufnr)
+    :delete_selection(function(selection)
+      return require('mini.bufremove').delete(selection.bufnr, false)
+    end)
+end
+
 return {
   'nvim-telescope/telescope.nvim',
   version = '*',
@@ -122,10 +130,10 @@ return {
         buffers = {
           mappings = {
             i = {
-              ['<c-d>'] = actions.delete_buffer + actions.move_to_top,
+              ['<c-d>'] = delete_buffer,
             },
             n = {
-              ['<c-d>'] = actions.delete_buffer + actions.move_to_top,
+              ['<c-d>'] = delete_buffer,
             },
           },
         },
