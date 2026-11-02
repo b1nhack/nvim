@@ -45,7 +45,7 @@ return {
     -- * keyword: highlights of the keyword
     -- * after: highlights after the keyword (todo text)
     highlight = {
-      multiline = false, -- enable multine todo comments
+      multiline = true, -- enable multine todo comments
     },
   },
 }
